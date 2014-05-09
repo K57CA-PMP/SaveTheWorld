@@ -27,10 +27,13 @@ private:
   cocos2d::Sprite *mCleared, *mArrow;
   CC_SYNTHESIZE_READONLY(const char*, mName, Name);
   eCityStatus mStatus;
+  cocos2d::Point mClearedPosition;
   
 public:
   virtual bool init(const char* pNqame, eCityStatus pCityStatus);
   static City* create(const char* pName, eCityStatus pCityStatus);
+  
+  void updateSprite();
 };
 
 #endif /* defined(__SaveTheWorld__City__) */

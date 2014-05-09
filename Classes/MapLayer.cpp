@@ -59,8 +59,11 @@ void MapLayer::addCities()
     City *city = City::create(cityKey->getCString(), CITY_STATUS_CLEARED);
     
     city->setPosition(PointFromString(((__String*)iCityDictionary->objectForKey("Position"))->getCString()));
+//    if (cityKey->compare("city01") == 0)
+    {
+      this->addChild(city, Z_MAP_CITIES);
+    }
     
-    this->addChild(city, Z_MAP_CITIES);
     
     iCityDictionary->setObject(city, "Object");
     
@@ -69,9 +72,9 @@ void MapLayer::addCities()
   
   CCARRAY_FOREACH(mCitiesArray, child)
   {
-    City *pCity = (City*)child;
+    City *city = (City*)child;
     
-    iCityDictionary = (__Dictionary*)mapCitiesDictionary->objectForKey(pCity->getName());
+    iCityDictionary = (__Dictionary*)mapCitiesDictionary->objectForKey(city->getName());
     __Array *pCityNeighbourArray = __Array::create();
     
     Ref *pChild;
@@ -84,14 +87,14 @@ void MapLayer::addCities()
 //    pCity->setNeighBours(pCityNeighbourArray);
   }
   
-//  if (pCurrentCityName == NULL || strcmp(pCurrentCityName, "") == 0)
-//  {
-//    pCurrentCityName = mapDictionary->valueForKey("StartCity")->getCString();
-//  }
-  
-//  mCurrentCity = (City*)((CCDictionary*)mapCitiesDictionary->objectForKey(pCurrentCityName))->objectForKey("Object");
-//  mCurrentCity->makeCurrent();
-//  mCurrentCity->unlock();
+////  if (pCurrentCityName == NULL || strcmp(pCurrentCityName, "") == 0)
+////  {
+////    pCurrentCityName = mapDictionary->valueForKey("StartCity")->getCString();
+////  }
+//  
+////  mCurrentCity = (City*)((CCDictionary*)mapCitiesDictionary->objectForKey(pCurrentCityName))->objectForKey("Object");
+////  mCurrentCity->makeCurrent();
+////  mCurrentCity->unlock();
 //  this->scrollToPoint(mCurrentCity->getPosition());
 }
 
