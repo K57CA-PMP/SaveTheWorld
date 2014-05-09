@@ -23,7 +23,6 @@ typedef enum eCityStatusEnum
 class City: public cocos2d::Sprite
 {
 private:
-//  MapLayer* mMapLayer;
   cocos2d::Sprite *mInnerCircle, *mOuterCircle, *mArrowCircle;
   cocos2d::Sprite *mCleared, *mArrow;
   CC_SYNTHESIZE_READONLY(const char*, mName, Name);

@@ -31,7 +31,7 @@ bool City::init(const char *pName, eCityStatus pCityStatus)
   {
     return false;
   }
-//  mMapLayer = pMapLayer;
+
   mInnerCircle = CCSprite::createWithSpriteFrameName("city_selector_inner.png");
   mOuterCircle = CCSprite::createWithSpriteFrameName("city_selector_outer.png");
   this->addChild(mInnerCircle);
