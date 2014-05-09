@@ -8,6 +8,7 @@
 
 #include "CIPlayScene.h"
 #include "cocos2d.h"
+#include <math.h>
 USING_NS_CC;
 
 Scene* CIPlayScene::createScene()
@@ -26,12 +27,17 @@ bool CIPlayScene::init()
   
   _visibleSize = Director::getInstance()->getVisibleSize();
   _origin = Director::getInstance()->getVisibleOrigin();
+  _state = ROTATE;
   
   addBackground();
   addBoy();
   addItems();
   addHooks();
   hookRotateAnimation();
+  handleTouch();
+  
+  _rotateAction->retain();
+  _isHookRotating = false;
   
   schedule(schedule_selector(CIPlayScene::update));
   
@@ -42,7 +48,7 @@ void CIPlayScene::addBackground()
 {
   _background = Sprite::create("CollectItems/background.png");
   _background->setScale(1.45);
-  _background->setAnchorPoint(_origin);
+  _background->setAnchorPoint(Point::ZERO);
   _background->setPosition(_origin);
   this->addChild(_background, 0);
 }
@@ -73,28 +79,94 @@ void CIPlayScene::addHooks()
   
   _hook = Sprite::create("CollectItems/hook.png");
   _hook->setAnchorPoint(Point(0.5, 1));
-  _hook->setPosition(Point(_visibleSize.width/2 - 20,
-                           _visibleSize.height - 30));
+  _hook->setPosition(HOOK_POSTITION);
   this->addChild(_hook, 10);
 }
 
 void CIPlayScene::hookRotateAnimation()
 {
   Animation* rotation = Animation::create();
-  rotation->setDelayPerUnit(0.5);
   rotation->addSpriteFrameWithFile("CollectItems/hook.png");
   
   Animate* rotate = Animate::create(rotation);
-  ActionInterval* left = RotateBy::create(1, 80);
-  ActionInterval* right = RotateBy::create(1, -80);
-  ActionInterval* sequence = Sequence::create(left, right, right, left, NULL);
+  ActionInterval* left = RotateBy::create(ROTATION_DELAY, LIMITED_ANGLE);
+  ActionInterval* right = RotateBy::create(ROTATION_DELAY, -LIMITED_ANGLE);
+  ActionInterval* sequence = Sequence::create(right, right, left, left, NULL);
+  _hook->setRotation(LIMITED_ANGLE);
   
   Spawn* spawn = Spawn::create(sequence, rotate, NULL);
-  RepeatForever* rotateForever = RepeatForever::create(spawn);
-  _hook->runAction(rotateForever);
+  _rotateAction = RepeatForever::create(spawn);
+}
+
+void CIPlayScene::hookLaunchAnimation()
+{
+  Animation* launching = Animation::create();
+  launching->addSpriteFrameWithFile("CollectItems/hook_long.png");
+
+  float dstX = _hook->getPositionX() * (1 - tan(_hook->getRotation() * PI/180));
+  float dstY = _origin.y;
+  if (_hook->getRotation() > 45)
+  {
+    dstX = _origin.x;
+    dstY = _hook->getPositionY() - (_hook->getPositionX() /
+                                    tan(_hook->getRotation() * PI/180));
+  }
+  else if (_hook->getRotation() < -45)
+  {
+    dstX = _visibleSize.width;
+    dstY = _hook->getPositionY() - (_hook->getPositionX() /
+                                    tan(-_hook->getRotation() * PI/180));
+  }
+  Animate* launch = Animate::create(launching);
+  ActionInterval* action = MoveTo::create(LAUNCHING_DELAY, Point(dstX, dstY));
+  ActionInterval* sequence = Sequence::create(action, NULL);
+  _launchAction = Spawn::create(sequence, launch, NULL);
+  _launchAction->retain();
+  _hook->runAction(_launchAction);
+}
+
+void CIPlayScene::
+
+void CIPlayScene::handleTouch()
+{
+  auto listener = EventListenerTouchOneByOne::create();
+  listener->setSwallowTouches(true);
+  
+  listener->onTouchBegan = [=](Touch* pTouch, Event* pEvent)
+  {
+    _state = LAUNCH;
+    _hook->stopAllActions();
+    this->hookLaunchAnimation();
+    return false;
+  };
+  
+  _eventDispatcher->addEventListenerWithSceneGraphPriority(listener,
+                                                           _background);
 }
 
 void CIPlayScene::update(float pDT)
 {
-  
+  if (_state == ROTATE && !_isHookRotating)
+  {
+    _hook->setRotation(LIMITED_ANGLE);
+    _hook->runAction(_rotateAction);
+    _isHookRotating = true;
+  }
+  else if (_state == LAUNCH)
+  {
+//    _hook->stopAction(_rotateAction);
+//    _hook->runAction(_launchAction);
+    if (_launchAction->isDone())
+    {
+      _hook->setPosition(HOOK_POSTITION);
+      _state = RETRIEVE;
+    }
+    _isHookRotating = false;
+  }
+  else if (_state == RETRIEVE)
+  {
+    
+    
+    _state = ROTATE;
+  }
 }

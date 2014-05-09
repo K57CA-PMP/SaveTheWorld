@@ -13,6 +13,15 @@
 #include "cocos2d.h"
 USING_NS_CC;
 
+#define ROTATE 0
+#define LAUNCH 1
+#define RETRIEVE 2
+#define HOOK_POSTITION Point(_visibleSize.width/2 - 20, _visibleSize.height - 30)
+#define LIMITED_ANGLE 80
+#define ROTATION_DELAY 1
+#define LAUNCHING_DELAY 1
+#define PI 3.14159265
+
 class CIPlayScene : cocos2d::Layer
 {
 private:
@@ -23,6 +32,13 @@ private:
   Sprite* _boy;
   Sprite* _hook;
   
+  RepeatForever* _rotateAction;
+  Spawn* _launchAction;
+  Spawn* _retrieveAction;
+  
+  int _state;
+  bool _isHookRotating;
+  
 public:
   static cocos2d::Scene* createScene();
   virtual bool init();
@@ -32,7 +48,12 @@ public:
   void addBoy();
   void addItems();
   void addHooks();
+  
   void hookRotateAnimation();
+  void hookLaunchAnimation();
+  void hookRetrieveAnimation();
+  
+  void handleTouch();
   
   void update(float pDT);
 };
