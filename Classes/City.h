@@ -26,9 +26,11 @@ private:
   MapLayer* mMapLayer;
   cocos2d::Sprite *mInnerCircle, *mOuterCircle, *mArrowCircle;
   cocos2d::Sprite *mCleared, *mArrow;
+  CC_SYNTHESIZE_READONLY(const char*, mName, Name);
+  eCityStatus mStatus;
   
 public:
-  virtual bool init(const char* pName, MapLayer* pMapLayer, eCityStatus pCityStatus);
+  virtual bool init(const char* pNqame, MapLayer* pMapLayer, eCityStatus pCityStatus);
   static City* create(const char* pName, MapLayer* pMapLayer, eCityStatus pCityStatus);
 };
 

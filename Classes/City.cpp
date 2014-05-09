@@ -7,7 +7,6 @@
 //
 
 #include "City.h"
-#include "MapLayer.h"
 
 USING_NS_CC;
 
@@ -38,14 +37,14 @@ bool City::init(const char *pName, MapLayer *pMapLayer, eCityStatus pCityStatus)
   mOuterCircle = CCSprite::createWithSpriteFrameName("city_selector_outer.png");
   this->addChild(mInnerCircle);
   this->addChild(mOuterCircle);
+  this->setContentSize(mOuterCircle->boundingBox().size);
+  
   mInnerCircle->setRotation(rand()%360);
   mOuterCircle->setRotation(rand()%360);
   mInnerCircle->runAction(CCRepeatForever::create(CCRotateBy::create(8, -360)));
   mOuterCircle->runAction(CCRepeatForever::create(CCRotateBy::create(8, 360)));
   mName = pName;
-  
-  // Adjustments so CCLayer positioning behaves like a sprite
-  this->setContentSize(mOuterCircle->boundingBox().size);
+  mStatus = pCityStatus;
   
   return true;
 }

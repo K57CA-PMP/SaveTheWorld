@@ -57,9 +57,7 @@ void MapLayer::addCities()
     __String* cityKey = (__String*)child;
     iCityDictionary = (__Dictionary*)mapCitiesDictionary->objectForKey(cityKey->getCString());
     
-    City *city = City::create(cityKey->getCString(),
-                              this,
-                              CITY_STATUS_CLEARED);
+    City *city = City::create(cityKey->getCString(), this, CITY_STATUS_CLEARED);
     
     city->setPosition(PointFromString(((__String*)iCityDictionary->objectForKey("Position"))->getCString()));
     
