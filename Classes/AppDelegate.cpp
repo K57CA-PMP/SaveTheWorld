@@ -1,6 +1,7 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
 #include "MapScene.h"
+#include "Stage1Scene.h"
 
 USING_NS_CC;
 
@@ -28,7 +29,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     director->setAnimationInterval(1.0 / 60);
 
     // create a scene. it's an autorelease object
-    auto scene = MapScene::create();
+    auto scene = Stage1Scene::create();
 
     // run
     director->runWithScene(scene);

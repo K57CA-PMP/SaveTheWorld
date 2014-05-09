@@ -10,8 +10,11 @@
 
 USING_NS_CC;
 
+
+
 MapScene* MapScene::create()
 {
+	CCLOG("+++++++++++=");
   MapScene *pRet = new MapScene();
   if (pRet && pRet->init())
   {
@@ -33,7 +36,6 @@ bool MapScene::init()
   }
   
   SpriteFrameCache::getInstance()->addSpriteFramesWithFile("city_selectors.plist");
-
   mMapLayer = MapLayer::create();
   addChild(mMapLayer);
   
