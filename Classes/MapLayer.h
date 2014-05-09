@@ -11,12 +11,16 @@
 
 #include "cocos2d.h"
 #include "Constant.h"
+#include "City.h"
 
 class MapLayer : public cocos2d::Layer
 {
 private:
   cocos2d::Point mBeginLocation;
   cocos2d::Sprite* map;
+  cocos2d::SpriteBatchNode* mCitiesBatchNode;
+  cocos2d::__Array* mCitiesArray;
+  
 public:
   virtual bool init();
   CREATE_FUNC(MapLayer);
@@ -26,6 +30,8 @@ public:
   
   void moveMap(float pDeltaX, float pDeltaY);
   cocos2d::Point getBound();
+  
+  void addCities();
 };
 
 
