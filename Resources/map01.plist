@@ -1,0 +1,1930 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BackgroundMusic</key>
+	<string>OST003-BG_MAP_01.caf</string>
+	<key>Cities</key>
+	<dict>
+		<key>city01</key>
+		<dict>
+			<key>Items</key>
+			<array>
+				<string>Icecream</string>
+				<string>CandyRed01</string>
+				<string>Ingredient03</string>
+				<string>CandyPinkUnlimited</string>
+				<string>CandyPurpleUnlimited</string>
+				<string>BagCandyUnlimited</string>
+			</array>
+			<key>ManuelFlipX</key>
+			<false/>
+			<key>ManuelPosition</key>
+			<string>{0, 0}</string>
+			<key>MapItems</key>
+			<dict>
+				<key>Moneybag1</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{983, 174}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag2</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{1125, 150}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag3</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{934, 248}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Tipscroll</key>
+				<dict>
+					<key>Kind</key>
+					<string>Tipscroll</string>
+					<key>Position</key>
+					<string>{1037, 204}</string>
+					<key>Value</key>
+					<string>tip_map01_city01</string>
+				</dict>
+			</dict>
+			<key>NeighbourCities</key>
+			<array>
+				<string>city22</string>
+			</array>
+			<key>Particles</key>
+			<string>sun</string>
+			<key>Position</key>
+			<string>{1080, 207}</string>
+			<key>ShopPosition</key>
+			<string>{1007, 220}</string>
+			<key>Stage</key>
+			<string>map01_stage01</string>
+		</dict>
+		<key>city02</key>
+		<dict>
+			<key>Items</key>
+			<array>
+				<string>KeyLaziness</string>
+				<string>CandyYellow01</string>
+				<string>Ingredient02</string>
+				<string>CandyGreenUnlimited</string>
+				<string>CandyPurpleUnlimited</string>
+				<string>Icecream</string>
+			</array>
+			<key>ManuelFlipX</key>
+			<false/>
+			<key>ManuelPosition</key>
+			<string>{0, 0}</string>
+			<key>MapItems</key>
+			<dict>
+				<key>Moneybag4</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{537, 112}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag5</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{276, 88}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag6</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{455, 267}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Tipscroll</key>
+				<dict>
+					<key>Kind</key>
+					<string>Tipscroll</string>
+					<key>Position</key>
+					<string>{509, 197}</string>
+					<key>Value</key>
+					<string>tip_map01_city02</string>
+				</dict>
+			</dict>
+			<key>NeighbourCities</key>
+			<array>
+				<string>city22</string>
+				<string>city03</string>
+				<string>city19</string>
+			</array>
+			<key>Position</key>
+			<string>{626, 230}</string>
+			<key>ShopPosition</key>
+			<string>{522, 248}</string>
+			<key>Stage</key>
+			<string>map01_stage02</string>
+		</dict>
+		<key>city03</key>
+		<dict>
+			<key>Boss</key>
+			<string>boss_1</string>
+			<key>Items</key>
+			<array>
+				<string>Ingredient29</string>
+				<string>Icecream</string>
+				<string>TokenFree</string>
+				<string>CandyOrangeUnlimited</string>
+				<string>CandyRedUnlimited</string>
+				<string>TokenUnlimited</string>
+			</array>
+			<key>ManuelFlipX</key>
+			<false/>
+			<key>ManuelPosition</key>
+			<string>{0, 0}</string>
+			<key>MapItems</key>
+			<dict>
+				<key>Moneybag6</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{398, 633}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag7</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{120, 409}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag8</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{87, 468}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Tipscroll</key>
+				<dict>
+					<key>Kind</key>
+					<string>Tipscroll</string>
+					<key>Position</key>
+					<string>{223, 527}</string>
+					<key>Value</key>
+					<string>tip_map01_city03</string>
+				</dict>
+			</dict>
+			<key>NeighbourCities</key>
+			<array>
+				<string>city02</string>
+				<string>city11</string>
+				<string>city19</string>
+			</array>
+			<key>Position</key>
+			<string>{221, 465}</string>
+			<key>Requisites</key>
+			<array>
+				<string>KeyLaziness</string>
+			</array>
+			<key>ShopPosition</key>
+			<string>{108, 521}</string>
+			<key>Stage</key>
+			<string>map01_pereza</string>
+			<key>Type</key>
+			<string>Boss</string>
+			<key>UnlockWarlock</key>
+			<string>Elipha</string>
+		</dict>
+		<key>city04</key>
+		<dict>
+			<key>Items</key>
+			<array>
+				<string>CandyPurple03</string>
+				<string>ChewingGum</string>
+				<string>CandyOrange03</string>
+				<string>BagCandyUnlimited</string>
+				<string>CandyGreenUnlimited</string>
+				<string>CandyPurpleUnlimited</string>
+			</array>
+			<key>ManuelFlipX</key>
+			<false/>
+			<key>ManuelPosition</key>
+			<string>{0, 0}</string>
+			<key>MapItems</key>
+			<dict>
+				<key>Moneybag10</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{666, 434}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag12</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{541, 740}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag9</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{505, 598}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Tipscroll</key>
+				<dict>
+					<key>Kind</key>
+					<string>Tipscroll</string>
+					<key>Position</key>
+					<string>{693, 488}</string>
+					<key>Value</key>
+					<string>tip_map01_city04</string>
+				</dict>
+			</dict>
+			<key>NeighbourCities</key>
+			<array>
+				<string>city14</string>
+				<string>city11</string>
+			</array>
+			<key>Position</key>
+			<string>{639, 498}</string>
+			<key>ShopPosition</key>
+			<string>{588, 557}</string>
+			<key>Stage</key>
+			<string>map01_stage04</string>
+		</dict>
+		<key>city05</key>
+		<dict>
+			<key>Items</key>
+			<array>
+				<string>LevelUpElipha01</string>
+				<string>Ingredient23</string>
+				<string>CandyRed03</string>
+				<string>Icecream</string>
+				<string>CandyRedUnlimited</string>
+				<string>CandyBlueUnlimited</string>
+			</array>
+			<key>ManuelFlipX</key>
+			<false/>
+			<key>ManuelPosition</key>
+			<string>{0, 0}</string>
+			<key>MapItems</key>
+			<dict>
+				<key>Moneybag13</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{1140, 879}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag14</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{1269, 736}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag15</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{1325, 499}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Tipscroll</key>
+				<dict>
+					<key>Kind</key>
+					<string>Tipscroll</string>
+					<key>Position</key>
+					<string>{1102, 625}</string>
+					<key>Value</key>
+					<string>tip_map01_city05</string>
+				</dict>
+			</dict>
+			<key>NeighbourCities</key>
+			<array>
+				<string>city14</string>
+				<string>city13</string>
+			</array>
+			<key>Position</key>
+			<string>{1202, 622}</string>
+			<key>ShopPosition</key>
+			<string>{1137, 650}</string>
+			<key>Stage</key>
+			<string>map01_stage05</string>
+		</dict>
+		<key>city06</key>
+		<dict>
+			<key>Boss</key>
+			<string>boss_2</string>
+			<key>Items</key>
+			<array>
+				<string>TokenFree</string>
+				<string>HatRed</string>
+				<string>Ingredient14</string>
+				<string>ChewingGum</string>
+				<string>CandyPurpleUnlimited</string>
+				<string>CandyPinkUnlimited</string>
+			</array>
+			<key>ManuelFlipX</key>
+			<false/>
+			<key>ManuelPosition</key>
+			<string>{0, 0}</string>
+			<key>MapItems</key>
+			<dict>
+				<key>Moneybag16</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{857, 922}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag17</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{761, 1032}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag18</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{420, 779}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Tipscroll</key>
+				<dict>
+					<key>Kind</key>
+					<string>Tipscroll</string>
+					<key>Position</key>
+					<string>{639, 945}</string>
+					<key>Value</key>
+					<string>tip_map01_city06</string>
+				</dict>
+			</dict>
+			<key>NeighbourCities</key>
+			<array>
+				<string>city13</string>
+				<string>city15</string>
+				<string>city20</string>
+			</array>
+			<key>Position</key>
+			<string>{741, 940}</string>
+			<key>Requisites</key>
+			<array>
+				<string>KeyGluttony</string>
+			</array>
+			<key>ShopPosition</key>
+			<string>{683, 957}</string>
+			<key>Stage</key>
+			<string>map01_gula</string>
+			<key>Type</key>
+			<string>Boss</string>
+			<key>UnlockWarlock</key>
+			<string>Giordano</string>
+		</dict>
+		<key>city07</key>
+		<dict>
+			<key>Items</key>
+			<array>
+				<string>LevelUpNostradamus01</string>
+				<string>Ingredient18</string>
+				<string>BagCandy</string>
+				<string>CandyPurpleUnlimited</string>
+				<string>CandyBlueUnlimited</string>
+				<string>BagCandyUnlimited</string>
+			</array>
+			<key>ManuelFlipX</key>
+			<false/>
+			<key>ManuelPosition</key>
+			<string>{0, 0}</string>
+			<key>MapItems</key>
+			<dict>
+				<key>Moneybag19</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{361, 1281}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag20</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{26, 1324}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag21</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{92, 940}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Tipscroll</key>
+				<dict>
+					<key>Kind</key>
+					<string>Tipscroll</string>
+					<key>Position</key>
+					<string>{116, 1105}</string>
+					<key>Value</key>
+					<string>tip_map01_city07</string>
+				</dict>
+			</dict>
+			<key>NeighbourCities</key>
+			<array>
+				<string>city21</string>
+				<string>city16</string>
+			</array>
+			<key>Position</key>
+			<string>{130, 1154}</string>
+			<key>ShopPosition</key>
+			<string>{140, 1245}</string>
+			<key>Stage</key>
+			<string>map01_stage07_timemode</string>
+			<key>Type</key>
+			<string>Time</string>
+		</dict>
+		<key>city08</key>
+		<dict>
+			<key>Boss</key>
+			<string>boss_4</string>
+			<key>Items</key>
+			<array>
+				<string>HatYellow</string>
+				<string>TokenFree</string>
+				<string>BagCandy</string>
+				<string>CandyOrangeUnlimited</string>
+				<string>CandyPurpleUnlimited</string>
+				<string>ChewingGum</string>
+			</array>
+			<key>ManuelFlipX</key>
+			<false/>
+			<key>ManuelPosition</key>
+			<string>{0, 0}</string>
+			<key>MapItems</key>
+			<dict>
+				<key>Moneybag22</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{921, 1411}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag23</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{1415, 1568}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag24</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{958, 1586}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Tipscroll</key>
+				<dict>
+					<key>Kind</key>
+					<string>Tipscroll</string>
+					<key>Position</key>
+					<string>{986, 1393}</string>
+					<key>Value</key>
+					<string>tip_map01_city08</string>
+				</dict>
+			</dict>
+			<key>NeighbourCities</key>
+			<array>
+				<string>city20</string>
+				<string>city17</string>
+			</array>
+			<key>Position</key>
+			<string>{1029, 1425}</string>
+			<key>Requisites</key>
+			<array>
+				<string>KeyGreed</string>
+			</array>
+			<key>ShopPosition</key>
+			<string>{967, 1436}</string>
+			<key>Stage</key>
+			<string>map01_avaricia</string>
+			<key>Type</key>
+			<string>Boss</string>
+			<key>UnlockWarlock</key>
+			<string>Nostradamus</string>
+		</dict>
+		<key>city09</key>
+		<dict>
+			<key>Items</key>
+			<array>
+				<string>Icecream</string>
+				<string>CandyOrange01</string>
+				<string>Token01</string>
+				<string>CandyYellowUnlimited</string>
+				<string>CandyBlueUnlimited</string>
+				<string>CandyRedUnlimited</string>
+			</array>
+			<key>ManuelFlipX</key>
+			<false/>
+			<key>ManuelPosition</key>
+			<string>{0, 0}</string>
+			<key>MapItems</key>
+			<dict>
+				<key>Moneybag25</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{1123, 959}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag26</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{1380, 960}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag27</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{1282, 877}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Tipscroll</key>
+				<dict>
+					<key>Kind</key>
+					<string>Tipscroll</string>
+					<key>Position</key>
+					<string>{1111, 1079}</string>
+					<key>Value</key>
+					<string>tip_map01_city09</string>
+				</dict>
+			</dict>
+			<key>NeighbourCities</key>
+			<array>
+				<string>city20</string>
+				<string>city18</string>
+			</array>
+			<key>Position</key>
+			<string>{1119, 1122}</string>
+			<key>ShopPosition</key>
+			<string>{1036, 1119}</string>
+			<key>Stage</key>
+			<string>map01_stage09</string>
+		</dict>
+		<key>city10</key>
+		<dict>
+			<key>Items</key>
+			<array>
+				<string>KeyGreed</string>
+				<string>HatGreen</string>
+				<string>Ingredient28</string>
+				<string>CandyBlueUnlimited</string>
+				<string>CandyGreenUnlimited</string>
+				<string>CandyPinkUnlimited</string>
+			</array>
+			<key>ManuelFlipX</key>
+			<false/>
+			<key>ManuelPosition</key>
+			<string>{0, 0}</string>
+			<key>MapItems</key>
+			<dict>
+				<key>Moneybag28</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{1412, 1216}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag29</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{1346, 1222}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag30</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{1181, 1358}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Tipscroll</key>
+				<dict>
+					<key>Kind</key>
+					<string>Tipscroll</string>
+					<key>Position</key>
+					<string>{1310, 1326}</string>
+					<key>Value</key>
+					<string>tip_map01_city10</string>
+				</dict>
+			</dict>
+			<key>NeighbourCities</key>
+			<array>
+				<string>city18</string>
+			</array>
+			<key>Position</key>
+			<string>{1338, 1374}</string>
+			<key>ShopPosition</key>
+			<string>{1316, 1399}</string>
+			<key>Stage</key>
+			<string>map01_stage10_puzzle</string>
+			<key>Type</key>
+			<string>Puzzle</string>
+		</dict>
+		<key>city11</key>
+		<dict>
+			<key>Items</key>
+			<array>
+				<string>BagCandy</string>
+				<string>CandyPink03</string>
+				<string>CandyPurple01</string>
+				<string>CandyGreenUnlimited</string>
+				<string>CandyPurpleUnlimited</string>
+				<string>CandyBlueUnlimited</string>
+			</array>
+			<key>ManuelFlipX</key>
+			<false/>
+			<key>ManuelPosition</key>
+			<string>{0, 0}</string>
+			<key>MapItems</key>
+			<dict>
+				<key>Moneybag31</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{17, 842}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag32</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{266, 773}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag33</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{444, 798}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Tipscroll</key>
+				<dict>
+					<key>Kind</key>
+					<string>Tipscroll</string>
+					<key>Position</key>
+					<string>{258, 663}</string>
+					<key>Value</key>
+					<string>tip_map01_city11</string>
+				</dict>
+			</dict>
+			<key>NeighbourCities</key>
+			<array>
+				<string>city03</string>
+				<string>city04</string>
+			</array>
+			<key>Position</key>
+			<string>{169, 681}</string>
+			<key>ShopPosition</key>
+			<string>{114, 688}</string>
+			<key>Stage</key>
+			<string>map01_stage11</string>
+		</dict>
+		<key>city12</key>
+		<dict>
+			<key>Items</key>
+			<array/>
+			<key>ManuelFlipX</key>
+			<false/>
+			<key>ManuelPosition</key>
+			<string>{0, 0}</string>
+			<key>NeighbourCities</key>
+			<array>
+				<string>city16</string>
+			</array>
+			<key>Position</key>
+			<string>{436, 1438}</string>
+			<key>Requisites</key>
+			<array>
+				<string>TransportBrightEyedTiger</string>
+			</array>
+			<key>ShopPosition</key>
+			<string>{-500, -500}</string>
+			<key>Stage</key>
+			<string>map02_city01_left</string>
+			<key>Type</key>
+			<string>ChangeMap</string>
+		</dict>
+		<key>city13</key>
+		<dict>
+			<key>Items</key>
+			<array>
+				<string>KeyGluttony</string>
+				<string>CandyBlue03</string>
+				<string>Ingredient13</string>
+				<string>BagCandyUnlimited</string>
+				<string>Icecream</string>
+				<string>CandyGreenUnlimited</string>
+			</array>
+			<key>ManuelFlipX</key>
+			<false/>
+			<key>ManuelPosition</key>
+			<string>{0, 0}</string>
+			<key>MapItems</key>
+			<dict>
+				<key>Moneybag37</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{960, 1025}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag38</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{608, 884}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag39</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{764, 812}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Tipscroll</key>
+				<dict>
+					<key>Kind</key>
+					<string>Tipscroll</string>
+					<key>Position</key>
+					<string>{961, 795}</string>
+					<key>Value</key>
+					<string>tip_map01_city13</string>
+				</dict>
+			</dict>
+			<key>NeighbourCities</key>
+			<array>
+				<string>city05</string>
+				<string>city06</string>
+			</array>
+			<key>Position</key>
+			<string>{892, 812}</string>
+			<key>ShopPosition</key>
+			<string>{817, 770}</string>
+			<key>Stage</key>
+			<string>map01_stage13_bombs</string>
+			<key>Type</key>
+			<string>Bomb</string>
+			<key>XPosition</key>
+			<real>1115</real>
+			<key>YPosition</key>
+			<real>1015</real>
+		</dict>
+		<key>city14</key>
+		<dict>
+			<key>Items</key>
+			<array>
+				<string>Ingredient31</string>
+				<string>BagCandy</string>
+				<string>Icecream</string>
+				<string>CandyBlueUnlimited</string>
+				<string>CandyPinkUnlimited</string>
+				<string>BagCandyUnlimited</string>
+			</array>
+			<key>ManuelFlipX</key>
+			<false/>
+			<key>ManuelPosition</key>
+			<string>{0, 0}</string>
+			<key>MapItems</key>
+			<dict>
+				<key>Moneybag40</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{844, 549}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag41</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{960, 533}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag42</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{1213, 460}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Tipscroll</key>
+				<dict>
+					<key>Kind</key>
+					<string>Tipscroll</string>
+					<key>Position</key>
+					<string>{1054, 446}</string>
+					<key>Value</key>
+					<string>tip_map01_city14</string>
+				</dict>
+			</dict>
+			<key>NeighbourCities</key>
+			<array>
+				<string>city04</string>
+				<string>city05</string>
+			</array>
+			<key>Position</key>
+			<string>{1064, 496}</string>
+			<key>ShopPosition</key>
+			<string>{1001, 477}</string>
+			<key>Stage</key>
+			<string>map01_stage14_puzzle</string>
+			<key>Type</key>
+			<string>Puzzle</string>
+		</dict>
+		<key>city15</key>
+		<dict>
+			<key>Items</key>
+			<array>
+				<string>PetTurtle</string>
+				<string>Icecream</string>
+				<string>CandyYellow03</string>
+				<string>CandyOrangeUnlimited</string>
+				<string>CandyGreenUnlimited</string>
+				<string>CandyPurpleUnlimited</string>
+			</array>
+			<key>ManuelFlipX</key>
+			<false/>
+			<key>ManuelPosition</key>
+			<string>{0, 0}</string>
+			<key>MapItems</key>
+			<dict>
+				<key>Moneybag43</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{251, 926}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag44</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{228, 866}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag45</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{454, 1137}</string>
+					<key>Value</key>
+					<integer>50</integer>
+				</dict>
+				<key>Tipscroll</key>
+				<dict>
+					<key>Kind</key>
+					<string>Tipscroll</string>
+					<key>Position</key>
+					<string>{396, 996}</string>
+					<key>Value</key>
+					<string>tip_map01_city15</string>
+				</dict>
+			</dict>
+			<key>NeighbourCities</key>
+			<array>
+				<string>city06</string>
+				<string>city21</string>
+			</array>
+			<key>Position</key>
+			<string>{494, 1006}</string>
+			<key>Requisites</key>
+			<array>
+				<string>KeyWood</string>
+			</array>
+			<key>ShopPosition</key>
+			<string>{430, 1019}</string>
+			<key>Stage</key>
+			<string>map01_stage15</string>
+		</dict>
+		<key>city16</key>
+		<dict>
+			<key>Items</key>
+			<array>
+				<string>TransportBrightEyedTiger</string>
+				<string>BagCandy</string>
+				<string>Token01</string>
+				<string>CandyGreenUnlimited</string>
+				<string>CandyYellowUnlimited</string>
+				<string>CandyPinkUnlimited</string>
+			</array>
+			<key>ManuelFlipX</key>
+			<false/>
+			<key>ManuelPosition</key>
+			<string>{0, 0}</string>
+			<key>MapItems</key>
+			<dict>
+				<key>Moneybag46</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{221, 1275}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag47</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{213, 1063}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag48</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{291, 1508}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Tipscroll</key>
+				<dict>
+					<key>Kind</key>
+					<string>Tipscroll</string>
+					<key>Position</key>
+					<string>{159, 1343}</string>
+					<key>Value</key>
+					<string>tip_map01_city16</string>
+				</dict>
+			</dict>
+			<key>NeighbourCities</key>
+			<array>
+				<string>city07</string>
+				<string>city12</string>
+			</array>
+			<key>Position</key>
+			<string>{163, 1451}</string>
+			<key>ShopPosition</key>
+			<string>{101, 1460}</string>
+			<key>Stage</key>
+			<string>map01_stage16</string>
+		</dict>
+		<key>city17</key>
+		<dict>
+			<key>Items</key>
+			<array>
+				<string>KeyWood</string>
+				<string>Icecream</string>
+				<string>CandyPurple03</string>
+				<string>CandyGreenUnlimited</string>
+				<string>ChewingGum</string>
+				<string>TokenUnlimited</string>
+			</array>
+			<key>ManuelFlipX</key>
+			<false/>
+			<key>ManuelPosition</key>
+			<string>{0, 0}</string>
+			<key>MapItems</key>
+			<dict>
+				<key>Moneybag49</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{653, 1379}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag50</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{568, 1346}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag51</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{825, 1526}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Tipscroll</key>
+				<dict>
+					<key>Kind</key>
+					<string>Tipscroll</string>
+					<key>Position</key>
+					<string>{717, 1376}</string>
+					<key>Value</key>
+					<string>tip_map01_city17</string>
+				</dict>
+			</dict>
+			<key>NeighbourCities</key>
+			<array>
+				<string>city08</string>
+			</array>
+			<key>Position</key>
+			<string>{724, 1501}</string>
+			<key>ShopPosition</key>
+			<string>{661, 1464}</string>
+			<key>Stage</key>
+			<string>map01_stage17</string>
+		</dict>
+		<key>city18</key>
+		<dict>
+			<key>Items</key>
+			<array>
+				<string>Pinyata03</string>
+				<string>TokenUnlimited</string>
+				<string>Pinyata05</string>
+			</array>
+			<key>ManuelFlipX</key>
+			<false/>
+			<key>ManuelPosition</key>
+			<string>{1336, 1235}</string>
+			<key>MapItems</key>
+			<dict>
+				<key>Moneybag52</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{915, 1215}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag53</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{1109, 1398}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag54</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{1211, 1251}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Tipscroll</key>
+				<dict>
+					<key>Kind</key>
+					<string>Tipscroll</string>
+					<key>Position</key>
+					<string>{1225, 1205}</string>
+					<key>Value</key>
+					<string>tip_map01_city18</string>
+				</dict>
+			</dict>
+			<key>NeighbourCities</key>
+			<array>
+				<string>city09</string>
+				<string>city10</string>
+			</array>
+			<key>Position</key>
+			<string>{1252, 1234}</string>
+			<key>ShopPosition</key>
+			<string>{1254, 1303}</string>
+			<key>Stage</key>
+			<string>map01_pairs_city20</string>
+			<key>Type</key>
+			<string>Pairs</string>
+		</dict>
+		<key>city19</key>
+		<dict>
+			<key>Items</key>
+			<array>
+				<string>Pinyata03</string>
+				<string>TokenUnlimited</string>
+				<string>Pinyata05</string>
+			</array>
+			<key>ManuelFlipX</key>
+			<true/>
+			<key>ManuelPosition</key>
+			<string>{112, 180}</string>
+			<key>MapItems</key>
+			<dict>
+				<key>Moneybag52</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{262, 417}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag53</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{505, 96}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag54</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{61, 234}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Tipscroll</key>
+				<dict>
+					<key>Kind</key>
+					<string>Tipscroll</string>
+					<key>Position</key>
+					<string>{126, 226}</string>
+					<key>Value</key>
+					<string>tip_map01_city19</string>
+				</dict>
+			</dict>
+			<key>NeighbourCities</key>
+			<array>
+				<string>city02</string>
+				<string>city03</string>
+			</array>
+			<key>Position</key>
+			<string>{152, 150}</string>
+			<key>ShopPosition</key>
+			<string>{79, 68}</string>
+			<key>Stage</key>
+			<string>map01_pairs_city19</string>
+			<key>Type</key>
+			<string>Pairs</string>
+		</dict>
+		<key>city20</key>
+		<dict>
+			<key>Items</key>
+			<array>
+				<string>Ingredient15</string>
+				<string>BagCandy</string>
+				<string>Ingredient07</string>
+				<string>CandyPurpleUnlimited</string>
+				<string>CandyYellowUnlimited</string>
+				<string>ChewingGum</string>
+			</array>
+			<key>ManuelFlipX</key>
+			<false/>
+			<key>ManuelPosition</key>
+			<string>{0, 0}</string>
+			<key>MapItems</key>
+			<dict>
+				<key>Moneybag52</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{797, 1117}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag53</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{1261, 1079}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag54</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{1292, 1202}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Tipscroll</key>
+				<dict>
+					<key>Kind</key>
+					<string>Tipscroll</string>
+					<key>Position</key>
+					<string>{897, 1096}</string>
+					<key>Value</key>
+					<string>tip_map01_city20</string>
+				</dict>
+			</dict>
+			<key>NeighbourCities</key>
+			<array>
+				<string>city06</string>
+				<string>city09</string>
+				<string>city08</string>
+			</array>
+			<key>Position</key>
+			<string>{960, 1104}</string>
+			<key>ShopPosition</key>
+			<string>{833, 1068}</string>
+			<key>Stage</key>
+			<string>map01_stage18</string>
+		</dict>
+		<key>city21</key>
+		<dict>
+			<key>Items</key>
+			<array>
+				<string>Pinyata03</string>
+				<string>TokenUnlimited</string>
+				<string>Pinyata05</string>
+			</array>
+			<key>ManuelFlipX</key>
+			<true/>
+			<key>ManuelPosition</key>
+			<string>{129, 995}</string>
+			<key>MapItems</key>
+			<dict>
+				<key>Moneybag52</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{102, 1041}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag53</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{330, 1171}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag54</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{469, 1200}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Tipscroll</key>
+				<dict>
+					<key>Kind</key>
+					<string>Tipscroll</string>
+					<key>Position</key>
+					<string>{281, 977}</string>
+					<key>Value</key>
+					<string>tip_map01_city21</string>
+				</dict>
+			</dict>
+			<key>NeighbourCities</key>
+			<array>
+				<string>city15</string>
+				<string>city07</string>
+			</array>
+			<key>Position</key>
+			<string>{219, 1010}</string>
+			<key>ShopPosition</key>
+			<string>{171, 1060}</string>
+			<key>Stage</key>
+			<string>map01_pairs_city21</string>
+			<key>Type</key>
+			<string>Pairs</string>
+		</dict>
+		<key>city22</key>
+		<dict>
+			<key>Items</key>
+			<array>
+				<string>PetUnisheep</string>
+				<string>CandyOrange01</string>
+				<string>Ingredient05</string>
+				<string>CandyRedUnlimited</string>
+				<string>CandyBlueUnlimited</string>
+				<string>CandyPinkUnlimited</string>
+			</array>
+			<key>ManuelFlipX</key>
+			<false/>
+			<key>ManuelPosition</key>
+			<string>{0, 0}</string>
+			<key>MapItems</key>
+			<dict>
+				<key>Moneybag55</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{913, 94}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag56</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{767, 178}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Moneybag57</key>
+				<dict>
+					<key>Kind</key>
+					<string>Moneybag</string>
+					<key>Position</key>
+					<string>{760, 421}</string>
+					<key>Value</key>
+					<integer>150</integer>
+				</dict>
+				<key>Tipscroll</key>
+				<dict>
+					<key>Kind</key>
+					<string>Tipscroll</string>
+					<key>Position</key>
+					<string>{806, 228}</string>
+					<key>Value</key>
+					<string>tip_map01_city22</string>
+				</dict>
+			</dict>
+			<key>NeighbourCities</key>
+			<array>
+				<string>city01</string>
+				<string>city02</string>
+			</array>
+			<key>Position</key>
+			<string>{913, 206}</string>
+			<key>ShopPosition</key>
+			<string>{861, 232}</string>
+			<key>Stage</key>
+			<string>map01_stage22</string>
+		</dict>
+	</dict>
+	<key>CitiesOrder</key>
+	<array>
+		<string>city01</string>
+		<string>city22</string>
+		<string>city02</string>
+		<string>city19</string>
+		<string>city03</string>
+		<string>city11</string>
+		<string>city04</string>
+		<string>city14</string>
+		<string>city05</string>
+		<string>city13</string>
+		<string>city06</string>
+		<string>city20</string>
+		<string>city09</string>
+		<string>city18</string>
+		<string>city10</string>
+		<string>city08</string>
+		<string>city17</string>
+		<string>city15</string>
+		<string>city21</string>
+		<string>city07</string>
+		<string>city16</string>
+		<string>city12</string>
+	</array>
+	<key>MapFilename</key>
+	<string>Images/Map/Tiles/map01/map01</string>
+	<key>MaxZoom</key>
+	<integer>1</integer>
+	<key>MaxZoomiPad</key>
+	<real>0.85</real>
+	<key>MinZoom</key>
+	<integer>1</integer>
+	<key>MinZoomiPad</key>
+	<real>0.85</real>
+	<key>Paths</key>
+	<array>
+		<dict>
+			<key>Curves</key>
+			<array>
+				<array>
+					<string>{639, 498}</string>
+					<string>{793, 496}</string>
+					<string>{899, 470}</string>
+					<integer>264</integer>
+				</array>
+				<array>
+					<string>{899, 470}</string>
+					<string>{1006, 451}</string>
+					<string>{1064, 496}</string>
+					<integer>187</integer>
+				</array>
+			</array>
+			<key>FirstCity</key>
+			<string>city04</string>
+			<key>SecondCity</key>
+			<string>city14</string>
+		</dict>
+		<dict>
+			<key>Curves</key>
+			<array>
+				<array>
+					<string>{741, 940}</string>
+					<string>{619, 949}</string>
+					<string>{494, 1006}</string>
+					<integer>261</integer>
+				</array>
+			</array>
+			<key>FirstCity</key>
+			<string>city06</string>
+			<key>SecondCity</key>
+			<string>city15</string>
+		</dict>
+		<dict>
+			<key>Curves</key>
+			<array>
+				<array>
+					<string>{221, 465}</string>
+					<string>{246, 520}</string>
+					<string>{263, 586}</string>
+					<integer>129</integer>
+				</array>
+				<array>
+					<string>{263, 586}</string>
+					<string>{232, 658}</string>
+					<string>{169, 681}</string>
+					<integer>149</integer>
+				</array>
+			</array>
+			<key>FirstCity</key>
+			<string>city03</string>
+			<key>SecondCity</key>
+			<string>city11</string>
+		</dict>
+		<dict>
+			<key>Curves</key>
+			<array>
+				<array>
+					<string>{1064, 496}</string>
+					<string>{1093, 537}</string>
+					<string>{1107, 584}</string>
+					<integer>100</integer>
+				</array>
+				<array>
+					<string>{1107, 584}</string>
+					<string>{1136, 629}</string>
+					<string>{1202, 622}</string>
+					<integer>124</integer>
+				</array>
+			</array>
+			<key>FirstCity</key>
+			<string>city14</string>
+			<key>SecondCity</key>
+			<string>city05</string>
+		</dict>
+		<dict>
+			<key>Curves</key>
+			<array>
+				<array>
+					<string>{1202, 622}</string>
+					<string>{1063, 665}</string>
+					<string>{993, 728}</string>
+					<integer>242</integer>
+				</array>
+				<array>
+					<string>{993, 728}</string>
+					<string>{949, 774}</string>
+					<string>{892, 812}</string>
+					<integer>132</integer>
+				</array>
+			</array>
+			<key>FirstCity</key>
+			<string>city05</string>
+			<key>SecondCity</key>
+			<string>city13</string>
+		</dict>
+		<dict>
+			<key>Curves</key>
+			<array>
+				<array>
+					<string>{626, 230}</string>
+					<string>{481, 219}</string>
+					<string>{370, 184}</string>
+					<integer>262</integer>
+				</array>
+				<array>
+					<string>{370, 184}</string>
+					<string>{255, 162}</string>
+					<string>{152, 150}</string>
+					<integer>221</integer>
+				</array>
+			</array>
+			<key>FirstCity</key>
+			<string>city02</string>
+			<key>SecondCity</key>
+			<string>city19</string>
+		</dict>
+		<dict>
+			<key>Curves</key>
+			<array>
+				<array>
+					<string>{960, 1104}</string>
+					<string>{1007, 1104}</string>
+					<string>{1042, 1097}</string>
+					<integer>83</integer>
+				</array>
+				<array>
+					<string>{1042, 1097}</string>
+					<string>{1086, 1101}</string>
+					<string>{1119, 1122}</string>
+					<integer>84</integer>
+				</array>
+			</array>
+			<key>FirstCity</key>
+			<string>city20</string>
+			<key>SecondCity</key>
+			<string>city09</string>
+		</dict>
+		<dict>
+			<key>Curves</key>
+			<array>
+				<array>
+					<string>{494, 1006}</string>
+					<string>{429, 1010}</string>
+					<string>{356, 985}</string>
+					<integer>143</integer>
+				</array>
+				<array>
+					<string>{356, 985}</string>
+					<string>{296, 981}</string>
+					<string>{219, 1010}</string>
+					<integer>144</integer>
+				</array>
+			</array>
+			<key>FirstCity</key>
+			<string>city15</string>
+			<key>SecondCity</key>
+			<string>city21</string>
+		</dict>
+		<dict>
+			<key>Curves</key>
+			<array>
+				<array>
+					<string>{219, 1010}</string>
+					<string>{136, 1062}</string>
+					<string>{130, 1154}</string>
+					<integer>195</integer>
+				</array>
+			</array>
+			<key>FirstCity</key>
+			<string>city21</string>
+			<key>SecondCity</key>
+			<string>city07</string>
+		</dict>
+		<dict>
+			<key>Curves</key>
+			<array>
+				<array>
+					<string>{1080, 207}</string>
+					<string>{1002, 202}</string>
+					<string>{913, 206}</string>
+					<integer>167</integer>
+				</array>
+			</array>
+			<key>FirstCity</key>
+			<string>city01</string>
+			<key>SecondCity</key>
+			<string>city22</string>
+		</dict>
+		<dict>
+			<key>Curves</key>
+			<array>
+				<array>
+					<string>{626, 230}</string>
+					<string>{773, 213}</string>
+					<string>{913, 206}</string>
+					<integer>288</integer>
+				</array>
+			</array>
+			<key>FirstCity</key>
+			<string>city02</string>
+			<key>SecondCity</key>
+			<string>city22</string>
+		</dict>
+		<dict>
+			<key>Curves</key>
+			<array>
+				<array>
+					<string>{1119, 1122}</string>
+					<string>{1193, 1185}</string>
+					<string>{1252, 1234}</string>
+					<integer>174</integer>
+				</array>
+			</array>
+			<key>FirstCity</key>
+			<string>city09</string>
+			<key>SecondCity</key>
+			<string>city18</string>
+		</dict>
+		<dict>
+			<key>Curves</key>
+			<array>
+				<array>
+					<string>{1338, 1374}</string>
+					<string>{1300, 1307}</string>
+					<string>{1252, 1234}</string>
+					<integer>164</integer>
+				</array>
+			</array>
+			<key>FirstCity</key>
+			<string>city10</string>
+			<key>SecondCity</key>
+			<string>city18</string>
+		</dict>
+		<dict>
+			<key>Curves</key>
+			<array>
+				<array>
+					<string>{960, 1104}</string>
+					<string>{970, 1138}</string>
+					<string>{958, 1189}</string>
+					<integer>89</integer>
+				</array>
+				<array>
+					<string>{958, 1189}</string>
+					<string>{955, 1232}</string>
+					<string>{948, 1273}</string>
+					<integer>85</integer>
+				</array>
+				<array>
+					<string>{948, 1273}</string>
+					<string>{934, 1332}</string>
+					<string>{975, 1362}</string>
+					<integer>116</integer>
+				</array>
+				<array>
+					<string>{975, 1362}</string>
+					<string>{1009, 1390}</string>
+					<string>{1029, 1425}</string>
+					<integer>85</integer>
+				</array>
+			</array>
+			<key>FirstCity</key>
+			<string>city20</string>
+			<key>SecondCity</key>
+			<string>city08</string>
+		</dict>
+		<dict>
+			<key>Curves</key>
+			<array>
+				<array>
+					<string>{741, 940}</string>
+					<string>{814, 866}</string>
+					<string>{892, 812}</string>
+					<integer>199</integer>
+				</array>
+			</array>
+			<key>FirstCity</key>
+			<string>city06</string>
+			<key>SecondCity</key>
+			<string>city13</string>
+		</dict>
+		<dict>
+			<key>Curves</key>
+			<array>
+				<array>
+					<string>{163, 1451}</string>
+					<string>{144, 1301}</string>
+					<string>{130, 1154}</string>
+					<integer>299</integer>
+				</array>
+			</array>
+			<key>FirstCity</key>
+			<string>city16</string>
+			<key>SecondCity</key>
+			<string>city07</string>
+		</dict>
+		<dict>
+			<key>Curves</key>
+			<array>
+				<array>
+					<string>{724, 1501}</string>
+					<string>{862, 1479}</string>
+					<string>{1029, 1425}</string>
+					<integer>316</integer>
+				</array>
+			</array>
+			<key>FirstCity</key>
+			<string>city17</string>
+			<key>SecondCity</key>
+			<string>city08</string>
+		</dict>
+		<dict>
+			<key>Curves</key>
+			<array>
+				<array>
+					<string>{221, 465}</string>
+					<string>{281, 349}</string>
+					<string>{416, 246}</string>
+					<integer>303</integer>
+				</array>
+				<array>
+					<string>{416, 246}</string>
+					<string>{525, 230}</string>
+					<string>{626, 230}</string>
+					<integer>211</integer>
+				</array>
+			</array>
+			<key>FirstCity</key>
+			<string>city03</string>
+			<key>SecondCity</key>
+			<string>city02</string>
+		</dict>
+		<dict>
+			<key>Curves</key>
+			<array>
+				<array>
+					<string>{436, 1438}</string>
+					<string>{357, 1438}</string>
+					<string>{294, 1455}</string>
+					<integer>145</integer>
+				</array>
+				<array>
+					<string>{294, 1455}</string>
+					<string>{225, 1479}</string>
+					<string>{163, 1451}</string>
+					<integer>144</integer>
+				</array>
+			</array>
+			<key>FirstCity</key>
+			<string>city12</string>
+			<key>SecondCity</key>
+			<string>city16</string>
+		</dict>
+		<dict>
+			<key>Curves</key>
+			<array>
+				<array>
+					<string>{169, 681}</string>
+					<string>{230, 658}</string>
+					<string>{259, 610}</string>
+					<integer>123</integer>
+				</array>
+				<array>
+					<string>{259, 610}</string>
+					<string>{445, 588}</string>
+					<string>{639, 498}</string>
+					<integer>403</integer>
+				</array>
+			</array>
+			<key>FirstCity</key>
+			<string>city11</string>
+			<key>SecondCity</key>
+			<string>city04</string>
+		</dict>
+		<dict>
+			<key>Curves</key>
+			<array>
+				<array>
+					<string>{221, 465}</string>
+					<string>{282, 341}</string>
+					<string>{423, 238}</string>
+					<integer>316</integer>
+				</array>
+				<array>
+					<string>{423, 238}</string>
+					<string>{319, 178}</string>
+					<string>{152, 150}</string>
+					<integer>291</integer>
+				</array>
+			</array>
+			<key>FirstCity</key>
+			<string>city03</string>
+			<key>SecondCity</key>
+			<string>city19</string>
+		</dict>
+		<dict>
+			<key>Curves</key>
+			<array>
+				<array>
+					<string>{741, 940}</string>
+					<string>{820, 1052}</string>
+					<string>{960, 1104}</string>
+					<integer>290</integer>
+				</array>
+			</array>
+			<key>FirstCity</key>
+			<string>city06</string>
+			<key>SecondCity</key>
+			<string>city20</string>
+		</dict>
+	</array>
+	<key>Size</key>
+	<string>{1434, 1638}</string>
+	<key>StartCity</key>
+	<string>city01</string>
+	<key>StartWitchOrientation</key>
+	<false/>
+	<key>TileHeight</key>
+	<integer>1024</integer>
+	<key>TileWidth</key>
+	<integer>1024</integer>
+</dict>
+</plist>
