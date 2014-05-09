@@ -20,6 +20,8 @@ private:
   Point _origin;
   
   Sprite* _background;
+  Sprite* _boy;
+  Sprite* _hook;
   
 public:
   static cocos2d::Scene* createScene();
@@ -27,6 +29,10 @@ public:
   CREATE_FUNC(CIPlayScene);
   
   void addBackground();
+  void addBoy();
+  void addItems();
+  void addHooks();
+  void hookRotateAnimation();
   
   void update(float pDT);
 };
