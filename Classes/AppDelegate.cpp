@@ -3,6 +3,7 @@
 #include "MapScene.h"
 #include "Stage1Scene.h"
 
+
 USING_NS_CC;
 
 AppDelegate::AppDelegate() {
@@ -30,6 +31,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // create a scene. it's an autorelease object
     auto scene = Stage1Scene::create();
+
 
     // run
     director->runWithScene(scene);
