@@ -9,7 +9,7 @@ Scene* HelloWorld::createScene()
     auto scene = Scene::create();
     
     // 'layer' is an autorelease object
-    auto layer = MapScene::create();
+    auto layer = HelloWorld::create();
 
     // add layer as a child to scene
     scene->addChild(layer);
@@ -79,6 +79,7 @@ bool HelloWorld::init()
 
 void HelloWorld::menuCloseCallback(Ref* pSender)
 {
+  GameManager::setCurrentCityName("city02");
   Director::getInstance()->replaceScene(MapScene::create());
 //#if (CC_TARGET_PLATFORM == CC_PLATFORM_WP8) || (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
 //	MessageBox("You pressed the close button. Windows Store Apps do not implement a close button.","Alert");
