@@ -1,4 +1,5 @@
 #include "HelloWorldScene.h"
+#include "MapScene.h"
 
 USING_NS_CC;
 
@@ -8,7 +9,7 @@ Scene* HelloWorld::createScene()
     auto scene = Scene::create();
     
     // 'layer' is an autorelease object
-    auto layer = HelloWorld::create();
+    auto layer = MapScene::create();
 
     // add layer as a child to scene
     scene->addChild(layer);
