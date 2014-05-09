@@ -63,6 +63,9 @@
 		50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A017ECD613001EB2F8 /* Icon-29.png */; };
 		50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
 		7A1FB691191CC4FF008171D2 /* City.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A1FB68F191CC4FF008171D2 /* City.cpp */; };
+		7AA0A8DE191CD3C6004F5774 /* city_selectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AA0A8DB191CD3C6004F5774 /* city_selectors.plist */; };
+		7AA0A8DF191CD3C6004F5774 /* city_selectors.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 7AA0A8DC191CD3C6004F5774 /* city_selectors.pvr.ccz */; };
+		7AA0A8E0191CD3C6004F5774 /* map01.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AA0A8DD191CD3C6004F5774 /* map01.plist */; };
 		7AF71D95191B788E00202960 /* map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7AF71D94191B788E00202960 /* map.jpg */; };
 		7AF71D9A191B78A200202960 /* MapLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AF71D98191B78A200202960 /* MapLayer.cpp */; };
 		7AF71D9D191B793D00202960 /* MapScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AF71D9B191B793D00202960 /* MapScene.cpp */; };
@@ -266,6 +269,9 @@
 		50EF62A117ECD613001EB2F8 /* Icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-50.png"; sourceTree = "<group>"; };
 		7A1FB68F191CC4FF008171D2 /* City.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = City.cpp; path = ../Classes/City.cpp; sourceTree = "<group>"; };
 		7A1FB690191CC4FF008171D2 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = City.h; path = ../Classes/City.h; sourceTree = "<group>"; };
+		7AA0A8DB191CD3C6004F5774 /* city_selectors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city_selectors.plist; sourceTree = "<group>"; };
+		7AA0A8DC191CD3C6004F5774 /* city_selectors.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = city_selectors.pvr.ccz; sourceTree = "<group>"; };
+		7AA0A8DD191CD3C6004F5774 /* map01.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = map01.plist; sourceTree = "<group>"; };
 		7ADEAE54191B800E00ABDC91 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		7AF71D94191B788E00202960 /* map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = map.jpg; sourceTree = "<group>"; };
 		7AF71D98191B78A200202960 /* MapLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapLayer.cpp; path = ../Classes/MapLayer.cpp; sourceTree = "<group>"; };
@@ -474,6 +480,9 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7AA0A8DB191CD3C6004F5774 /* city_selectors.plist */,
+				7AA0A8DC191CD3C6004F5774 /* city_selectors.pvr.ccz */,
+				7AA0A8DD191CD3C6004F5774 /* map01.plist */,
 				7AF71D94191B788E00202960 /* map.jpg */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
@@ -657,11 +666,14 @@
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
+				7AA0A8DE191CD3C6004F5774 /* city_selectors.plist in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
+				7AA0A8E0191CD3C6004F5774 /* map01.plist in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
+				7AA0A8DF191CD3C6004F5774 /* city_selectors.pvr.ccz in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,

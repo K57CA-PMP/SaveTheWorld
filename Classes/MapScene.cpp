@@ -32,6 +32,7 @@ bool MapScene::init()
     return false;
   }
   
+  SpriteFrameCache::getInstance()->addSpriteFramesWithFile("city_selectors.plist");
   mMapLayer = MapLayer::create();
   addChild(mMapLayer);
   

@@ -11,5 +11,6 @@
 
 #define NUMBER_BACKGROUND_IMG 20
 #define SCREEN_SIZE           cocos2d::Director::getInstance()->getWinSize()
+#define Z_MAP_CITIES          14
 
 #endif

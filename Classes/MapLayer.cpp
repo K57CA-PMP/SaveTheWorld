@@ -29,13 +29,12 @@ bool MapLayer::init()
   touchListener->onTouchMoved = CC_CALLBACK_2(MapLayer::onTouchMoved, this);
   _eventDispatcher->addEventListenerWithSceneGraphPriority(touchListener, this);
   
-
   return true;
 }
 
 void MapLayer::addCities()
 {
-  __String* path = __String::createWithFormat("Plist/Maps/map01.plist");
+  __String* path = __String::createWithFormat("map01.plist");
   std::string fullpath = FileUtils::getInstance()->fullPathForFilename(path->getCString());
   __Dictionary* mapDictionary = Dictionary::createWithContentsOfFileThreadSafe(fullpath.c_str());
   
@@ -57,7 +56,7 @@ void MapLayer::addCities()
     __String* cityKey = (__String*)child;
     iCityDictionary = (__Dictionary*)mapCitiesDictionary->objectForKey(cityKey->getCString());
     
-    City *city = City::create(cityKey->getCString(), this, CITY_STATUS_CLEARED);
+    City *city = City::create(cityKey->getCString(), CITY_STATUS_CLEARED);
     
     city->setPosition(PointFromString(((__String*)iCityDictionary->objectForKey("Position"))->getCString()));
     
@@ -75,14 +74,14 @@ void MapLayer::addCities()
     iCityDictionary = (__Dictionary*)mapCitiesDictionary->objectForKey(pCity->getName());
     __Array *pCityNeighbourArray = __Array::create();
     
-    CCObject *pChild;
+    Ref *pChild;
     CCARRAY_FOREACH((__Array*)iCityDictionary->objectForKey("NeighbourCities"), pChild)
     {
       __String *pNeighbourCityName = (__String*)pChild;
-      pCityNeighbourArray->addObject(((CCDictionary*)mapCitiesDictionary->objectForKey(pNeighbourCityName->getCString()))->objectForKey("Object"));
+      pCityNeighbourArray->addObject(((__Dictionary*)mapCitiesDictionary->objectForKey(pNeighbourCityName->getCString()))->objectForKey("Object"));
     }
     
-    pCity->setNeighBours(pCityNeighbourArray);
+//    pCity->setNeighBours(pCityNeighbourArray);
   }
   
 //  if (pCurrentCityName == NULL || strcmp(pCurrentCityName, "") == 0)

@@ -10,12 +10,11 @@
 
 USING_NS_CC;
 
-City* City::create(const char *pName, MapLayer *pMapLayer, eCityStatus pCityStatus)
+City* City::create(const char *pName, eCityStatus pCityStatus)
 {
   City *pobSprite = new City();
   
   if (pobSprite && pobSprite->init(pName,
-                                   pMapLayer,
                                    pCityStatus))
   {
     pobSprite->autorelease();
@@ -26,13 +25,13 @@ City* City::create(const char *pName, MapLayer *pMapLayer, eCityStatus pCityStat
 }
 
 
-bool City::init(const char *pName, MapLayer *pMapLayer, eCityStatus pCityStatus)
+bool City::init(const char *pName, eCityStatus pCityStatus)
 {
   if (!Sprite::init())
   {
     return false;
   }
-  mMapLayer = pMapLayer;
+//  mMapLayer = pMapLayer;
   mInnerCircle = CCSprite::createWithSpriteFrameName("city_selector_inner.png");
   mOuterCircle = CCSprite::createWithSpriteFrameName("city_selector_outer.png");
   this->addChild(mInnerCircle);
