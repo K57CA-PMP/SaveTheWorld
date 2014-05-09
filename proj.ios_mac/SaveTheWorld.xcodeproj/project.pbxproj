@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17CA7713191CD29100CC9814 /* CIPlayScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17CA7711191CD29100CC9814 /* CIPlayScene.cpp */; };
+		17CA7719191CD5A600CC9814 /* city_selectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17CA7715191CD5A600CC9814 /* city_selectors.plist */; };
+		17CA771A191CD5A600CC9814 /* city_selectors.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 17CA7716191CD5A600CC9814 /* city_selectors.pvr.ccz */; };
+		17CA771B191CD5A600CC9814 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 17CA7717191CD5A600CC9814 /* fonts */; };
+		17CA771C191CD5A600CC9814 /* map01.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17CA7718191CD5A600CC9814 /* map01.plist */; };
+		17CA771E191CD63600CC9814 /* CollectItems in Resources */ = {isa = PBXBuildFile; fileRef = 17CA771D191CD63600CC9814 /* CollectItems */; };
 		1AC6FB1F180E996B004C840B /* libbox2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAFF180E9839004C840B /* libbox2d Mac.a */; };
 		1AC6FB20180E996B004C840B /* libchipmunk Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAFD180E9839004C840B /* libchipmunk Mac.a */; };
 		1AC6FB21180E996B004C840B /* libcocos2dx Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2dx Mac.a */; };
@@ -219,6 +225,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17CA7711191CD29100CC9814 /* CIPlayScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CIPlayScene.cpp; path = ../Classes/CIPlayScene.cpp; sourceTree = "<group>"; };
+		17CA7712191CD29100CC9814 /* CIPlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CIPlayScene.h; path = ../Classes/CIPlayScene.h; sourceTree = "<group>"; };
+		17CA7715191CD5A600CC9814 /* city_selectors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city_selectors.plist; sourceTree = "<group>"; };
+		17CA7716191CD5A600CC9814 /* city_selectors.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = city_selectors.pvr.ccz; sourceTree = "<group>"; };
+		17CA7717191CD5A600CC9814 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		17CA7718191CD5A600CC9814 /* map01.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = map01.plist; sourceTree = "<group>"; };
+		17CA771D191CD63600CC9814 /* CollectItems */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CollectItems; sourceTree = "<group>"; };
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = ../Classes/AppDelegate.cpp; sourceTree = "<group>"; };
@@ -359,9 +372,19 @@
 				7AF71D9C191B793D00202960 /* MapScene.h */,
 				7A1FB68F191CC4FF008171D2 /* City.cpp */,
 				7A1FB690191CC4FF008171D2 /* City.h */,
+				17CA770E191CD1E300CC9814 /* CollectItems */,
 			);
 			name = Classes;
 			path = ../classes;
+			sourceTree = "<group>";
+		};
+		17CA770E191CD1E300CC9814 /* CollectItems */ = {
+			isa = PBXGroup;
+			children = (
+				17CA7711191CD29100CC9814 /* CIPlayScene.cpp */,
+				17CA7712191CD29100CC9814 /* CIPlayScene.h */,
+			);
+			name = CollectItems;
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -474,6 +497,11 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				17CA771D191CD63600CC9814 /* CollectItems */,
+				17CA7715191CD5A600CC9814 /* city_selectors.plist */,
+				17CA7716191CD5A600CC9814 /* city_selectors.pvr.ccz */,
+				17CA7717191CD5A600CC9814 /* fonts */,
+				17CA7718191CD5A600CC9814 /* map01.plist */,
 				7AF71D94191B788E00202960 /* map.jpg */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
@@ -651,17 +679,22 @@
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
+				17CA771C191CD5A600CC9814 /* map01.plist in Resources */,
 				7AF71D95191B788E00202960 /* map.jpg in Resources */,
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
+				17CA771E191CD63600CC9814 /* CollectItems in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
+				17CA771B191CD5A600CC9814 /* fonts in Resources */,
+				17CA7719191CD5A600CC9814 /* city_selectors.plist in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
+				17CA771A191CD5A600CC9814 /* city_selectors.pvr.ccz in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
@@ -693,6 +726,7 @@
 				7A1FB691191CC4FF008171D2 /* City.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				17CA7713191CD29100CC9814 /* CIPlayScene.cpp in Sources */,
 				7AF71D9D191B793D00202960 /* MapScene.cpp in Sources */,
 				7AF71D9A191B78A200202960 /* MapLayer.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
