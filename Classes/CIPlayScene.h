@@ -16,10 +16,12 @@ USING_NS_CC;
 #define ROTATE 0
 #define LAUNCH 1
 #define RETRIEVE 2
+#define ITEM_COLLECTED 3
 #define HOOK_POSTITION Point(_visibleSize.width/2 - 20, _visibleSize.height - 30)
 #define LIMITED_ANGLE 80
 #define ROTATION_DELAY 1
 #define LAUNCHING_DELAY 1
+#define RETRIEVING_DELAY 0.7
 #define PI 3.14159265
 
 class CIPlayScene : cocos2d::Layer
@@ -36,8 +38,13 @@ private:
   Spawn* _launchAction;
   Spawn* _retrieveAction;
   
+  Spawn* _itemRetrieveAction;
+  
   int _state;
   bool _isHookRotating;
+  bool _ItemCollected;
+  
+  Sprite* food;
   
 public:
   static cocos2d::Scene* createScene();
@@ -52,6 +59,9 @@ public:
   void hookRotateAnimation();
   void hookLaunchAnimation();
   void hookRetrieveAnimation();
+  void itemRetrieveAnimation();
+  
+  void checkCollision();
   
   void handleTouch();
   

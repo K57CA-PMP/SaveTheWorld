@@ -38,6 +38,7 @@ bool CIPlayScene::init()
   
   _rotateAction->retain();
   _isHookRotating = false;
+  _ItemCollected = false;
   
   schedule(schedule_selector(CIPlayScene::update));
   
@@ -64,7 +65,7 @@ void CIPlayScene::addBoy()
 
 void CIPlayScene::addItems()
 {
-  Sprite* food = Sprite::create("CollectItems/food.png");
+  food = Sprite::create("CollectItems/food.png");
   food->setScale(0.5);
   food->setPosition(Point(_visibleSize.width/3, _visibleSize.height/3));
   this->addChild(food, 5);
@@ -119,13 +120,54 @@ void CIPlayScene::hookLaunchAnimation()
   }
   Animate* launch = Animate::create(launching);
   ActionInterval* action = MoveTo::create(LAUNCHING_DELAY, Point(dstX, dstY));
-  ActionInterval* sequence = Sequence::create(action, NULL);
-  _launchAction = Spawn::create(sequence, launch, NULL);
+  _launchAction = Spawn::create(action, launch, NULL);
   _launchAction->retain();
   _hook->runAction(_launchAction);
 }
 
-void CIPlayScene::
+void CIPlayScene::hookRetrieveAnimation()
+{
+  Animation* retrieving = Animation::create();
+  retrieving->addSpriteFrameWithFile("CollectItems/hook_long.png");
+  
+  Animate* retrieve = Animate::create(retrieving);
+  ActionInterval* action;
+  if (_ItemCollected)
+  {
+    action = MoveTo::create(RETRIEVING_DELAY * 5, HOOK_POSTITION);
+  }
+  else
+  {
+    action = MoveTo::create(RETRIEVING_DELAY, HOOK_POSTITION);
+  }
+  _retrieveAction = Spawn::create(action, retrieve, NULL);
+  _retrieveAction->retain();
+  _hook->runAction(_retrieveAction);
+}
+
+void CIPlayScene::checkCollision()
+{
+  Rect hookRect = _hook->boundingBox();
+  Rect foodRect = food->boundingBox();
+  if (hookRect.intersectsRect(foodRect))
+  {
+    _hook->stopAllActions();
+    _state = ITEM_COLLECTED;
+    _ItemCollected = true;
+  }
+}
+
+void CIPlayScene::itemRetrieveAnimation()
+{
+  Animation* retrieving = Animation::create();
+  retrieving->addSpriteFrameWithFile("CollectItems/food.png");
+  
+  Animate* retrieve = Animate::create(retrieving);
+  ActionInterval* action = MoveTo::create(RETRIEVING_DELAY * 6.5, HOOK_POSTITION);
+  _itemRetrieveAction = Spawn::create(action, retrieve, NULL);
+  _itemRetrieveAction->retain();
+  food->runAction(_itemRetrieveAction);
+}
 
 void CIPlayScene::handleTouch()
 {
@@ -134,9 +176,9 @@ void CIPlayScene::handleTouch()
   
   listener->onTouchBegan = [=](Touch* pTouch, Event* pEvent)
   {
-    _state = LAUNCH;
     _hook->stopAllActions();
     this->hookLaunchAnimation();
+    _state = LAUNCH;
     return false;
   };
   
@@ -154,19 +196,30 @@ void CIPlayScene::update(float pDT)
   }
   else if (_state == LAUNCH)
   {
-//    _hook->stopAction(_rotateAction);
-//    _hook->runAction(_launchAction);
+    this->checkCollision();
     if (_launchAction->isDone())
     {
-      _hook->setPosition(HOOK_POSTITION);
+      this->hookRetrieveAnimation();
       _state = RETRIEVE;
     }
-    _isHookRotating = false;
   }
   else if (_state == RETRIEVE)
   {
-    
-    
-    _state = ROTATE;
+    if (_retrieveAction->isDone())
+    {
+      if (_ItemCollected)
+      {
+        food->setVisible(false);
+        _ItemCollected = false;
+      }
+      _isHookRotating = false;
+      _state = ROTATE;
+    }
+  }
+  else if (_state == ITEM_COLLECTED)
+  {
+    this->hookRetrieveAnimation();
+    this->itemRetrieveAnimation();
+    _state = RETRIEVE;
   }
 }
