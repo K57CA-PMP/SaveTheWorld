@@ -42,7 +42,7 @@ bool City::init(const char *pName, eCityStatus pCityStatus)
   mCleared->setVisible(false);
 
   mArrow = Sprite::createWithSpriteFrameName("city_selector_arrow.png");
-  mArrow->setVisible(true);
+  mArrow->setVisible(false);
   
   //Positions
   mInnerCircle->setPosition(Point(mOuterCircle->boundingBox().size.width/2,
@@ -89,3 +89,7 @@ bool City::init(const char *pName, eCityStatus pCityStatus)
   return true;
 }
 
+void City::updateSprite()
+{
+  mArrow->setVisible(true);
+}

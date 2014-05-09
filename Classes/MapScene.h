@@ -14,12 +14,14 @@
 
 class MapScene : public cocos2d::Scene
 {
+private:
+  MapLayer* mMapLayer;
+  cocos2d::Menu* mPlayButton;
+
 public:
   virtual bool init();  
   static MapScene* create();
-private:
-  MapLayer* mMapLayer;
-  
+  void play(cocos2d::Ref* pSender);
 };
 
 #endif /* defined(__SaveTheWorld__MapScene__) */

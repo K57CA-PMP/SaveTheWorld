@@ -10,7 +10,21 @@
 
 USING_NS_CC;
 
-bool MapLayer::init()
+MapLayer* MapLayer::create(const char *pCurrentCityName)
+{
+  MapLayer *pobSprite = new MapLayer();
+  
+  if (pobSprite && pobSprite->init(pCurrentCityName));
+  {
+    pobSprite->autorelease();
+    return pobSprite;
+  }
+  CC_SAFE_DELETE(pobSprite);
+  return NULL;
+}
+
+
+bool MapLayer::init(const char* pCurrentCityName)
 {
   if (!Layer::init())
   {
@@ -22,7 +36,8 @@ bool MapLayer::init()
   map->setAnchorPoint(Point::ANCHOR_BOTTOM_LEFT);
   addChild(map);
   
-  addCities();
+  
+  addCities(pCurrentCityName);
   
   auto touchListener = EventListenerTouchOneByOne::create();
   touchListener->onTouchBegan = CC_CALLBACK_2(MapLayer::onTouchBegan, this);
@@ -32,11 +47,18 @@ bool MapLayer::init()
   return true;
 }
 
-void MapLayer::addCities()
+void MapLayer::addCities(const char* pCurrentCityName)
 {
   __String* path = __String::createWithFormat("map01.plist");
   std::string fullpath = FileUtils::getInstance()->fullPathForFilename(path->getCString());
   __Dictionary* mapDictionary = Dictionary::createWithContentsOfFileThreadSafe(fullpath.c_str());
+  
+  if (pCurrentCityName == NULL || strcmp(pCurrentCityName, "") == 0)
+  {
+    pCurrentCityName = mapDictionary->valueForKey("StartCity")->getCString();
+  }
+  
+  GameManager::setCurrentCityName(pCurrentCityName);
   
   // References
   __Dictionary* mapCitiesDictionary = (__Dictionary*)mapDictionary->objectForKey("Cities");
@@ -56,43 +78,38 @@ void MapLayer::addCities()
     __String* cityKey = (__String*)child;
     iCityDictionary = (__Dictionary*)mapCitiesDictionary->objectForKey(cityKey->getCString());
     
-    City *city = City::create(cityKey->getCString(), CITY_STATUS_CLEARED);
+    City *city = City::create(cityKey->getCString(), CITY_STATUS_LOCKED);
     
     city->setPosition(PointFromString(((__String*)iCityDictionary->objectForKey("Position"))->getCString()));
-//    if (cityKey->compare("city01") == 0)
+    if (cityKey->compare(pCurrentCityName) == 0)
     {
-      this->addChild(city, Z_MAP_CITIES);
+      city->updateSprite();
     }
-    
+    this->addChild(city, Z_MAP_CITIES);
     
     iCityDictionary->setObject(city, "Object");
     
     mCitiesArray->addObject((Ref*) city);
   }
   
-  CCARRAY_FOREACH(mCitiesArray, child)
-  {
-    City *city = (City*)child;
-    
-    iCityDictionary = (__Dictionary*)mapCitiesDictionary->objectForKey(city->getName());
-    __Array *pCityNeighbourArray = __Array::create();
-    
-    Ref *pChild;
-    CCARRAY_FOREACH((__Array*)iCityDictionary->objectForKey("NeighbourCities"), pChild)
-    {
-      __String *pNeighbourCityName = (__String*)pChild;
-      pCityNeighbourArray->addObject(((__Dictionary*)mapCitiesDictionary->objectForKey(pNeighbourCityName->getCString()))->objectForKey("Object"));
-    }
-    
-//    pCity->setNeighBours(pCityNeighbourArray);
-  }
-  
-////  if (pCurrentCityName == NULL || strcmp(pCurrentCityName, "") == 0)
-////  {
-////    pCurrentCityName = mapDictionary->valueForKey("StartCity")->getCString();
-////  }
-//  
-////  mCurrentCity = (City*)((CCDictionary*)mapCitiesDictionary->objectForKey(pCurrentCityName))->objectForKey("Object");
+//  CCARRAY_FOREACH(mCitiesArray, child)
+//  {
+//    City *city = (City*)child;
+//    
+//    iCityDictionary = (__Dictionary*)mapCitiesDictionary->objectForKey(city->getName());
+//    __Array *pCityNeighbourArray = __Array::create();
+//    
+//    Ref *pChild;
+//    CCARRAY_FOREACH((__Array*)iCityDictionary->objectForKey("NeighbourCities"), pChild)
+//    {
+//      __String *pNeighbourCityName = (__String*)pChild;
+//      pCityNeighbourArray->addObject(((__Dictionary*)mapCitiesDictionary->objectForKey(pNeighbourCityName->getCString()))->objectForKey("Object"));
+//    }
+//    
+////    pCity->setNeighBours(pCityNeighbourArray);
+//  }
+
+//  mCurrentCity = (City*)((__Dictionary*)mapCitiesDictionary->objectForKey(pCurrentCity))->objectForKey("Object");
 ////  mCurrentCity->makeCurrent();
 ////  mCurrentCity->unlock();
 //  this->scrollToPoint(mCurrentCity->getPosition());
