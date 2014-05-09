@@ -39,6 +39,7 @@ bool CIPlayScene::init()
   _rotateAction->retain();
   _isHookRotating = false;
   _ItemCollected = false;
+  _indexOfCollectedItem = -1;
   
   schedule(schedule_selector(CIPlayScene::update));
   
@@ -65,10 +66,20 @@ void CIPlayScene::addBoy()
 
 void CIPlayScene::addItems()
 {
-  food = Sprite::create("CollectItems/food.png");
-  food->setScale(0.5);
-  food->setPosition(Point(_visibleSize.width/3, _visibleSize.height/3));
-  this->addChild(food, 5);
+  _itemsArray = CCArray::createWithCapacity(5);
+  _itemsArray->retain();
+  for (int i = 0; i < 5;  i++)
+  {
+    Sprite* food = Sprite::create("CollectItems/food.png");
+    food->setScale(0.3);
+    food->setPosition(Point(_visibleSize.width/(i+2), _visibleSize.height/3));
+    this->addChild(food, 5);
+    _itemsArray->addObject(food);
+  }
+//  food = Sprite::create("CollectItems/food.png");
+//  food->setScale(0.5);
+//  food->setPosition(Point(_visibleSize.width/3, _visibleSize.height/3));
+//  this->addChild(food, 5);
 }
 
 void CIPlayScene::addHooks()
@@ -148,12 +159,17 @@ void CIPlayScene::hookRetrieveAnimation()
 void CIPlayScene::checkCollision()
 {
   Rect hookRect = _hook->boundingBox();
-  Rect foodRect = food->boundingBox();
-  if (hookRect.intersectsRect(foodRect))
+  for (int i = 0; i < _itemsArray->count(); i++)
   {
-    _hook->stopAllActions();
-    _state = ITEM_COLLECTED;
-    _ItemCollected = true;
+    Rect foodRect = ((Sprite*)(_itemsArray->objectAtIndex(i)))->boundingBox();
+    if (hookRect.intersectsRect(foodRect))
+    {
+      _hook->stopAllActions();
+      _state = ITEM_COLLECTED;
+      _ItemCollected = true;
+      _indexOfCollectedItem = i;
+      break;
+    }
   }
 }
 
@@ -166,7 +182,7 @@ void CIPlayScene::itemRetrieveAnimation()
   ActionInterval* action = MoveTo::create(RETRIEVING_DELAY * 6.5, HOOK_POSTITION);
   _itemRetrieveAction = Spawn::create(action, retrieve, NULL);
   _itemRetrieveAction->retain();
-  food->runAction(_itemRetrieveAction);
+  ((Sprite*)(_itemsArray->objectAtIndex(_indexOfCollectedItem)))->runAction(_itemRetrieveAction);
 }
 
 void CIPlayScene::handleTouch()
@@ -209,7 +225,8 @@ void CIPlayScene::update(float pDT)
     {
       if (_ItemCollected)
       {
-        food->setVisible(false);
+        ((Sprite*)(_itemsArray->objectAtIndex(_indexOfCollectedItem)))->setVisible(false);
+        _itemsArray->removeObjectAtIndex(_indexOfCollectedItem);
         _ItemCollected = false;
       }
       _isHookRotating = false;

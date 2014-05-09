@@ -44,7 +44,8 @@ private:
   bool _isHookRotating;
   bool _ItemCollected;
   
-  Sprite* food;
+  CCArray* _itemsArray;
+  int _indexOfCollectedItem;
   
 public:
   static cocos2d::Scene* createScene();
