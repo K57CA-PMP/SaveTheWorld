@@ -47,6 +47,7 @@ bool CIPlayScene::init()
   addLbls();
   
   schedule(schedule_selector(CIPlayScene::update));
+  schedule(schedule_selector(CIPlayScene::countdown), 1);
   
   return true;
 }
@@ -307,6 +308,9 @@ void CIPlayScene::update(float pDT)
       {
         ((Sprite*)(_itemsArray->objectAtIndex(_indexOfCollectedItem)))->setVisible(false);
         _itemsArray->removeObjectAtIndex(_indexOfCollectedItem);
+        _score++;
+        sprintf(_scoreBuffer, "%i", _score);
+        _scoreLbl->setString(_scoreBuffer);
         _ItemCollected = false;
       }
       _isHookRotating = false;
@@ -315,11 +319,19 @@ void CIPlayScene::update(float pDT)
   }
   else if (_state == ITEM_COLLECTED)
   {
-    _score++;
-    sprintf(_scoreBuffer, "%i", _score);
-    _scoreLbl->setString(_scoreBuffer);
     this->hookRetrieveAnimation();
     this->itemRetrieveAnimation();
     _state = RETRIEVE;
+  }
+}
+
+void CIPlayScene::countdown(float pDT)
+{
+  pDT = 1/50;
+  if (_timeLimit > 0)
+  {
+    _timeLimit--;
+    sprintf(_timeBuffer, "00:%i", _timeLimit);
+    _timeLbl->setString(_timeBuffer);
   }
 }

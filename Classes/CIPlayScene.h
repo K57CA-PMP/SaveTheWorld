@@ -91,6 +91,7 @@ public:
   void handleTouch();
   
   void update(float pDT);
+  void countdown(float pDT);
 };
 
 #endif /* defined(__SaveTheWorld__CIPlayScene__) */
