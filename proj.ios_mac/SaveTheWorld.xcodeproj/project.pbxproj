@@ -13,6 +13,7 @@
 		17CA771B191CD5A600CC9814 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 17CA7717191CD5A600CC9814 /* fonts */; };
 		17CA771C191CD5A600CC9814 /* map01.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17CA7718191CD5A600CC9814 /* map01.plist */; };
 		17CA7740191DDB9400CC9814 /* CollectItems in Resources */ = {isa = PBXBuildFile; fileRef = 17CA773F191DDB9400CC9814 /* CollectItems */; };
+		17CA7743191DFA8E00CC9814 /* CIGameManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17CA7741191DFA8E00CC9814 /* CIGameManager.cpp */; };
 		1AC6FB1F180E996B004C840B /* libbox2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAFF180E9839004C840B /* libbox2d Mac.a */; };
 		1AC6FB20180E996B004C840B /* libchipmunk Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAFD180E9839004C840B /* libchipmunk Mac.a */; };
 		1AC6FB21180E996B004C840B /* libcocos2dx Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2dx Mac.a */; };
@@ -232,6 +233,8 @@
 		17CA7717191CD5A600CC9814 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		17CA7718191CD5A600CC9814 /* map01.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = map01.plist; sourceTree = "<group>"; };
 		17CA773F191DDB9400CC9814 /* CollectItems */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CollectItems; sourceTree = "<group>"; };
+		17CA7741191DFA8E00CC9814 /* CIGameManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CIGameManager.cpp; path = ../Classes/CIGameManager.cpp; sourceTree = "<group>"; };
+		17CA7742191DFA8E00CC9814 /* CIGameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CIGameManager.h; path = ../Classes/CIGameManager.h; sourceTree = "<group>"; };
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = ../Classes/AppDelegate.cpp; sourceTree = "<group>"; };
@@ -383,6 +386,8 @@
 			children = (
 				17CA7711191CD29100CC9814 /* CIPlayScene.cpp */,
 				17CA7712191CD29100CC9814 /* CIPlayScene.h */,
+				17CA7741191DFA8E00CC9814 /* CIGameManager.cpp */,
+				17CA7742191DFA8E00CC9814 /* CIGameManager.h */,
 			);
 			name = CollectItems;
 			sourceTree = "<group>";
@@ -722,6 +727,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				17CA7743191DFA8E00CC9814 /* CIGameManager.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				7A1FB691191CC4FF008171D2 /* City.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,

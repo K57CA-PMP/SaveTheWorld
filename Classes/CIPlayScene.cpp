@@ -42,6 +42,9 @@ bool CIPlayScene::init()
   _indexOfCollectedItem = -1;
   _hooktail = CCArray::create();
   _hooktail->retain();
+  _score = 0;
+  _timeLimit = 30;
+  addLbls();
   
   schedule(schedule_selector(CIPlayScene::update));
   
@@ -110,12 +113,30 @@ void CIPlayScene::addHooks()
   Sprite* staticHook = Sprite::create("CollectItems/hook.png");
   staticHook->setPosition(_visibleSize.width/2 + 27,
                           _visibleSize.height - 60);
-  this->addChild(staticHook, 10);
+  this->addChild(staticHook, 3);
   
   _hook = Sprite::create("CollectItems/hook.png");
   _hook->setAnchorPoint(Point(0.5, 1));
   _hook->setPosition(HOOK_POSITION);
   this->addChild(_hook, 4);
+}
+
+void CIPlayScene::addLbls()
+{
+  _scoreLbl = CCLabelTTF::create("0", "ordin", 50);
+  _scoreLbl->setHorizontalAlignment(kCCTextAlignmentCenter);
+  _scoreLbl->setVerticalAlignment(kCCVerticalTextAlignmentCenter);
+  _scoreLbl->setColor(Color3B(255, 255, 255));
+  _scoreLbl->setPosition(SCORE_LBL_POS * 1.45);
+  this->addChild(_scoreLbl, 10);
+  
+  CCString* timeStart = CCString::createWithFormat("00:%i", _timeLimit);
+  _timeLbl = CCLabelTTF::create(timeStart->getCString(), "ordin", 50);
+  _timeLbl->setHorizontalAlignment(kCCTextAlignmentCenter);
+  _timeLbl->setVerticalAlignment(kCCVerticalTextAlignmentCenter);
+  _timeLbl->setColor(Color3B(255, 255, 255));
+  _timeLbl->setPosition(TIME_LBL_POS * 1.45);
+  this->addChild(_timeLbl, 10);
 }
 
 void CIPlayScene::hookRotateAnimation()
@@ -210,7 +231,7 @@ void CIPlayScene::checkCollision()
   for (int i = 0; i < _itemsArray->count(); i++)
   {
     Sprite* itemShadow = Sprite::create("CollectItems/itemShadow.png");
-    itemShadow->setScale(1.2);
+    itemShadow->setScale(1.5);
     itemShadow->setPosition(((Sprite*)(_itemsArray->objectAtIndex(i)))->getPosition());
     itemShadow->setVisible(false);
     Rect itemRect = itemShadow->getBoundingBox();
@@ -233,9 +254,11 @@ void CIPlayScene::handleTouch()
   
   listener->onTouchBegan = [=](Touch* pTouch, Event* pEvent)
   {
-    _hook->stopAllActions();
-    this->hookLaunchAnimation();
-    _state = LAUNCH;
+    if (_state == ROTATE) {
+      _hook->stopAllActions();
+      this->hookLaunchAnimation();
+      _state = LAUNCH;
+    }
     return false;
   };
   
@@ -292,6 +315,9 @@ void CIPlayScene::update(float pDT)
   }
   else if (_state == ITEM_COLLECTED)
   {
+    _score++;
+    sprintf(_scoreBuffer, "%i", _score);
+    _scoreLbl->setString(_scoreBuffer);
     this->hookRetrieveAnimation();
     this->itemRetrieveAnimation();
     _state = RETRIEVE;

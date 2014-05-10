@@ -26,13 +26,16 @@ USING_NS_CC;
 #define PI 3.14159265
 
 #define NUM_OF_ITEMS 7
-#define ITEM1_POS Point(65, 220)
+#define ITEM1_POS Point(150, 250)
 #define ITEM2_POS Point(85, 140)
 #define ITEM3_POS Point(220, 80)
 #define ITEM4_POS Point(360, 180)
 #define ITEM5_POS Point(540, 60)
 #define ITEM6_POS Point(640, 220)
 #define ITEM7_POS Point(740, 80)
+
+#define SCORE_LBL_POS Point(150, 400)
+#define TIME_LBL_POS Point(50, 400)
 
 class CIPlayScene : cocos2d::Layer
 {
@@ -58,6 +61,13 @@ private:
   CCArray* _hooktail;
   int _indexOfCollectedItem;
   
+  int _score;
+  CCLabelTTF* _scoreLbl;
+  CCLabelTTF* _timeLbl;
+  char _scoreBuffer[2];
+  char _timeBuffer[5];
+  int _timeLimit;
+  
 public:
   static cocos2d::Scene* createScene();
   virtual bool init();
@@ -67,6 +77,7 @@ public:
   void addBoy();
   void addItems();
   void addHooks();
+  void addLbls();
   
   void hookRotateAnimation();
   void hookLaunchAnimation();
