@@ -13,30 +13,6 @@
 #include "cocos2d.h"
 USING_NS_CC;
 
-#define ROTATE 0
-#define LAUNCH 1
-#define RETRIEVE 2
-#define ITEM_COLLECTED 3
-#define HOOK_POSITION Point(_visibleSize.width/2 - 20, _visibleSize.height - 30)
-#define ITEM_DST_POS Point(_visibleSize.width/2 - 20, _visibleSize.height - 100)
-#define LIMITED_ANGLE 80
-#define ROTATION_DELAY 1
-#define LAUNCHING_DELAY 1
-#define RETRIEVING_DELAY 1
-#define PI 3.14159265
-
-#define NUM_OF_ITEMS 7
-#define ITEM1_POS Point(150, 250)
-#define ITEM2_POS Point(85, 140)
-#define ITEM3_POS Point(220, 80)
-#define ITEM4_POS Point(360, 180)
-#define ITEM5_POS Point(540, 60)
-#define ITEM6_POS Point(640, 220)
-#define ITEM7_POS Point(740, 80)
-
-#define SCORE_LBL_POS Point(150, 400)
-#define TIME_LBL_POS Point(50, 400)
-
 class CIPlayScene : cocos2d::Layer
 {
 private:
@@ -46,6 +22,7 @@ private:
   Sprite* _background;
   Sprite* _boy;
   Sprite* _hook;
+  Sprite* _gameOver;
   
   RepeatForever* _rotateAction;
   Spawn* _launchAction;
@@ -78,6 +55,7 @@ public:
   void addItems();
   void addHooks();
   void addLbls();
+  void addGameOver();
   
   void hookRotateAnimation();
   void hookLaunchAnimation();

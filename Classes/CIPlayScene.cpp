@@ -9,6 +9,7 @@
 #include "CIPlayScene.h"
 #include "cocos2d.h"
 #include <math.h>
+#include "Constant.h"
 USING_NS_CC;
 
 Scene* CIPlayScene::createScene()
@@ -33,6 +34,7 @@ bool CIPlayScene::init()
   addBoy();
   addItems();
   addHooks();
+  addGameOver();
   hookRotateAnimation();
   handleTouch();
   
@@ -43,7 +45,7 @@ bool CIPlayScene::init()
   _hooktail = CCArray::create();
   _hooktail->retain();
   _score = 0;
-  _timeLimit = 30;
+  _timeLimit = 3;
   addLbls();
   
   schedule(schedule_selector(CIPlayScene::update));
@@ -138,6 +140,15 @@ void CIPlayScene::addLbls()
   _timeLbl->setColor(Color3B(255, 255, 255));
   _timeLbl->setPosition(TIME_LBL_POS * 1.45);
   this->addChild(_timeLbl, 10);
+}
+
+void CIPlayScene::addGameOver()
+{
+  _gameOver = Sprite::create("CollectItems/gameOver.png");
+  _gameOver->setScale(2);
+  _gameOver->setPosition(SCREEN_SIZE.width/2, SCREEN_SIZE.height/2);
+  _gameOver->setVisible(false);
+  this->addChild(_gameOver, 11);
 }
 
 void CIPlayScene::hookRotateAnimation()
@@ -323,15 +334,27 @@ void CIPlayScene::update(float pDT)
     this->itemRetrieveAnimation();
     _state = RETRIEVE;
   }
+  else if (_state == GAME_OVER)
+  {
+    _hook->stopAllActions();
+    _gameOver->setVisible(true);
+  }
 }
 
 void CIPlayScene::countdown(float pDT)
 {
-  pDT = 1/50;
   if (_timeLimit > 0)
   {
+    if (_timeLimit <= 10)
+    {
+      _timeLbl->setColor(Color3B(198, 68, 56));
+    }
     _timeLimit--;
     sprintf(_timeBuffer, "00:%i", _timeLimit);
     _timeLbl->setString(_timeBuffer);
+  }
+  else
+  {
+    _state = GAME_OVER;
   }
 }
