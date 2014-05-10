@@ -84,6 +84,7 @@ void MapLayer::addCities(const char* pCurrentCityName)
     City *city = City::create(cityKey->getCString(), CITY_STATUS_LOCKED);
     
     city->setPosition(ccpAdd(PointFromString(((__String*)iCityDictionary->objectForKey("Position"))->getCString()), ccp(380, 300)));
+    city->setScale(1.5f);
     if (cityKey->compare(pCurrentCityName) == 0)
     {
       city->updateSprite();
