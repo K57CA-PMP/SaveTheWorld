@@ -1,4 +1,5 @@
 #include "HelloWorldScene.h"
+#include "MapScene.h"
 
 USING_NS_CC;
 
@@ -81,4 +82,30 @@ void HelloWorld::menuCloseCallback(Ref* pSender)
   CIGameManager::setGameLevel(CIGameManager::getGameLevel() + 1);
   Scene* scene = CIPlayScene::createScene();
   Director::getInstance()->sharedDirector()->replaceScene(scene);
+  
+  std::string currentCityName = UserDefault::getInstance()->getStringForKey("CurrentCityName"); //GameManager::getCurrentCityName();
+  CCLOG("cur: %s", currentCityName.c_str());
+  int newCityNumber = __String::create(currentCityName.substr(4, 2))->intValue() + 1;
+  if (newCityNumber > 22)
+    newCityNumber = 22;
+  
+  __String* newCityName = __String::createWithFormat("city%s%d", newCityNumber <= 9 ? "0" : "", newCityNumber);
+  CCLOG("new: %s", newCityName->getCString());
+//  GameManager::setCurrentCityName(newCityName->getCString());
+  UserDefault::getInstance()->setStringForKey("CurrentCityName", newCityName->getCString());
+  UserDefault::getInstance()->setIntegerForKey("CurrentCityNo", newCityNumber);
+  CCLOG("gamemanager: %s", UserDefault::getInstance()->getStringForKey("CurrentCityName").c_str()); //
+  
+  Director::getInstance()->replaceScene(MapScene::create());
+//#if (CC_TARGET_PLATFORM == CC_PLATFORM_WP8) || (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
+//	MessageBox("You pressed the close button. Windows Store Apps do not implement a close button.","Alert");
+//    return;
+//#endif
+//
+//    Director::getInstance()->end();
+//
+//#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+//    exit(0);
+//#endif
+
 }

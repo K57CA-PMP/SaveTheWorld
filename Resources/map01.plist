@@ -67,7 +67,7 @@
 			<key>Particles</key>
 			<string>sun</string>
 			<key>Position</key>
-			<string>{1080, 207}</string>
+			<string>{429, 375}</string>
 			<key>ShopPosition</key>
 			<string>{1007, 220}</string>
 			<key>Stage</key>
@@ -134,7 +134,7 @@
 				<string>city19</string>
 			</array>
 			<key>Position</key>
-			<string>{626, 230}</string>
+			<string>{633, 495}</string>
 			<key>ShopPosition</key>
 			<string>{522, 248}</string>
 			<key>Stage</key>
@@ -203,7 +203,7 @@
 				<string>city19</string>
 			</array>
 			<key>Position</key>
-			<string>{221, 465}</string>
+			<string>{852, 291}</string>
 			<key>Requisites</key>
 			<array>
 				<string>KeyLaziness</string>
@@ -277,7 +277,7 @@
 				<string>city11</string>
 			</array>
 			<key>Position</key>
-			<string>{639, 498}</string>
+			<string>{1269, 420}</string>
 			<key>ShopPosition</key>
 			<string>{588, 557}</string>
 			<key>Stage</key>
@@ -343,7 +343,7 @@
 				<string>city13</string>
 			</array>
 			<key>Position</key>
-			<string>{1202, 622}</string>
+			<string>{1350, 174}</string>
 			<key>ShopPosition</key>
 			<string>{1137, 650}</string>
 			<key>Stage</key>
@@ -412,7 +412,7 @@
 				<string>city20</string>
 			</array>
 			<key>Position</key>
-			<string>{741, 940}</string>
+			<string>{1725, 219}</string>
 			<key>Requisites</key>
 			<array>
 				<string>KeyGluttony</string>
@@ -486,7 +486,7 @@
 				<string>city16</string>
 			</array>
 			<key>Position</key>
-			<string>{130, 1154}</string>
+			<string>{2049, 288}</string>
 			<key>ShopPosition</key>
 			<string>{140, 1245}</string>
 			<key>Stage</key>
@@ -556,7 +556,7 @@
 				<string>city17</string>
 			</array>
 			<key>Position</key>
-			<string>{1029, 1425}</string>
+			<string>{2124, 534}</string>
 			<key>Requisites</key>
 			<array>
 				<string>KeyGreed</string>
@@ -630,7 +630,7 @@
 				<string>city18</string>
 			</array>
 			<key>Position</key>
-			<string>{1119, 1122}</string>
+			<string>{2125, 792}</string>
 			<key>ShopPosition</key>
 			<string>{1036, 1119}</string>
 			<key>Stage</key>
@@ -695,7 +695,7 @@
 				<string>city18</string>
 			</array>
 			<key>Position</key>
-			<string>{1338, 1374}</string>
+			<string>{1761, 984}</string>
 			<key>ShopPosition</key>
 			<string>{1316, 1399}</string>
 			<key>Stage</key>
@@ -763,7 +763,7 @@
 				<string>city04</string>
 			</array>
 			<key>Position</key>
-			<string>{169, 681}</string>
+			<string>{1794, 1149}</string>
 			<key>ShopPosition</key>
 			<string>{114, 688}</string>
 			<key>Stage</key>
@@ -782,7 +782,7 @@
 				<string>city16</string>
 			</array>
 			<key>Position</key>
-			<string>{436, 1438}</string>
+			<string>{1458, 1212}</string>
 			<key>Requisites</key>
 			<array>
 				<string>TransportBrightEyedTiger</string>
@@ -854,7 +854,7 @@
 				<string>city06</string>
 			</array>
 			<key>Position</key>
-			<string>{892, 812}</string>
+			<string>{1245, 876}</string>
 			<key>ShopPosition</key>
 			<string>{817, 770}</string>
 			<key>Stage</key>
@@ -926,7 +926,7 @@
 				<string>city05</string>
 			</array>
 			<key>Position</key>
-			<string>{1064, 496}</string>
+			<string>{1017, 720}</string>
 			<key>ShopPosition</key>
 			<string>{1001, 477}</string>
 			<key>Stage</key>
@@ -994,7 +994,7 @@
 				<string>city21</string>
 			</array>
 			<key>Position</key>
-			<string>{494, 1006}</string>
+			<string>{777, 777}</string>
 			<key>Requisites</key>
 			<array>
 				<string>KeyWood</string>
@@ -1064,7 +1064,7 @@
 				<string>city12</string>
 			</array>
 			<key>Position</key>
-			<string>{163, 1451}</string>
+			<string>{735, 1104}</string>
 			<key>ShopPosition</key>
 			<string>{101, 1460}</string>
 			<key>Stage</key>
@@ -1129,7 +1129,7 @@
 				<string>city08</string>
 			</array>
 			<key>Position</key>
-			<string>{724, 1501}</string>
+			<string>{396, 1287}</string>
 			<key>ShopPosition</key>
 			<string>{661, 1464}</string>
 			<key>Stage</key>
@@ -1146,7 +1146,7 @@
 			<key>ManuelFlipX</key>
 			<false/>
 			<key>ManuelPosition</key>
-			<string>{1336, 1235}</string>
+			<string>{1336, 565}</string>
 			<key>MapItems</key>
 			<dict>
 				<key>Moneybag52</key>
@@ -1192,7 +1192,7 @@
 				<string>city10</string>
 			</array>
 			<key>Position</key>
-			<string>{1252, 1234}</string>
+			<string>{1068, 510}</string>
 			<key>ShopPosition</key>
 			<string>{1254, 1303}</string>
 			<key>Stage</key>
@@ -1257,9 +1257,9 @@
 				<string>city03</string>
 			</array>
 			<key>Position</key>
-			<string>{152, 150}</string>
+			<string>{152, 1650}</string>
 			<key>ShopPosition</key>
-			<string>{79, 68}</string>
+			<string>{1353, 366}</string>
 			<key>Stage</key>
 			<string>map01_pairs_city19</string>
 			<key>Type</key>
@@ -1326,7 +1326,7 @@
 				<string>city08</string>
 			</array>
 			<key>Position</key>
-			<string>{960, 1104}</string>
+			<string>{1305, 1629}</string>
 			<key>ShopPosition</key>
 			<string>{833, 1068}</string>
 			<key>Stage</key>
@@ -1389,7 +1389,7 @@
 				<string>city07</string>
 			</array>
 			<key>Position</key>
-			<string>{219, 1010}</string>
+			<string>{186, 1044}</string>
 			<key>ShopPosition</key>
 			<string>{171, 1060}</string>
 			<key>Stage</key>
@@ -1457,7 +1457,7 @@
 				<string>city02</string>
 			</array>
 			<key>Position</key>
-			<string>{913, 206}</string>
+			<string>{2262, 1047}</string>
 			<key>ShopPosition</key>
 			<string>{861, 232}</string>
 			<key>Stage</key>

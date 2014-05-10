@@ -70,7 +70,27 @@
 		50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF629517ECD46A001EB2F8 /* Icon-100.png */; };
 		50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A017ECD613001EB2F8 /* Icon-29.png */; };
 		50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
+		7A049279191DD047005676D3 /* MainMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A049277191DD047005676D3 /* MainMenu.cpp */; };
+		7A04927E191DD0F2005676D3 /* mainbg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7A04927D191DD0F2005676D3 /* mainbg.jpg */; };
+		7A049282191DD3C4005676D3 /* startButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A049281191DD3C4005676D3 /* startButton.png */; };
+		7A049284191DFC5B005676D3 /* emergencyButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A049283191DFC5B005676D3 /* emergencyButton.png */; };
+		7A049286191E0049005676D3 /* settingButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A049285191E0049005676D3 /* settingButton.png */; };
+		7A04928B191E0438005676D3 /* Stage1Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A049287191E0438005676D3 /* Stage1Layer.cpp */; };
+		7A04928C191E0438005676D3 /* Stage1Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A049289191E0438005676D3 /* Stage1Scene.cpp */; };
+		7A049290191E04AC005676D3 /* stage1 in Resources */ = {isa = PBXBuildFile; fileRef = 7A04928D191E04AC005676D3 /* stage1 */; };
+		7A049291191E04AC005676D3 /* submit1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A04928E191E04AC005676D3 /* submit1.png */; };
+		7A049292191E04AC005676D3 /* submit2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A04928F191E04AC005676D3 /* submit2.png */; };
+		7A049295191E16D6005676D3 /* SavingBoy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A049293191E16D6005676D3 /* SavingBoy.cpp */; };
+		7A049298191E2DF9005676D3 /* CCLabelBMFontAnimated.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A049296191E2DF9005676D3 /* CCLabelBMFontAnimated.cpp */; };
+		7A04929D191E3AFF005676D3 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 7A04929B191E3AFF005676D3 /* fonts */; };
+		7A04929E191E3AFF005676D3 /* SavingBoy in Resources */ = {isa = PBXBuildFile; fileRef = 7A04929C191E3AFF005676D3 /* SavingBoy */; };
 		7A1FB691191CC4FF008171D2 /* City.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A1FB68F191CC4FF008171D2 /* City.cpp */; };
+		7AA0A8DE191CD3C6004F5774 /* city_selectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AA0A8DB191CD3C6004F5774 /* city_selectors.plist */; };
+		7AA0A8DF191CD3C6004F5774 /* city_selectors.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 7AA0A8DC191CD3C6004F5774 /* city_selectors.pvr.ccz */; };
+		7AA0A8E0191CD3C6004F5774 /* map01.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AA0A8DD191CD3C6004F5774 /* map01.plist */; };
+		7AA0A8E6191D137D004F5774 /* GameManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AA0A8E4191D137D004F5774 /* GameManager.cpp */; };
+		7AA0A8EB191D39FB004F5774 /* map_ui.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AA0A8E9191D39FB004F5774 /* map_ui.plist */; };
+		7AA0A8EC191D39FB004F5774 /* map_ui.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 7AA0A8EA191D39FB004F5774 /* map_ui.pvr.ccz */; };
 		7AF71D95191B788E00202960 /* map.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7AF71D94191B788E00202960 /* map.jpg */; };
 		7AF71D9A191B78A200202960 /* MapLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AF71D98191B78A200202960 /* MapLayer.cpp */; };
 		7AF71D9D191B793D00202960 /* MapScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7AF71D9B191B793D00202960 /* MapScene.cpp */; };
@@ -283,8 +303,34 @@
 		50EF629517ECD46A001EB2F8 /* Icon-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-100.png"; sourceTree = "<group>"; };
 		50EF62A017ECD613001EB2F8 /* Icon-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29.png"; sourceTree = "<group>"; };
 		50EF62A117ECD613001EB2F8 /* Icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-50.png"; sourceTree = "<group>"; };
+		7A049277191DD047005676D3 /* MainMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainMenu.cpp; path = ../Classes/MainMenu.cpp; sourceTree = "<group>"; };
+		7A049278191DD047005676D3 /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainMenu.h; path = ../Classes/MainMenu.h; sourceTree = "<group>"; };
+		7A04927D191DD0F2005676D3 /* mainbg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mainbg.jpg; sourceTree = "<group>"; };
+		7A049281191DD3C4005676D3 /* startButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startButton.png; sourceTree = "<group>"; };
+		7A049283191DFC5B005676D3 /* emergencyButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emergencyButton.png; sourceTree = "<group>"; };
+		7A049285191E0049005676D3 /* settingButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingButton.png; sourceTree = "<group>"; };
+		7A049287191E0438005676D3 /* Stage1Layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Stage1Layer.cpp; path = ../Classes/Stage1Layer.cpp; sourceTree = "<group>"; };
+		7A049288191E0438005676D3 /* Stage1Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stage1Layer.h; path = ../Classes/Stage1Layer.h; sourceTree = "<group>"; };
+		7A049289191E0438005676D3 /* Stage1Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Stage1Scene.cpp; path = ../Classes/Stage1Scene.cpp; sourceTree = "<group>"; };
+		7A04928A191E0438005676D3 /* Stage1Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stage1Scene.h; path = ../Classes/Stage1Scene.h; sourceTree = "<group>"; };
+		7A04928D191E04AC005676D3 /* stage1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = stage1; sourceTree = "<group>"; };
+		7A04928E191E04AC005676D3 /* submit1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = submit1.png; sourceTree = "<group>"; };
+		7A04928F191E04AC005676D3 /* submit2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = submit2.png; sourceTree = "<group>"; };
+		7A049293191E16D6005676D3 /* SavingBoy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SavingBoy.cpp; path = ../Classes/SavingBoy.cpp; sourceTree = "<group>"; };
+		7A049294191E16D6005676D3 /* SavingBoy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SavingBoy.h; path = ../Classes/SavingBoy.h; sourceTree = "<group>"; };
+		7A049296191E2DF9005676D3 /* CCLabelBMFontAnimated.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCLabelBMFontAnimated.cpp; sourceTree = "<group>"; };
+		7A049297191E2DF9005676D3 /* CCLabelBMFontAnimated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLabelBMFontAnimated.h; sourceTree = "<group>"; };
+		7A04929B191E3AFF005676D3 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		7A04929C191E3AFF005676D3 /* SavingBoy */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SavingBoy; sourceTree = "<group>"; };
 		7A1FB68F191CC4FF008171D2 /* City.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = City.cpp; path = ../Classes/City.cpp; sourceTree = "<group>"; };
 		7A1FB690191CC4FF008171D2 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = City.h; path = ../Classes/City.h; sourceTree = "<group>"; };
+		7AA0A8DB191CD3C6004F5774 /* city_selectors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city_selectors.plist; sourceTree = "<group>"; };
+		7AA0A8DC191CD3C6004F5774 /* city_selectors.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = city_selectors.pvr.ccz; sourceTree = "<group>"; };
+		7AA0A8DD191CD3C6004F5774 /* map01.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = map01.plist; sourceTree = "<group>"; };
+		7AA0A8E4191D137D004F5774 /* GameManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameManager.cpp; path = ../Classes/GameManager.cpp; sourceTree = "<group>"; };
+		7AA0A8E5191D137D004F5774 /* GameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameManager.h; path = ../Classes/GameManager.h; sourceTree = "<group>"; };
+		7AA0A8E9191D39FB004F5774 /* map_ui.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = map_ui.plist; sourceTree = "<group>"; };
+		7AA0A8EA191D39FB004F5774 /* map_ui.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = map_ui.pvr.ccz; sourceTree = "<group>"; };
 		7ADEAE54191B800E00ABDC91 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		7AF71D94191B788E00202960 /* map.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = map.jpg; sourceTree = "<group>"; };
 		7AF71D98191B78A200202960 /* MapLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapLayer.cpp; path = ../Classes/MapLayer.cpp; sourceTree = "<group>"; };
@@ -367,6 +413,12 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7A049296191E2DF9005676D3 /* CCLabelBMFontAnimated.cpp */,
+				7A049297191E2DF9005676D3 /* CCLabelBMFontAnimated.h */,
+				7A049287191E0438005676D3 /* Stage1Layer.cpp */,
+				7A049288191E0438005676D3 /* Stage1Layer.h */,
+				7A049289191E0438005676D3 /* Stage1Scene.cpp */,
+				7A04928A191E0438005676D3 /* Stage1Scene.h */,
 				7ADEAE54191B800E00ABDC91 /* Constant.h */,
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
@@ -379,6 +431,12 @@
 				7A1FB68F191CC4FF008171D2 /* City.cpp */,
 				7A1FB690191CC4FF008171D2 /* City.h */,
 				17CA770E191CD1E300CC9814 /* CollectItems */,
+				7AA0A8E4191D137D004F5774 /* GameManager.cpp */,
+				7AA0A8E5191D137D004F5774 /* GameManager.h */,
+				7A049277191DD047005676D3 /* MainMenu.cpp */,
+				7A049278191DD047005676D3 /* MainMenu.h */,
+				7A049293191E16D6005676D3 /* SavingBoy.cpp */,
+				7A049294191E16D6005676D3 /* SavingBoy.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -512,6 +570,20 @@
 				17CA7716191CD5A600CC9814 /* city_selectors.pvr.ccz */,
 				17CA7717191CD5A600CC9814 /* fonts */,
 				17CA7718191CD5A600CC9814 /* map01.plist */,
+				7A04929B191E3AFF005676D3 /* fonts */,
+				7A04929C191E3AFF005676D3 /* SavingBoy */,
+				7A04928D191E04AC005676D3 /* stage1 */,
+				7A04928E191E04AC005676D3 /* submit1.png */,
+				7A04928F191E04AC005676D3 /* submit2.png */,
+				7A049285191E0049005676D3 /* settingButton.png */,
+				7A049283191DFC5B005676D3 /* emergencyButton.png */,
+				7A049281191DD3C4005676D3 /* startButton.png */,
+				7A04927D191DD0F2005676D3 /* mainbg.jpg */,
+				7AA0A8E9191D39FB004F5774 /* map_ui.plist */,
+				7AA0A8EA191D39FB004F5774 /* map_ui.pvr.ccz */,
+				7AA0A8DB191CD3C6004F5774 /* city_selectors.plist */,
+				7AA0A8DC191CD3C6004F5774 /* city_selectors.pvr.ccz */,
+				7AA0A8DD191CD3C6004F5774 /* map01.plist */,
 				7AF71D94191B788E00202960 /* map.jpg */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
@@ -685,27 +757,41 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A04929D191E3AFF005676D3 /* fonts in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
+				7A04929E191E3AFF005676D3 /* SavingBoy in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				17CA771C191CD5A600CC9814 /* map01.plist in Resources */,
+				7A049292191E04AC005676D3 /* submit2.png in Resources */,
 				7AF71D95191B788E00202960 /* map.jpg in Resources */,
+				7A049282191DD3C4005676D3 /* startButton.png in Resources */,
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				17CA7746191E08B300CC9814 /* CollectItems in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
+				7A049291191E04AC005676D3 /* submit1.png in Resources */,
+				7AA0A8EC191D39FB004F5774 /* map_ui.pvr.ccz in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
 				17CA771B191CD5A600CC9814 /* fonts in Resources */,
 				17CA7719191CD5A600CC9814 /* city_selectors.plist in Resources */,
+				7AA0A8DE191CD3C6004F5774 /* city_selectors.plist in Resources */,
+				7A049284191DFC5B005676D3 /* emergencyButton.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
+				7A049290191E04AC005676D3 /* stage1 in Resources */,
+				7AA0A8E0191CD3C6004F5774 /* map01.plist in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				17CA771A191CD5A600CC9814 /* city_selectors.pvr.ccz in Resources */,
+				7AA0A8EB191D39FB004F5774 /* map_ui.plist in Resources */,
+				7AA0A8DF191CD3C6004F5774 /* city_selectors.pvr.ccz in Resources */,
+				7A049286191E0049005676D3 /* settingButton.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
+				7A04927E191DD0F2005676D3 /* mainbg.jpg in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
@@ -731,17 +817,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A04928B191E0438005676D3 /* Stage1Layer.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				17CA7743191DFA8E00CC9814 /* CIGameManager.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				17CA7749191E421C00CC9814 /* CIStartScene.cpp in Sources */,
+				7A04928C191E0438005676D3 /* Stage1Scene.cpp in Sources */,
 				7A1FB691191CC4FF008171D2 /* City.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
+				7AA0A8E6191D137D004F5774 /* GameManager.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				17CA7713191CD29100CC9814 /* CIPlayScene.cpp in Sources */,
 				7AF71D9D191B793D00202960 /* MapScene.cpp in Sources */,
+				7A049295191E16D6005676D3 /* SavingBoy.cpp in Sources */,
 				7AF71D9A191B78A200202960 /* MapLayer.cpp in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
+				7A049279191DD047005676D3 /* MainMenu.cpp in Sources */,
+				7A049298191E2DF9005676D3 /* CCLabelBMFontAnimated.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
