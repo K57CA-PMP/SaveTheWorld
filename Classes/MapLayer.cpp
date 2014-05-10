@@ -87,7 +87,11 @@ void MapLayer::addCities(const char* pCurrentCityName)
     city->setScale(1.5f);
     if (cityKey->compare(pCurrentCityName) == 0)
     {
-      city->updateSprite();
+      city->updateCurrentSprite();
+    }
+    if (UserDefault::getInstance()->getBoolForKey("IsWinCurrentCity"))
+    {
+      city->updateClearedSprite();
     }
     this->addChild(city, Z_MAP_CITIES);
     

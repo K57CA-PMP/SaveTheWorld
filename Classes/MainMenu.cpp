@@ -40,17 +40,39 @@ bool MainMenu::init()
   
   addChild(background);
   
-  Sprite* normal = Sprite::create("startButton.png");
-  Sprite* selected = Sprite::create("startButton.png");
-  selected->setColor(Color3B::GRAY);
-  MenuItemSprite* item = MenuItemSprite::create(normal,
-                                                selected,
+  Sprite* normalS = Sprite::create("startButton.png");
+  Sprite* selectedS = Sprite::create("startButton.png");
+  selectedS->setColor(Color3B::GRAY);
+  MenuItemSprite* start = MenuItemSprite::create(normalS,
+                                                selectedS,
                                                 CC_CALLBACK_1(MainMenu::goToStartScene, this));
-  Point pos = Point(SCREEN_SIZE.width/4, SCREEN_SIZE.height/4);
-  item->setPosition(pos);
-  item->setScale(0.5f);
+  Point posStart = Point(SCREEN_SIZE.width/2, SCREEN_SIZE.height/4 + 10);
+  start->setPosition(posStart);
+  start->setScale(0.5f);
+  
+  Sprite* normalE = Sprite::create("emergencyButton.png");
+  normalE->setColor(Color3B::RED);
+  Sprite* selectedE = Sprite::create("emergencyButton.png");
+  selectedE->setColor(Color3B::GRAY);
+  MenuItemSprite* emergency = MenuItemSprite::create(normalE,
+                                                     selectedE,
+                                                     CC_CALLBACK_1(MainMenu::goToStartScene, this));
+  Point posEmer = Point(SCREEN_SIZE.width/3 + 10, SCREEN_SIZE.height/4 + 10);
+  emergency->setPosition(posEmer);
+  emergency->setScale(0.5f);
+  
+  Sprite* normalSe = Sprite::create("settingButton.png");
+  Sprite* selectedSe = Sprite::create("settingButton.png");
+  selectedSe->setColor(Color3B::GRAY);
+  MenuItemSprite* settings = MenuItemSprite::create(normalSe,
+                                                    selectedSe,
+                                                    CC_CALLBACK_1(MainMenu::goToStartScene, this));
+  Point posSe = Point(2 * SCREEN_SIZE.width/3 - 10, SCREEN_SIZE.height/4 + 10);
+  settings->setPosition(posSe);
+  settings->setScale(0.5f);
 
-  Menu* menu = Menu::create(item, NULL);
+
+  Menu* menu = Menu::create(start, emergency, settings, NULL);
   menu->setPosition(Point::ZERO);
   
   addChild(menu, 1);
@@ -60,5 +82,5 @@ bool MainMenu::init()
 
 void MainMenu::goToStartScene(Ref* pSender)
 {
-  
+  Director::getInstance()->replaceScene(MapScene::create());
 }

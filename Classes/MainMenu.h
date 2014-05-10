@@ -12,6 +12,7 @@
 
 #include "cocos2d.h"
 #include "Constant.h"
+#include "MapScene.h"
 
 class MainMenu : public cocos2d::Layer
 {

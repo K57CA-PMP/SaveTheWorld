@@ -89,7 +89,12 @@ bool City::init(const char *pName, eCityStatus pCityStatus)
   return true;
 }
 
-void City::updateSprite()
+void City::updateCurrentSprite()
 {
   mArrow->setVisible(true);
+}
+
+void City::updateClearedSprite()
+{
+  mCleared->setVisible(true);
 }
