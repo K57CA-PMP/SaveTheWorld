@@ -2,6 +2,7 @@
 #include "HelloWorldScene.h"
 #include "MapScene.h"
 #include "CIPlayScene.h"
+#include "CIStartScene.h"
 
 USING_NS_CC;
 
@@ -29,7 +30,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     director->setAnimationInterval(1.0 / 60);
 
     // create a scene. it's an autorelease object
-    auto scene = CIPlayScene::createScene();
+    auto scene = CIStartScene::createScene();
 
     // run
     director->runWithScene(scene);

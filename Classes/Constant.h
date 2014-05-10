@@ -40,4 +40,9 @@
 #define SCORE_LBL_POS Point(150, 400)
 #define TIME_LBL_POS Point(50, 400)
 
+#define DIALOG1 "Bạn ở trong khu vực sắp có bão xãy ra."
+#define DIALOG2 "Bạn nhận được yêu cầu di dời ngay lập tức."
+#define DIALOG3 "Bạn sẽ phải làm gì?"
+#define DIALOG4 "Hãy mang theo nhu yếu phẩm thiết yếu nhất!"
+
 #endif

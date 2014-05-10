@@ -17,9 +17,14 @@ class CIGameManager
 {
 private:
   static int _gameLevel;
+  static int _dialogState;
+  
 public:
   static int getGameLevel();
   static void setGameLevel(int pLevel);
+  
+  static int getDialogState();
+  static void setDialogState(int pState);
 };
 
 #endif /* defined(__SaveTheWorld__CIGameManager__) */
