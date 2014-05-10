@@ -9,9 +9,11 @@
 #include "Stage1Scene.h"
 #include "Constant.h"
 #include "MapScene.h"
+//#include "cocos-ext.h"
 
 
 USING_NS_CC;
+//USING_NS_CC_EXT;
 
 
 
@@ -41,6 +43,14 @@ bool Stage1Scene::init()
 	menu->setPosition(Point::ZERO);
 	mStage1Layer->addChild(menu,1);
 	//
+
+	//set Edit Box
+
+	//auto answerBoxSize = Size(visibleSize.width / 3, visibleSize.height / 10);
+	//auto mAnswerBox = EditBox::create();
+	//
+
+	//set First Image
 
 	
 	
