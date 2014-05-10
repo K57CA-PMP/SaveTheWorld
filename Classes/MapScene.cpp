@@ -39,13 +39,13 @@ bool MapScene::init()
 
   SpriteFrameCache::getInstance()->addSpriteFramesWithFile("map_ui.plist");
   
-  mMapLayer = MapLayer::create("");
+  mMapLayer = MapLayer::create(UserDefault::getInstance()->getStringForKey("CurrentCityName").c_str()); //GameManager::getCurrentCityName());
+  CCLOG("MapScene: %s %d", UserDefault::getInstance()->getStringForKey("CurrentCityName").c_str(), UserDefault::getInstance()->getIntegerForKey("CurrentCityNo"));
   addChild(mMapLayer);
   
   
   Sprite* normal = Sprite::createWithSpriteFrameName("map_button_battle.png");
   Sprite* selected = Sprite::createWithSpriteFrameName("map_button_battle.png");
-  selected->runAction(CCEaseOut::create(CCScaleTo::create(0.04,0.9),4));
   MenuItemSprite* item = MenuItemSprite::create(normal,
                                                 selected,
                                                 CC_CALLBACK_1(MapScene::play, this));
@@ -56,11 +56,13 @@ bool MapScene::init()
   Menu* menu = Menu::create(item, NULL);
   menu->setPosition(Point::ZERO);
   addChild(menu, 1);
-  menu->runAction(CCRepeatForever::create(CCRotateBy::create(0.8, 360)));
+//  menu->setAnchorPoint(Point::ANCHOR_BOTTOM_RIGHT);
+//  menu->runAction(CCRepeatForever::create(CCRotateBy::create(0.8, 360)));
   return true;
 }
 
 void MapScene::play(Ref* pSender)
 {
-  CCLOG("play!!!!");
+  CCLOG("play!!!!. cur: %s", UserDefault::getInstance()->getStringForKey("CurrentCityName").c_str());
+  Director::getInstance()->replaceScene(TransitionFade::create(0.5f, HelloWorld::createScene(), Color3B::BLACK));
 }

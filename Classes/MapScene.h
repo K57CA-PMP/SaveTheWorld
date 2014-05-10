@@ -11,6 +11,7 @@
 
 #include "cocos2d.h"
 #include "MapLayer.h"
+#include "HelloWorldScene.h"
 
 class MapScene : public cocos2d::Scene
 {

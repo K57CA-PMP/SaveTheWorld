@@ -8,7 +8,7 @@
 
 #include "GameManager.h"
 
-const char* GameManager::mCurrentCityName = NULL;
+const char* GameManager::mCurrentCityName = "";
 
 void GameManager::setCurrentCityName(const char* pCurrentCityName)
 {
