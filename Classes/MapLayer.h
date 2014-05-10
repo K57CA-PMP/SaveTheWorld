@@ -14,6 +14,19 @@
 #include "City.h"
 #include "GameManager.h"
 
+#define TAG_SCROLL_ACTION 131
+#define SCROLL_DURATION 0.3
+
+enum eCCEaseInOut
+{
+  CCEIO_NONE,
+  CCEIO_EASE_IN,
+  CCEIO_EASE_OUT,
+  CCEIO_EASE_IN_OUT
+};
+
+
+
 class MapLayer : public cocos2d::Layer
 {
 private:
@@ -22,6 +35,7 @@ private:
   cocos2d::SpriteBatchNode* mCitiesBatchNode;
   cocos2d::__Array* mCitiesArray;
 //  City* mCurrentCity;
+  bool mAutoScrolling;
   
 public:
   virtual bool init(const char* pCurrentCityName);
@@ -34,6 +48,19 @@ public:
   cocos2d::Point getBound();
   
   void addCities(const char* pCurrentCity);
+  
+  void scrollToPoint(const cocos2d::Point& pPoint);
+  void scrollToPoint(const cocos2d::Point& pPoint, float pDuration);
+  void scrollToPoint(const cocos2d::Point& pPoint, float pDuration, eCCEaseInOut pEaseInOut);
+  cocos2d::FiniteTimeAction* scrollActionToPoint(const cocos2d::Point& pPoint);
+  cocos2d::FiniteTimeAction* scrollActionToPoint(const cocos2d::Point& pPoint,
+                                                    float pDuration);
+  cocos2d::FiniteTimeAction* scrollActionToPoint(const cocos2d::Point& pPoint,
+                                                    float pDuration,
+                                                    eCCEaseInOut pEaseInOut);
+  void startAutoScroll();
+  void endAutoScroll();
+
 };
 
 

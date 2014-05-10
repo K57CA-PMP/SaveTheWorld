@@ -58,7 +58,8 @@ void MapLayer::addCities(const char* pCurrentCityName)
     pCurrentCityName = mapDictionary->valueForKey("StartCity")->getCString();
   }
   
-  GameManager::setCurrentCityName(pCurrentCityName);
+//  GameManager::setCurrentCityName(pCurrentCityName);
+  UserDefault::getInstance()->setStringForKey("CurrentCityName", pCurrentCityName);
   
   // References
   __Dictionary* mapCitiesDictionary = (__Dictionary*)mapDictionary->objectForKey("Cities");
@@ -112,7 +113,7 @@ void MapLayer::addCities(const char* pCurrentCityName)
 //  mCurrentCity = (City*)((__Dictionary*)mapCitiesDictionary->objectForKey(pCurrentCity))->objectForKey("Object");
 ////  mCurrentCity->makeCurrent();
 ////  mCurrentCity->unlock();
-//  this->scrollToPoint(mCurrentCity->getPosition());
+  this->scrollToPoint(PointFromString(((__String*)((__Dictionary*)mapCitiesDictionary->objectForKey(UserDefault::getInstance()->getStringForKey("CurrentCityName").c_str()))->objectForKey("Position"))->getCString()));
 }
 
 bool MapLayer::onTouchBegan(cocos2d::Touch *pTouch, cocos2d::Event *pEvent)
@@ -135,7 +136,77 @@ void MapLayer::onTouchMoved(cocos2d::Touch *pTouch, cocos2d::Event *pEvent)
   mBeginLocation = touchLocation;
   return;
 }
+
+void MapLayer::scrollToPoint(const Point& pPoint)
+{
+  scrollToPoint(pPoint, SCROLL_DURATION, CCEIO_EASE_IN_OUT);
+}
+
+void MapLayer::scrollToPoint(const Point& pPoint, float pDuration)
+{
+  scrollToPoint(pPoint, pDuration, CCEIO_EASE_IN_OUT);
+}
+
+void MapLayer::scrollToPoint(const Point& pPoint, float pDuration, eCCEaseInOut pEaseInOut)
+{
+  stopActionByTag(TAG_SCROLL_ACTION);
   
+  if (pDuration != 0)
+  {
+    runAction(scrollActionToPoint(pPoint, pDuration, pEaseInOut));
+  }
+  else
+  {
+    // Scale and invert axis
+    Point point;
+    point = ccpMult(pPoint, -1);
+    point.x += SCREEN_SIZE.width/2;
+    point.y += SCREEN_SIZE.height/2;
+    
+    mAutoScrolling = false;
+    setPosition(point);
+  }
+}
+
+FiniteTimeAction* MapLayer::scrollActionToPoint(const Point& pPoint)
+{
+  return scrollActionToPoint(pPoint, SCROLL_DURATION);
+}
+
+FiniteTimeAction* MapLayer::scrollActionToPoint(const Point& pPoint, float pDuration)
+{
+  return scrollActionToPoint(pPoint, pDuration, CCEIO_EASE_IN_OUT);
+}
+
+FiniteTimeAction* MapLayer::scrollActionToPoint(const Point& pPoint, float pDuration, eCCEaseInOut pEaseInOut)
+{
+  // Scale and invert axis
+  Point point = ccpMult(pPoint, -1);
+  point.x += SCREEN_SIZE.width/2;
+  point.y += SCREEN_SIZE.height/2;
+  
+  Action *scrollAction = NULL;
+  
+  scrollAction = CCSequence::create(CallFunc::create(this, callfunc_selector(MapLayer::startAutoScroll)),
+                                  CCEaseInOut::create(CCMoveTo::create(pDuration, point), 2),
+                                  CallFunc::create(this, callfunc_selector(MapLayer::endAutoScroll)),
+                                  NULL);
+  
+  scrollAction->setTag(TAG_SCROLL_ACTION);
+  return (FiniteTimeAction*)scrollAction;
+}
+
+void MapLayer::startAutoScroll()
+{
+  mAutoScrolling = true;
+}
+
+void MapLayer::endAutoScroll()
+{
+  mAutoScrolling = true;
+}
+
+
 void MapLayer::moveMap(float pDeltaX, float pDeltaY)
 {
   float posX = getPosition().x + pDeltaX;

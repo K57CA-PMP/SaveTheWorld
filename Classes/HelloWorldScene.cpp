@@ -79,7 +79,18 @@ bool HelloWorld::init()
 
 void HelloWorld::menuCloseCallback(Ref* pSender)
 {
-  GameManager::setCurrentCityName("city02");
+  std::string currentCityName = UserDefault::getInstance()->getStringForKey("CurrentCityName"); //GameManager::getCurrentCityName();
+  CCLOG("cur: %s", currentCityName.c_str());
+  int newCityNumber = __String::create(currentCityName.substr(4, 2))->intValue() + 1;
+  if (newCityNumber > 22)
+    newCityNumber = 22;
+  
+  __String* newCityName = __String::createWithFormat("city%s%d", newCityNumber <= 9 ? "0" : "", newCityNumber);
+  CCLOG("new: %s", newCityName->getCString());
+//  GameManager::setCurrentCityName(newCityName->getCString());
+  UserDefault::getInstance()->setStringForKey("CurrentCityName", newCityName->getCString());
+  CCLOG("gamemanager: %s", UserDefault::getInstance()->getStringForKey("CurrentCityName").c_str()); //
+  
   Director::getInstance()->replaceScene(MapScene::create());
 //#if (CC_TARGET_PLATFORM == CC_PLATFORM_WP8) || (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
 //	MessageBox("You pressed the close button. Windows Store Apps do not implement a close button.","Alert");
