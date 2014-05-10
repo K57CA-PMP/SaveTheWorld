@@ -23,7 +23,7 @@ bool Stage1Scene::init()
 	{
 		return false;
 	}
-	questionIndex = 2;
+	questionIndex = UserDefault::getInstance()->getIntegerForKey("CurrentCityNo");
 	loadImageAnswer();
 	
 	mStage1Layer = Stage1Layer::create();
@@ -68,15 +68,18 @@ void Stage1Scene::menuSubmitCallback(Ref* pSender)
 	currentAnswer = mAnswerBox->getText();
 	CCLOG("%s",currentAnswer.c_str());
 	
-	if (currentAnswer != answer[questionIndex] || (questionIndex == 1 && pictureIndex == 0)) {
+	if (currentAnswer != answer[questionIndex] ) {
+		
 		pictureIndex++;
 		if (pictureIndex >= 5) {
+			CCLOG("fuck");
 			Director::getInstance()->replaceScene(MapScene::create());
 		}
 	}
 	else {
-			CCLOG("----------------");
-		    Director::getInstance()->replaceScene(MapScene::create());
+		UserDefault::getInstance()->setIntegerForKey("CurrentCityNo",questionIndex+1);
+		UserDefault::getInstance()->setStringForKey("CurrentCityName", __String::createWithFormat("city0%d", questionIndex + 1)->getCString());
+		Director::getInstance()->replaceScene(MapScene::create());
 	}
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();

@@ -7,6 +7,7 @@
 //
 
 #include "MapScene.h"
+#include "Stage1Scene.h"
 
 USING_NS_CC;
 
@@ -64,5 +65,5 @@ bool MapScene::init()
 void MapScene::play(Ref* pSender)
 {
   CCLOG("play!!!!. cur: %s", UserDefault::getInstance()->getStringForKey("CurrentCityName").c_str());
-  Director::getInstance()->replaceScene(TransitionFade::create(0.5f, HelloWorld::createScene(), Color3B::BLACK));
+  Director::getInstance()->replaceScene(TransitionFade::create(0.5f, Stage1Scene::create(), Color3B::BLACK));
 }

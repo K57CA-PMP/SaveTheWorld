@@ -1,6 +1,7 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
 #include "MapScene.h"
+#include "Stage1Scene.h"
 
 USING_NS_CC;
 
