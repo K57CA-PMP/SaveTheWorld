@@ -8,7 +8,7 @@
 
 #include "CIGameManager.h"
 
-int CIGameManager::_gameLevel = 5;
+int CIGameManager::_gameLevel = 1;
 int CIGameManager::getGameLevel()
 {
   return _gameLevel;

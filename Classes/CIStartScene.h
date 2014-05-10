@@ -14,6 +14,7 @@
 #include "cocos2d.h"
 #include "cocos-ext.h"
 #include "CIGameManager.h"
+#include "CIPlayScene.h"
 USING_NS_CC;
 USING_NS_CC_EXT;
 
@@ -28,6 +29,7 @@ private:
   char _buffer[100];
   Menu* _nextBtn;
   Menu* _backBtn;
+  Menu* _startBtn;
   
 public:
   static cocos2d::Scene* createScene();
@@ -38,9 +40,10 @@ public:
   void addDialogs();
   void addNextBtn();
   void nextBtnTouched(Ref* pSender);
-  
   void addBackBtn();
   void backBtnTouched(Ref* pSender);
+  void addStartBtn();
+  void startBtnTouched(Ref* pSender);
 };
 
 #endif /* defined(__SaveTheWorld__CIStartScene__) */

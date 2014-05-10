@@ -37,10 +37,10 @@ bool CIPlayScene::init()
   addHooks();
   addGameOver();
   addReplayButton();
-  addWin();
   addBackBtn();
   hookRotateAnimation();
   handleTouch();
+  addWin();
   
   _rotateAction->retain();
   _isHookRotating = false;
@@ -65,7 +65,7 @@ bool CIPlayScene::init()
       _timeLimit = 32;
       break;
     case 5:
-      _timeLimit = 5;
+      _timeLimit = 60;
       break;
     default:
       break;
@@ -98,7 +98,7 @@ void CIPlayScene::addBoy()
 
 void CIPlayScene::addItems()
 {
-  _itemsArray = CCArray::createWithCapacity(5);
+  _itemsArray = CCArray::createWithCapacity(NUM_OF_ITEMS);
   _itemsArray->retain();
   _nItems = CIGameManager::getGameLevel() + 2;
   for (int i = 0; i < _nItems;  i++)
@@ -156,6 +156,7 @@ void CIPlayScene::addLbls()
   _scoreLbl->setVerticalAlignment(kCCVerticalTextAlignmentCenter);
   _scoreLbl->setColor(Color3B(255, 255, 255));
   _scoreLbl->setPosition(SCORE_LBL_POS * 1.45);
+  _scoreLbl->retain();
   this->addChild(_scoreLbl, 10);
   
   CCString* timeStart = CCString::createWithFormat("00:%i", _timeLimit);
@@ -164,6 +165,7 @@ void CIPlayScene::addLbls()
   _timeLbl->setVerticalAlignment(kCCVerticalTextAlignmentCenter);
   _timeLbl->setColor(Color3B(255, 255, 255));
   _timeLbl->setPosition(TIME_LBL_POS * 1.45);
+  _timeLbl->retain();
   this->addChild(_timeLbl, 10);
 }
 
@@ -298,7 +300,6 @@ void CIPlayScene::itemRetrieveAnimation()
   Animation* retrieving = Animation::create();
   retrieving->addSpriteFrameWithFile("CollectItems/food.png");
   
-  Sprite* item = ((Sprite*)(_itemsArray->objectAtIndex(_indexOfCollectedItem)));
   float dstX = HOOK_POSITION.x - sin(_hook->getRotation() * PI/180) * _hook->getContentSize().height;
   float dstY = HOOK_POSITION.y - cos(_hook->getRotation() * PI/180) * _hook->getContentSize().height;
   Animate* retrieve = Animate::create(retrieving);
@@ -306,7 +307,7 @@ void CIPlayScene::itemRetrieveAnimation()
                                           Point(dstX, dstY));
   _itemRetrieveAction = Spawn::create(action, retrieve, NULL);
   _itemRetrieveAction->retain();
-  ((Sprite*)(_itemsArray->objectAtIndex(_indexOfCollectedItem)))->runAction(_itemRetrieveAction);
+  _currentItem->runAction(_itemRetrieveAction);
 }
 
 void CIPlayScene::drawHookTail()
@@ -334,7 +335,8 @@ void CIPlayScene::checkCollision()
       _state = ITEM_COLLECTED;
       _ItemCollected = true;
       _indexOfCollectedItem = i;
-      ((Sprite*)(_itemsArray->objectAtIndex(_indexOfCollectedItem)))->setScale(2);
+      _currentItem = ((Sprite*)(_itemsArray->objectAtIndex(_indexOfCollectedItem)));
+      _currentItem->setScale(2);
       break;
     }
   }
@@ -361,7 +363,7 @@ void CIPlayScene::handleTouch()
 
 void CIPlayScene::update(float pDT)
 {
-  if (_itemsArray->count() == 6)
+  if (_itemsArray->count() == 0)
   {
     if (CIGameManager::getGameLevel() == 5)
     {
@@ -378,7 +380,10 @@ void CIPlayScene::update(float pDT)
     while (_hooktail->count() > 0)
     {
       ((Sprite*)(_hooktail->objectAtIndex(_hooktail->count()-1)))->setVisible(false);
-      _hooktail->removeLastObject();
+      if (_hooktail->count() > 0)
+      {
+        _hooktail->removeLastObject();
+      }
     }
     _hook->setRotation(LIMITED_ANGLE);
     _hook->runAction(_rotateAction);
@@ -409,11 +414,12 @@ void CIPlayScene::update(float pDT)
     {
       if (_ItemCollected)
       {
-        ((Sprite*)(_itemsArray->objectAtIndex(_indexOfCollectedItem)))->setVisible(false);
+        _currentItem->setVisible(false);
         _itemsArray->removeObjectAtIndex(_indexOfCollectedItem);
         _score++;
-        sprintf(_scoreBuffer, "%i", _score);
-        _scoreLbl->setString(_scoreBuffer);
+        char scoreBuffer[10];
+        sprintf(scoreBuffer, "%i", _score);
+        _scoreLbl->setString(scoreBuffer);
         _ItemCollected = false;
       }
       _isHookRotating = false;
@@ -430,7 +436,7 @@ void CIPlayScene::update(float pDT)
   {
     _hook->stopAllActions();
     if (_indexOfCollectedItem >= 0) {
-      ((Sprite*)(_itemsArray->objectAtIndex(_indexOfCollectedItem)))->stopAllActions();
+      _currentItem->stopAllActions();
     }
     _gameOver->setVisible(true);
     _replayBtn->setVisible(true);
@@ -439,8 +445,7 @@ void CIPlayScene::update(float pDT)
   else if (_state == NEXT_LEVEL)
   {
 //    this->release();
-    CIGameManager::setGameLevel(CIGameManager::getGameLevel() + 1);
-    auto scene = CCTransitionCrossFade::create(0.5, CIPlayScene::createScene());
+    auto scene = CCTransitionCrossFade::create(0.5, HelloWorld::createScene());
     Director::getInstance()->sharedDirector()->replaceScene(scene);
   }
   else if (_state == WIN)
@@ -453,13 +458,14 @@ void CIPlayScene::countdown(float pDT)
 {
   if (_timeLimit > 0)
   {
-    if (_timeLimit <= 10)
+    if (_timeLimit == 10)
     {
       _timeLbl->setColor(Color3B(198, 68, 56));
     }
     _timeLimit--;
-    sprintf(_timeBuffer, "00:%i", _timeLimit);
-    _timeLbl->setString(_timeBuffer);
+//    char timeBuffer[10];
+//    sprintf(timeBuffer, "00:%i", _timeLimit);
+//    _timeLbl->setString(timeBuffer);
   }
   else
   {
@@ -467,12 +473,12 @@ void CIPlayScene::countdown(float pDT)
   }
 }
 
-void CIPlayScene::release()
-{
-  _itemsArray->release();
-  _rotateAction->release();
-  _hooktail->release();
-  _launchAction->release();
-  _retrieveAction->release();
-  _itemRetrieveAction->release();
-}
+//void CIPlayScene::release()
+//{
+//  _itemsArray->release();
+//  _rotateAction->release();
+//  _hooktail->release();
+//  _launchAction->release();
+//  _retrieveAction->release();
+//  _itemRetrieveAction->release();
+//}

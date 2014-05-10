@@ -43,12 +43,11 @@ private:
   CCArray* _itemsArray;
   CCArray* _hooktail;
   int _indexOfCollectedItem;
+  Sprite* _currentItem;
   
   int _score;
   CCLabelTTF* _scoreLbl;
   CCLabelTTF* _timeLbl;
-  char _scoreBuffer[2];
-  char _timeBuffer[5];
   int _timeLimit;
   
 public:
