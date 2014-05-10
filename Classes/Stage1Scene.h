@@ -10,6 +10,9 @@
 
 #include "cocos2d.h"
 #include "Stage1Layer.h"
+#include "cocos-ext.h"
+
+USING_NS_CC_EXT;
 
 class Stage1Scene : public cocos2d::Scene
 {
@@ -24,6 +27,9 @@ private:
 	int pictureIndex = 0;
 	Stage1Layer * mStage1Layer;
 	void showpicture();
+	std::string currentAnswer="wrong";
+	EditBox* mAnswerBox;
+	void loadImageAnswer();
 };
 
 #endif /* defined(__SaveTheWorld__MapScene__) */
