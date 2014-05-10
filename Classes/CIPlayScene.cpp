@@ -47,8 +47,27 @@ bool CIPlayScene::init()
   _hooktail = CCArray::create();
   _hooktail->retain();
   _score = 0;
-  _timeLimit = 3;
   _nItems = 0;
+  switch (CIGameManager::getGameLevel())
+  {
+    case 1:
+      _timeLimit = 20;
+      break;
+    case 2:
+      _timeLimit = 25;
+      break;
+    case 3:
+      _timeLimit = 29;
+      break;
+    case 4:
+      _timeLimit = 32;
+      break;
+    case 5:
+      _timeLimit = 35;
+      break;
+    default:
+      break;
+  }
   addLbls();
   
   schedule(schedule_selector(CIPlayScene::update));
@@ -303,15 +322,6 @@ void CIPlayScene::handleTouch()
 
 void CIPlayScene::update(float pDT)
 {
-//  switch (_state)
-//  {
-//    case ROTATE:
-//      <#statements#>
-//      break;
-//      
-//    default:
-//      break;
-//  }
   if (_state == ROTATE && !_isHookRotating)
   {
     while (_hooktail->count() > 0)
