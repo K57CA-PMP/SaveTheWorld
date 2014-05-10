@@ -40,6 +40,8 @@ bool CIPlayScene::init()
   _isHookRotating = false;
   _ItemCollected = false;
   _indexOfCollectedItem = -1;
+  _hooktail = CCArray::create();
+  _hooktail->retain();
   
   schedule(schedule_selector(CIPlayScene::update));
   
@@ -68,18 +70,39 @@ void CIPlayScene::addItems()
 {
   _itemsArray = CCArray::createWithCapacity(5);
   _itemsArray->retain();
-  for (int i = 0; i < 5;  i++)
+  for (int i = 0; i < NUM_OF_ITEMS;  i++)
   {
-    Sprite* item = Sprite::create("CollectItems/food.png");
-    item->setScale(2);
-    item->setPosition(Point(_visibleSize.width/(i+2), _visibleSize.height/3));
+    CCString* itemName = CCString::createWithFormat("CollectItems/item%i.png", i);
+    Sprite* item = Sprite::create(itemName->getCString());
+    switch (i)
+    {
+      case 0:
+        item->setPosition(ITEM1_POS * 1.45);
+        break;
+      case 1:
+        item->setPosition(ITEM2_POS * 1.45);
+        break;
+      case 2:
+        item->setPosition(ITEM3_POS * 1.45);
+        break;
+      case 3:
+        item->setPosition(ITEM4_POS * 1.45);
+        break;
+      case 4:
+        item->setPosition(ITEM5_POS * 1.45);
+        break;
+      case 5:
+        item->setPosition(ITEM6_POS * 1.45);
+        break;
+      case 6:
+        item->setPosition(ITEM7_POS * 1.45);
+        break;
+      default:
+        break;
+    }
     this->addChild(item, 5);
     _itemsArray->addObject(item);
   }
-//  food = Sprite::create("CollectItems/food.png");
-//  food->setScale(0.5);
-//  food->setPosition(Point(_visibleSize.width/3, _visibleSize.height/3));
-//  this->addChild(food, 5);
 }
 
 void CIPlayScene::addHooks()
@@ -145,7 +168,7 @@ void CIPlayScene::hookRetrieveAnimation()
   ActionInterval* action;
   if (_ItemCollected)
   {
-    action = MoveTo::create(RETRIEVING_DELAY * 5, HOOK_POSITION);
+    action = MoveTo::create(RETRIEVING_DELAY * 3, HOOK_POSITION);
   }
   else
   {
@@ -154,26 +177,6 @@ void CIPlayScene::hookRetrieveAnimation()
   _retrieveAction = Spawn::create(action, retrieve, NULL);
   _retrieveAction->retain();
   _hook->runAction(_retrieveAction);
-}
-
-void CIPlayScene::checkCollision()
-{
-  Rect hookRect = _hook->boundingBox();
-  for (int i = 0; i < _itemsArray->count(); i++)
-  {
-    Sprite* itemShadow = Sprite::create("CollectItems/itemShadow.png");
-    itemShadow->setPosition(((Sprite*)(_itemsArray->objectAtIndex(i)))->getPosition());
-    itemShadow->setVisible(false);
-    Rect itemRect = itemShadow->getBoundingBox();
-    if (hookRect.intersectsRect(itemRect))
-    {
-      _hook->stopAllActions();
-      _state = ITEM_COLLECTED;
-      _ItemCollected = true;
-      _indexOfCollectedItem = i;
-      break;
-    }
-  }
 }
 
 void CIPlayScene::itemRetrieveAnimation()
@@ -185,11 +188,42 @@ void CIPlayScene::itemRetrieveAnimation()
   float dstX = HOOK_POSITION.x - sin(_hook->getRotation() * PI/180) * _hook->getContentSize().height;
   float dstY = HOOK_POSITION.y - cos(_hook->getRotation() * PI/180) * _hook->getContentSize().height;
   Animate* retrieve = Animate::create(retrieving);
-  ActionInterval* action = MoveTo::create(RETRIEVING_DELAY * 5,
+  ActionInterval* action = MoveTo::create(RETRIEVING_DELAY * 3,
                                           Point(dstX, dstY));
   _itemRetrieveAction = Spawn::create(action, retrieve, NULL);
   _itemRetrieveAction->retain();
   ((Sprite*)(_itemsArray->objectAtIndex(_indexOfCollectedItem)))->runAction(_itemRetrieveAction);
+}
+
+void CIPlayScene::drawHookTail()
+{
+  Sprite* tail = Sprite::create("CollectItems/hook_tail_short.png");
+  tail->setPosition(_hook->getPosition());
+  tail->setRotation(_hook->getRotation());
+  this->addChild(tail, 4);
+  _hooktail->addObject(tail);
+}
+
+void CIPlayScene::checkCollision()
+{
+  Rect hookRect = _hook->boundingBox();
+  for (int i = 0; i < _itemsArray->count(); i++)
+  {
+    Sprite* itemShadow = Sprite::create("CollectItems/itemShadow.png");
+    itemShadow->setScale(1.2);
+    itemShadow->setPosition(((Sprite*)(_itemsArray->objectAtIndex(i)))->getPosition());
+    itemShadow->setVisible(false);
+    Rect itemRect = itemShadow->getBoundingBox();
+    if (hookRect.intersectsRect(itemRect))
+    {
+      _hook->stopAllActions();
+      _state = ITEM_COLLECTED;
+      _ItemCollected = true;
+      _indexOfCollectedItem = i;
+      ((Sprite*)(_itemsArray->objectAtIndex(_indexOfCollectedItem)))->setScale(2);
+      break;
+    }
+  }
 }
 
 void CIPlayScene::handleTouch()
@@ -211,14 +245,21 @@ void CIPlayScene::handleTouch()
 
 void CIPlayScene::update(float pDT)
 {
+  pDT = 2/60;
   if (_state == ROTATE && !_isHookRotating)
   {
+    while (_hooktail->count() > 0)
+    {
+      ((Sprite*)(_hooktail->objectAtIndex(_hooktail->count()-1)))->setVisible(false);
+      _hooktail->removeLastObject();
+    }
     _hook->setRotation(LIMITED_ANGLE);
     _hook->runAction(_rotateAction);
     _isHookRotating = true;
   }
   else if (_state == LAUNCH)
   {
+    drawHookTail();
     this->checkCollision();
     if (_launchAction->isDone())
     {
@@ -228,6 +269,15 @@ void CIPlayScene::update(float pDT)
   }
   else if (_state == RETRIEVE)
   {
+    if (_hooktail->count() > 0)
+    {
+      Sprite* last = ((Sprite*)(_hooktail->objectAtIndex(_hooktail->count()-1)));
+      if (last->getPositionY() < _hook->getPositionY())
+      {
+        last->setVisible(false);
+        _hooktail->removeLastObject();
+      }
+    }
     if (_retrieveAction->isDone())
     {
       if (_ItemCollected)
