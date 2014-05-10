@@ -3,6 +3,7 @@
 #include "MapScene.h"
 #include "MainMenu.h"
 #include "Stage1Scene.h"
+#include "SavingBoy.h"
 
 USING_NS_CC;
 
@@ -31,7 +32,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     director->setAnimationInterval(1.0 / 60);
 
     // create a scene. it's an autorelease object
-    auto scene = MainMenu::createScene();
+    auto scene = SavingBoy::createScene();
     // run
     director->runWithScene(scene);
 
