@@ -242,4 +242,3 @@ cocos2d::Point MapLayer::getBound()
   
   return Point(SCREEN_SIZE.width - mapWidth, SCREEN_SIZE.height - mapHeight);
 }
->>>>>>> f6dca27167d6246661eac049dbeb7c9fa4c80429
