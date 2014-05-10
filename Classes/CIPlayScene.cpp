@@ -48,7 +48,7 @@ bool CIPlayScene::init()
   _indexOfCollectedItem = 0;
   _hooktail = CCArray::create();
   _hooktail->retain();
-  _score = 0;
+  _score = CIGameManager::getGameLevel() + 2;
   _nItems = 0;
   switch (CIGameManager::getGameLevel())
   {
@@ -65,7 +65,7 @@ bool CIPlayScene::init()
       _timeLimit = 32;
       break;
     case 5:
-      _timeLimit = 60;
+      _timeLimit = 35;
       break;
     default:
       break;
@@ -151,7 +151,8 @@ void CIPlayScene::addHooks()
 
 void CIPlayScene::addLbls()
 {
-  _scoreLbl = CCLabelTTF::create("0", "ordin", 50);
+  
+  _scoreLbl = CCLabelTTF::create(__String::createWithFormat("%i", CIGameManager::getGameLevel() + 2)->getCString(), "ordin", 50);
   _scoreLbl->setHorizontalAlignment(kCCTextAlignmentCenter);
   _scoreLbl->setVerticalAlignment(kCCVerticalTextAlignmentCenter);
   _scoreLbl->setColor(Color3B(255, 255, 255));
@@ -165,7 +166,6 @@ void CIPlayScene::addLbls()
   _timeLbl->setVerticalAlignment(kCCVerticalTextAlignmentCenter);
   _timeLbl->setColor(Color3B(255, 255, 255));
   _timeLbl->setPosition(TIME_LBL_POS * 1.45);
-  _timeLbl->retain();
   this->addChild(_timeLbl, 10);
 }
 
@@ -416,7 +416,7 @@ void CIPlayScene::update(float pDT)
       {
         _currentItem->setVisible(false);
         _itemsArray->removeObjectAtIndex(_indexOfCollectedItem);
-        _score++;
+        _score--;
         char scoreBuffer[10];
         sprintf(scoreBuffer, "%i", _score);
         _scoreLbl->setString(scoreBuffer);
@@ -445,6 +445,8 @@ void CIPlayScene::update(float pDT)
   else if (_state == NEXT_LEVEL)
   {
 //    this->release();
+    unschedule(schedule_selector(CIPlayScene::update));
+    unschedule(schedule_selector(CIPlayScene::countdown));
     auto scene = CCTransitionCrossFade::create(0.5, HelloWorld::createScene());
     Director::getInstance()->sharedDirector()->replaceScene(scene);
   }
@@ -463,9 +465,7 @@ void CIPlayScene::countdown(float pDT)
       _timeLbl->setColor(Color3B(198, 68, 56));
     }
     _timeLimit--;
-//    char timeBuffer[10];
-//    sprintf(timeBuffer, "00:%i", _timeLimit);
-//    _timeLbl->setString(timeBuffer);
+    _timeLbl->setString(__String::createWithFormat("00:%i", _timeLimit)->getCString());
   }
   else
   {
