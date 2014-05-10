@@ -60,6 +60,8 @@ void MapLayer::addCities(const char* pCurrentCityName)
   
 //  GameManager::setCurrentCityName(pCurrentCityName);
   UserDefault::getInstance()->setStringForKey("CurrentCityName", pCurrentCityName);
+  std::string name = pCurrentCityName;
+  UserDefault::getInstance()->setIntegerForKey("CurrentCityNo", __String::create(name.substr(4, 2))->intValue());
   
   // References
   __Dictionary* mapCitiesDictionary = (__Dictionary*)mapDictionary->objectForKey("Cities");
@@ -81,7 +83,7 @@ void MapLayer::addCities(const char* pCurrentCityName)
     
     City *city = City::create(cityKey->getCString(), CITY_STATUS_LOCKED);
     
-    city->setPosition(PointFromString(((__String*)iCityDictionary->objectForKey("Position"))->getCString()));
+    city->setPosition(ccpAdd(PointFromString(((__String*)iCityDictionary->objectForKey("Position"))->getCString()), ccp(380, 300)));
     if (cityKey->compare(pCurrentCityName) == 0)
     {
       city->updateSprite();
@@ -113,7 +115,7 @@ void MapLayer::addCities(const char* pCurrentCityName)
 //  mCurrentCity = (City*)((__Dictionary*)mapCitiesDictionary->objectForKey(pCurrentCity))->objectForKey("Object");
 ////  mCurrentCity->makeCurrent();
 ////  mCurrentCity->unlock();
-  this->scrollToPoint(PointFromString(((__String*)((__Dictionary*)mapCitiesDictionary->objectForKey(UserDefault::getInstance()->getStringForKey("CurrentCityName").c_str()))->objectForKey("Position"))->getCString()));
+  this->scrollToPoint(ccpAdd(ccp(380, 300), PointFromString(((__String*)((__Dictionary*)mapCitiesDictionary->objectForKey(UserDefault::getInstance()->getStringForKey("CurrentCityName").c_str()))->objectForKey("Position"))->getCString())));
 }
 
 bool MapLayer::onTouchBegan(cocos2d::Touch *pTouch, cocos2d::Event *pEvent)

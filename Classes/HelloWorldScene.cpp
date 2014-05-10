@@ -89,6 +89,7 @@ void HelloWorld::menuCloseCallback(Ref* pSender)
   CCLOG("new: %s", newCityName->getCString());
 //  GameManager::setCurrentCityName(newCityName->getCString());
   UserDefault::getInstance()->setStringForKey("CurrentCityName", newCityName->getCString());
+  UserDefault::getInstance()->setIntegerForKey("CurrentCityNo", newCityNumber);
   CCLOG("gamemanager: %s", UserDefault::getInstance()->getStringForKey("CurrentCityName").c_str()); //
   
   Director::getInstance()->replaceScene(MapScene::create());

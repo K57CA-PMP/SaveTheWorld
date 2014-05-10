@@ -1,0 +1,23 @@
+﻿Build started 5/10/2014 12:22:09 AM.
+     1>Project "G:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\audio\proj.win32\CocosDenshion.vcxproj" on node 4 (Build target(s)).
+     1>ClCompile:
+         G:\Programming\VisualStudio\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\include" /I..\Include /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\2d /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\2d\renderer /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\ui /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\base /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\physics /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\math\kazmath /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\2d\platform\win32 /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\2d\platform\desktop /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external\glfw3\include\win32 /I"G:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external\win32-specific\gles\include\OGLES" /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _CRT_SECURE_NO_WARNINGS /D _VARIADIC_MAX=10 /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc120.pdb" /Gd /TP /wd4251 /analyze- /errorReport:prompt ..\win32\MciPlayer.cpp ..\win32\SimpleAudioEngine.cpp
+         MciPlayer.cpp
+         SimpleAudioEngine.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\sal_supp.h(57): warning C4005: '__useHeader' : macro redefinition (..\win32\MciPlayer.cpp)
+                 g:\programming\visualstudio\vc\include\sal.h(2886) : see previous definition of '__useHeader'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\specstrings_supp.h(77): warning C4005: '__on_failure' : macro redefinition (..\win32\MciPlayer.cpp)
+                 g:\programming\visualstudio\vc\include\sal.h(2896) : see previous definition of '__on_failure'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\sal_supp.h(57): warning C4005: '__useHeader' : macro redefinition (..\win32\SimpleAudioEngine.cpp)
+                 g:\programming\visualstudio\vc\include\sal.h(2886) : see previous definition of '__useHeader'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\specstrings_supp.h(77): warning C4005: '__on_failure' : macro redefinition (..\win32\SimpleAudioEngine.cpp)
+                 g:\programming\visualstudio\vc\include\sal.h(2896) : see previous definition of '__on_failure'
+       Lib:
+         G:\Programming\VisualStudio\VC\bin\Lib.exe /OUT:"G:\GitHub\Repositories\SaveTheWorld\proj.win32\Debug.win32\libAudio.lib" /NOLOGO Debug.win32\MciPlayer.obj
+         Debug.win32\SimpleAudioEngine.obj
+         CocosDenshion.vcxproj -> G:\GitHub\Repositories\SaveTheWorld\proj.win32\Debug.win32\libAudio.lib
+     1>Done Building Project "G:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\audio\proj.win32\CocosDenshion.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:48.37

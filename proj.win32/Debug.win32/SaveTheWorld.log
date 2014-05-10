@@ -1,0 +1,30 @@
+﻿Build started 5/10/2014 8:06:28 AM.
+     1>Project "G:\GitHub\Repositories\SaveTheWorld\proj.win32\SaveTheWorld.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         G:\Programming\VisualStudio\VC\bin\CL.exe /c /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\audio\include /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external\chipmunk\include\chipmunk /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\extensions /I..\Classes /I.. /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\2d /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\2d\renderer /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\ui /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\base /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\physics /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\math\kazmath /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\2d\platform\win32 /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\2d\platform\desktop /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external\glfw3\include\win32 /I"G:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external\win32-specific\gles\include\OGLES" /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USE_MATH_DEFINES /D GL_GLEXT_PROTOTYPES /D CC_ENABLE_CHIPMUNK_INTEGRATION=1 /D COCOS2D_DEBUG=1 /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _VARIADIC_MAX=10 /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc120.pdb" /Gd /TP /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt ..\Classes\Stage1Scene.cpp
+         Stage1Scene.cpp
+       PreLinkEvent:
+         if not exist "G:\GitHub\Repositories\SaveTheWorld\proj.win32\Debug.win32\" mkdir "G:\GitHub\Repositories\SaveTheWorld\proj.win32\Debug.win32\"
+         xcopy /Y /Q "G:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external\websockets\prebuilt\win32\*.*" "G:\GitHub\Repositories\SaveTheWorld\proj.win32\Debug.win32\"
+         :VCEnd
+         2 File(s) copied
+       Link:
+         G:\Programming\VisualStudio\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\GitHub\Repositories\SaveTheWorld\proj.win32\Debug.win32\SaveTheWorld.exe" /INCREMENTAL /NOLOGO /LIBPATH:G:\GitHub\Repositories\SaveTheWorld\proj.win32\Debug.win32\ /LIBPATH:G:\GitHub\Repositories\SaveTheWorld\proj.win32\Debug.win32\ opengl32.lib glew32.lib libzlib.lib libpng.lib libjpeg.lib libtiff.lib libwebp.lib libiconv.lib glfw3.lib freetype250.lib winmm.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\GitHub\Repositories\SaveTheWorld\proj.win32\Debug.win32\SaveTheWorld.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\GitHub\Repositories\SaveTheWorld\proj.win32\Debug.win32\SaveTheWorld.lib" /MACHINE:X86 /SAFESEH Debug.win32\game.res
+         Debug.win32\AppDelegate.obj
+         Debug.win32\City.obj
+         Debug.win32\GameManager.obj
+         Debug.win32\HelloWorldScene.obj
+         Debug.win32\MapLayer.obj
+         Debug.win32\MapScene.obj
+         Debug.win32\Stage1Layer.obj
+         Debug.win32\Stage1Scene.obj
+         Debug.win32\main.obj
+         G:\GitHub\Repositories\SaveTheWorld\proj.win32\Debug.win32\libcocos2d.lib
+         G:\GitHub\Repositories\SaveTheWorld\proj.win32\Debug.win32\libAudio.lib
+         G:\GitHub\Repositories\SaveTheWorld\proj.win32\Debug.win32\libchipmunk.lib
+         SaveTheWorld.vcxproj -> G:\GitHub\Repositories\SaveTheWorld\proj.win32\Debug.win32\SaveTheWorld.exe
+     1>Done Building Project "G:\GitHub\Repositories\SaveTheWorld\proj.win32\SaveTheWorld.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:06.43

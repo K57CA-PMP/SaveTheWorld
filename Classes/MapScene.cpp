@@ -10,8 +10,11 @@
 
 USING_NS_CC;
 
+
+
 MapScene* MapScene::create()
 {
+	CCLOG("+++++++++++=");
   MapScene *pRet = new MapScene();
   if (pRet && pRet->init())
   {
@@ -33,10 +36,11 @@ bool MapScene::init()
   }
   
   SpriteFrameCache::getInstance()->addSpriteFramesWithFile("city_selectors.plist");
+
   SpriteFrameCache::getInstance()->addSpriteFramesWithFile("map_ui.plist");
   
   mMapLayer = MapLayer::create(UserDefault::getInstance()->getStringForKey("CurrentCityName").c_str()); //GameManager::getCurrentCityName());
-  CCLOG("MapScene: %s", UserDefault::getInstance()->getStringForKey("CurrentCityName").c_str());
+  CCLOG("MapScene: %s %d", UserDefault::getInstance()->getStringForKey("CurrentCityName").c_str(), UserDefault::getInstance()->getIntegerForKey("CurrentCityNo"));
   addChild(mMapLayer);
   
   
