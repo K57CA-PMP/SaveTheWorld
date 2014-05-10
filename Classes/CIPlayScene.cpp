@@ -70,11 +70,11 @@ void CIPlayScene::addItems()
   _itemsArray->retain();
   for (int i = 0; i < 5;  i++)
   {
-    Sprite* food = Sprite::create("CollectItems/food.png");
-    food->setScale(0.3);
-    food->setPosition(Point(_visibleSize.width/(i+2), _visibleSize.height/3));
-    this->addChild(food, 5);
-    _itemsArray->addObject(food);
+    Sprite* item = Sprite::create("CollectItems/food.png");
+    item->setScale(2);
+    item->setPosition(Point(_visibleSize.width/(i+2), _visibleSize.height/3));
+    this->addChild(item, 5);
+    _itemsArray->addObject(item);
   }
 //  food = Sprite::create("CollectItems/food.png");
 //  food->setScale(0.5);
@@ -91,8 +91,8 @@ void CIPlayScene::addHooks()
   
   _hook = Sprite::create("CollectItems/hook.png");
   _hook->setAnchorPoint(Point(0.5, 1));
-  _hook->setPosition(HOOK_POSTITION);
-  this->addChild(_hook, 10);
+  _hook->setPosition(HOOK_POSITION);
+  this->addChild(_hook, 4);
 }
 
 void CIPlayScene::hookRotateAnimation()
@@ -145,11 +145,11 @@ void CIPlayScene::hookRetrieveAnimation()
   ActionInterval* action;
   if (_ItemCollected)
   {
-    action = MoveTo::create(RETRIEVING_DELAY * 5, HOOK_POSTITION);
+    action = MoveTo::create(RETRIEVING_DELAY * 5, HOOK_POSITION);
   }
   else
   {
-    action = MoveTo::create(RETRIEVING_DELAY, HOOK_POSTITION);
+    action = MoveTo::create(RETRIEVING_DELAY, HOOK_POSITION);
   }
   _retrieveAction = Spawn::create(action, retrieve, NULL);
   _retrieveAction->retain();
@@ -161,8 +161,11 @@ void CIPlayScene::checkCollision()
   Rect hookRect = _hook->boundingBox();
   for (int i = 0; i < _itemsArray->count(); i++)
   {
-    Rect foodRect = ((Sprite*)(_itemsArray->objectAtIndex(i)))->boundingBox();
-    if (hookRect.intersectsRect(foodRect))
+    Sprite* itemShadow = Sprite::create("CollectItems/itemShadow.png");
+    itemShadow->setPosition(((Sprite*)(_itemsArray->objectAtIndex(i)))->getPosition());
+    itemShadow->setVisible(false);
+    Rect itemRect = itemShadow->getBoundingBox();
+    if (hookRect.intersectsRect(itemRect))
     {
       _hook->stopAllActions();
       _state = ITEM_COLLECTED;
@@ -178,8 +181,12 @@ void CIPlayScene::itemRetrieveAnimation()
   Animation* retrieving = Animation::create();
   retrieving->addSpriteFrameWithFile("CollectItems/food.png");
   
+  Sprite* item = ((Sprite*)(_itemsArray->objectAtIndex(_indexOfCollectedItem)));
+  float dstX = HOOK_POSITION.x - sin(_hook->getRotation() * PI/180) * _hook->getContentSize().height;
+  float dstY = HOOK_POSITION.y - cos(_hook->getRotation() * PI/180) * _hook->getContentSize().height;
   Animate* retrieve = Animate::create(retrieving);
-  ActionInterval* action = MoveTo::create(RETRIEVING_DELAY * 6.5, HOOK_POSTITION);
+  ActionInterval* action = MoveTo::create(RETRIEVING_DELAY * 5,
+                                          Point(dstX, dstY));
   _itemRetrieveAction = Spawn::create(action, retrieve, NULL);
   _itemRetrieveAction->retain();
   ((Sprite*)(_itemsArray->objectAtIndex(_indexOfCollectedItem)))->runAction(_itemRetrieveAction);

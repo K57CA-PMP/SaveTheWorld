@@ -17,7 +17,8 @@ USING_NS_CC;
 #define LAUNCH 1
 #define RETRIEVE 2
 #define ITEM_COLLECTED 3
-#define HOOK_POSTITION Point(_visibleSize.width/2 - 20, _visibleSize.height - 30)
+#define HOOK_POSITION Point(_visibleSize.width/2 - 20, _visibleSize.height - 30)
+#define ITEM_DST_POS Point(_visibleSize.width/2 - 20, _visibleSize.height - 100)
 #define LIMITED_ANGLE 80
 #define ROTATION_DELAY 1
 #define LAUNCHING_DELAY 1
