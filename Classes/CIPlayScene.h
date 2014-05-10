@@ -12,6 +12,7 @@
 #include <iostream>
 #include "cocos2d.h"
 #include "CIGameManager.h"
+#include "HelloWorldScene.h"
 USING_NS_CC;
 
 class CIPlayScene : cocos2d::Layer
@@ -24,7 +25,9 @@ private:
   Sprite* _boy;
   Sprite* _hook;
   Sprite* _gameOver;
+  Menu* _win;
   Menu* _replayBtn;
+  Menu* _backBtn;
   
   RepeatForever* _rotateAction;
   Spawn* _launchAction;
@@ -60,7 +63,11 @@ public:
   void addLbls();
   void addGameOver();
   void addReplayButton();
+  void addWin();
+  void addBackBtn();
   void replayBtnTouched(Ref* pSender);
+  void winTouched(Ref* pSender);
+  void backBtnTouched(Ref* pSender);
   
   void hookRotateAnimation();
   void hookLaunchAnimation();
@@ -75,6 +82,7 @@ public:
   
   void update(float pDT);
   void countdown(float pDT);
+  void release();
 };
 
 #endif /* defined(__SaveTheWorld__CIPlayScene__) */

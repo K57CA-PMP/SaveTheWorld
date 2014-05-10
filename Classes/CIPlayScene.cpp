@@ -37,13 +37,15 @@ bool CIPlayScene::init()
   addHooks();
   addGameOver();
   addReplayButton();
+  addWin();
+  addBackBtn();
   hookRotateAnimation();
   handleTouch();
   
   _rotateAction->retain();
   _isHookRotating = false;
   _ItemCollected = false;
-  _indexOfCollectedItem = -1;
+  _indexOfCollectedItem = 0;
   _hooktail = CCArray::create();
   _hooktail->retain();
   _score = 0;
@@ -63,7 +65,7 @@ bool CIPlayScene::init()
       _timeLimit = 32;
       break;
     case 5:
-      _timeLimit = 35;
+      _timeLimit = 5;
       break;
     default:
       break;
@@ -187,12 +189,49 @@ void CIPlayScene::addReplayButton()
   this->addChild(_replayBtn, 11);
 }
 
+void CIPlayScene::addWin()
+{
+  auto menu = MenuItemImage::create("CollectItems/win.png",
+                                    "CollectItems/win.png",
+                                    CC_CALLBACK_1(CIPlayScene::winTouched, this));
+  menu->setPosition(Point(SCREEN_SIZE.width/2, SCREEN_SIZE.height/2));
+  _win = Menu::create(menu, NULL);
+  _win->setScale(0.7);
+  _win->setPosition(Point::ZERO);
+  _win->setVisible(false);
+  this->addChild(_win, 11);
+}
+
+void CIPlayScene::addBackBtn()
+{
+  auto menu = MenuItemImage::create("CollectItems/back.png",
+                                    "CollectItems/back.png",
+                                    CC_CALLBACK_1(CIPlayScene::backBtnTouched, this));
+  menu->setPosition(Point(_origin.x + menu->getContentSize().width/2, _origin.y + menu->getContentSize().height/2));
+  menu->setScale(0.7);
+  _backBtn = Menu::create(menu, _backBtn);
+  _backBtn->setPosition(Point::ZERO);
+  _backBtn->setVisible(false);
+  this->addChild(_backBtn, 11);
+}
+
 void CIPlayScene::replayBtnTouched(Ref* pSender)
 {
   auto scene = CCTransitionCrossFade::create(0.5, CIPlayScene::createScene());
   Director::getInstance()->sharedDirector()->replaceScene(scene);
 }
 
+void CIPlayScene::winTouched(Ref* pSender)
+{
+  auto scene = CCTransitionCrossFade::create(0.5, HelloWorld::createScene());
+  Director::getInstance()->sharedDirector()->replaceScene(scene);
+}
+
+void CIPlayScene::backBtnTouched(Ref* pSender)
+{
+  auto scene = CCTransitionCrossFade::create(0.5, HelloWorld::createScene());
+  Director::getInstance()->sharedDirector()->replaceScene(scene);
+}
 void CIPlayScene::hookRotateAnimation()
 {
   Animation* rotation = Animation::create();
@@ -322,6 +361,18 @@ void CIPlayScene::handleTouch()
 
 void CIPlayScene::update(float pDT)
 {
+  if (_itemsArray->count() == 6)
+  {
+    if (CIGameManager::getGameLevel() == 5)
+    {
+      _state = WIN;
+    }
+    else
+    {
+      _state = NEXT_LEVEL;
+    }
+  }
+  
   if (_state == ROTATE && !_isHookRotating)
   {
     while (_hooktail->count() > 0)
@@ -383,14 +434,18 @@ void CIPlayScene::update(float pDT)
     }
     _gameOver->setVisible(true);
     _replayBtn->setVisible(true);
+    _backBtn->setVisible(true);
   }
   else if (_state == NEXT_LEVEL)
   {
-    
+//    this->release();
+    CIGameManager::setGameLevel(CIGameManager::getGameLevel() + 1);
+    auto scene = CCTransitionCrossFade::create(0.5, CIPlayScene::createScene());
+    Director::getInstance()->sharedDirector()->replaceScene(scene);
   }
   else if (_state == WIN)
   {
-  
+    _win->setVisible(true);
   }
 }
 
@@ -410,4 +465,14 @@ void CIPlayScene::countdown(float pDT)
   {
     _state = GAME_OVER;
   }
+}
+
+void CIPlayScene::release()
+{
+  _itemsArray->release();
+  _rotateAction->release();
+  _hooktail->release();
+  _launchAction->release();
+  _retrieveAction->release();
+  _itemRetrieveAction->release();
 }
