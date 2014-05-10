@@ -2,10 +2,12 @@
 #include "HelloWorldScene.h"
 #include "MapScene.h"
 #include "MainMenu.h"
+#include "Stage1Scene.h"
 
 USING_NS_CC;
 
-AppDelegate::AppDelegate() {
+AppDelegate::AppDelegate()
+{
 
 }
 

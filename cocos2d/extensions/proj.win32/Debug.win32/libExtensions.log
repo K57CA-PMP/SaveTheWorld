@@ -1,0 +1,141 @@
+﻿Build started 5/10/2014 9:07:15 AM.
+     1>Project "G:\GitHub\Repositories\SaveTheWorld\cocos2d\extensions\proj.win32\libExtensions.vcxproj" on node 5 (Build target(s)).
+     1>ClCompile:
+         G:\Programming\VisualStudio\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\include" /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\ /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\audio\include /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external\unzip /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external\chipmunk\include\chipmunk /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external\curl\include\win32 /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external\sqlite3\include /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external\libwebsockets\win32\include /I"G:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external\win32-specific\zlib\include" /I..\ /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\2d /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\2d\renderer /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\ui /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\base /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\physics /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\math\kazmath /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\2d\platform\win32 /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\2d\platform\desktop /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external\glfw3\include\win32 /I"G:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external\win32-specific\gles\include\OGLES" /Z7 /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _LIB /D COCOS2D_DEBUG=1 /D CC_ENABLE_CHIPMUNK_INTEGRATION=1 /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _VARIADIC_MAX=10 /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc120.pdb" /Gd /TP /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt "..\assets-manager\AssetsManager.cpp" ..\GUI\CCControlExtension\CCControl.cpp ..\GUI\CCControlExtension\CCControlButton.cpp ..\GUI\CCControlExtension\CCControlColourPicker.cpp ..\GUI\CCControlExtension\CCControlHuePicker.cpp ..\GUI\CCControlExtension\CCControlPotentiometer.cpp ..\GUI\CCControlExtension\CCControlSaturationBrightnessPicker.cpp ..\GUI\CCControlExtension\CCControlSlider.cpp ..\GUI\CCControlExtension\CCControlStepper.cpp ..\GUI\CCControlExtension\CCControlSwitch.cpp ..\GUI\CCControlExtension\CCControlUtils.cpp ..\GUI\CCControlExtension\CCInvocation.cpp ..\GUI\CCControlExtension\CCScale9Sprite.cpp ..\GUI\CCEditBox\CCEditBox.cpp ..\GUI\CCEditBox\CCEditBoxImplWin.cpp ..\GUI\CCScrollView\CCScrollView.cpp ..\GUI\CCScrollView\CCTableView.cpp ..\GUI\CCScrollView\CCTableViewCell.cpp "..\physics-nodes\CCPhysicsDebugNode.cpp" "..\physics-nodes\CCPhysicsSprite.cpp" Win32InputBox.cpp
+         AssetsManager.cpp
+         CCControl.cpp
+         CCControlButton.cpp
+         CCControlColourPicker.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\sal_supp.h(57): warning C4005: '__useHeader' : macro redefinition (..\GUI\CCControlExtension\CCControlButton.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2886) : see previous definition of '__useHeader'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\specstrings_supp.h(77): warning C4005: '__on_failure' : macro redefinition (..\GUI\CCControlExtension\CCControlButton.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2896) : see previous definition of '__on_failure'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\sal_supp.h(57): warning C4005: '__useHeader' : macro redefinition (..\GUI\CCControlExtension\CCControl.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2886) : see previous definition of '__useHeader'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\specstrings_supp.h(77): warning C4005: '__on_failure' : macro redefinition (..\GUI\CCControlExtension\CCControl.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2896) : see previous definition of '__on_failure'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\sal_supp.h(57): warning C4005: '__useHeader' : macro redefinition (..\GUI\CCControlExtension\CCControlColourPicker.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2886) : see previous definition of '__useHeader'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\specstrings_supp.h(77): warning C4005: '__on_failure' : macro redefinition (..\GUI\CCControlExtension\CCControlColourPicker.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2896) : see previous definition of '__on_failure'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\sal_supp.h(57): warning C4005: '__useHeader' : macro redefinition (..\assets-manager\AssetsManager.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2886) : see previous definition of '__useHeader'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\specstrings_supp.h(77): warning C4005: '__on_failure' : macro redefinition (..\assets-manager\AssetsManager.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2896) : see previous definition of '__on_failure'
+         CCControlHuePicker.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\sal_supp.h(57): warning C4005: '__useHeader' : macro redefinition (..\GUI\CCControlExtension\CCControlHuePicker.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2886) : see previous definition of '__useHeader'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\specstrings_supp.h(77): warning C4005: '__on_failure' : macro redefinition (..\GUI\CCControlExtension\CCControlHuePicker.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2896) : see previous definition of '__on_failure'
+         CCControlPotentiometer.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\sal_supp.h(57): warning C4005: '__useHeader' : macro redefinition (..\GUI\CCControlExtension\CCControlPotentiometer.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2886) : see previous definition of '__useHeader'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\specstrings_supp.h(77): warning C4005: '__on_failure' : macro redefinition (..\GUI\CCControlExtension\CCControlPotentiometer.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2896) : see previous definition of '__on_failure'
+         CCControlSaturationBrightnessPicker.cpp
+         CCControlSlider.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\sal_supp.h(57): warning C4005: '__useHeader' : macro redefinition (..\GUI\CCControlExtension\CCControlSaturationBrightnessPicker.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2886) : see previous definition of '__useHeader'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\specstrings_supp.h(77): warning C4005: '__on_failure' : macro redefinition (..\GUI\CCControlExtension\CCControlSaturationBrightnessPicker.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2896) : see previous definition of '__on_failure'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\sal_supp.h(57): warning C4005: '__useHeader' : macro redefinition (..\GUI\CCControlExtension\CCControlSlider.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2886) : see previous definition of '__useHeader'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\specstrings_supp.h(77): warning C4005: '__on_failure' : macro redefinition (..\GUI\CCControlExtension\CCControlSlider.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2896) : see previous definition of '__on_failure'
+         CCControlStepper.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\sal_supp.h(57): warning C4005: '__useHeader' : macro redefinition (..\GUI\CCControlExtension\CCControlStepper.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2886) : see previous definition of '__useHeader'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\specstrings_supp.h(77): warning C4005: '__on_failure' : macro redefinition (..\GUI\CCControlExtension\CCControlStepper.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2896) : see previous definition of '__on_failure'
+         CCControlSwitch.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\sal_supp.h(57): warning C4005: '__useHeader' : macro redefinition (..\GUI\CCControlExtension\CCControlSwitch.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2886) : see previous definition of '__useHeader'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\specstrings_supp.h(77): warning C4005: '__on_failure' : macro redefinition (..\GUI\CCControlExtension\CCControlSwitch.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2896) : see previous definition of '__on_failure'
+         CCControlUtils.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\sal_supp.h(57): warning C4005: '__useHeader' : macro redefinition (..\GUI\CCControlExtension\CCControlUtils.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2886) : see previous definition of '__useHeader'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\specstrings_supp.h(77): warning C4005: '__on_failure' : macro redefinition (..\GUI\CCControlExtension\CCControlUtils.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2896) : see previous definition of '__on_failure'
+         CCInvocation.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\sal_supp.h(57): warning C4005: '__useHeader' : macro redefinition (..\GUI\CCControlExtension\CCInvocation.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2886) : see previous definition of '__useHeader'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\specstrings_supp.h(77): warning C4005: '__on_failure' : macro redefinition (..\GUI\CCControlExtension\CCInvocation.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2896) : see previous definition of '__on_failure'
+         CCScale9Sprite.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\sal_supp.h(57): warning C4005: '__useHeader' : macro redefinition (..\GUI\CCControlExtension\CCScale9Sprite.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2886) : see previous definition of '__useHeader'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\specstrings_supp.h(77): warning C4005: '__on_failure' : macro redefinition (..\GUI\CCControlExtension\CCScale9Sprite.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2896) : see previous definition of '__on_failure'
+         CCEditBox.cpp
+         CCEditBoxImplWin.cpp
+         CCScrollView.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\sal_supp.h(57): warning C4005: '__useHeader' : macro redefinition (..\GUI\CCScrollView\CCScrollView.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2886) : see previous definition of '__useHeader'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\specstrings_supp.h(77): warning C4005: '__on_failure' : macro redefinition (..\GUI\CCScrollView\CCScrollView.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2896) : see previous definition of '__on_failure'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\sal_supp.h(57): warning C4005: '__useHeader' : macro redefinition (..\GUI\CCEditBox\CCEditBox.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2886) : see previous definition of '__useHeader'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\specstrings_supp.h(77): warning C4005: '__on_failure' : macro redefinition (..\GUI\CCEditBox\CCEditBox.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2896) : see previous definition of '__on_failure'
+         CCTableView.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\sal_supp.h(57): warning C4005: '__useHeader' : macro redefinition (..\GUI\CCEditBox\CCEditBoxImplWin.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2886) : see previous definition of '__useHeader'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\specstrings_supp.h(77): warning C4005: '__on_failure' : macro redefinition (..\GUI\CCEditBox\CCEditBoxImplWin.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2896) : see previous definition of '__on_failure'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\sal_supp.h(57): warning C4005: '__useHeader' : macro redefinition (..\GUI\CCScrollView\CCTableView.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2886) : see previous definition of '__useHeader'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\specstrings_supp.h(77): warning C4005: '__on_failure' : macro redefinition (..\GUI\CCScrollView\CCTableView.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2896) : see previous definition of '__on_failure'
+         CCTableViewCell.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\sal_supp.h(57): warning C4005: '__useHeader' : macro redefinition (..\GUI\CCScrollView\CCTableViewCell.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2886) : see previous definition of '__useHeader'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\specstrings_supp.h(77): warning C4005: '__on_failure' : macro redefinition (..\GUI\CCScrollView\CCTableViewCell.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2896) : see previous definition of '__on_failure'
+         CCPhysicsDebugNode.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\sal_supp.h(57): warning C4005: '__useHeader' : macro redefinition (..\physics-nodes\CCPhysicsDebugNode.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2886) : see previous definition of '__useHeader'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\specstrings_supp.h(77): warning C4005: '__on_failure' : macro redefinition (..\physics-nodes\CCPhysicsDebugNode.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2896) : see previous definition of '__on_failure'
+         CCPhysicsSprite.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\sal_supp.h(57): warning C4005: '__useHeader' : macro redefinition (..\physics-nodes\CCPhysicsSprite.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2886) : see previous definition of '__useHeader'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\specstrings_supp.h(77): warning C4005: '__on_failure' : macro redefinition (..\physics-nodes\CCPhysicsSprite.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2896) : see previous definition of '__on_failure'
+     1>g:\github\repositories\savetheworld\cocos2d\external\chipmunk\include\chipmunk\cpBB.h(105): warning C4056: overflow in floating-point constant arithmetic (..\physics-nodes\CCPhysicsDebugNode.cpp)
+     1>g:\github\repositories\savetheworld\cocos2d\external\chipmunk\include\chipmunk\cpBB.h(111): warning C4056: overflow in floating-point constant arithmetic (..\physics-nodes\CCPhysicsDebugNode.cpp)
+         Win32InputBox.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\sal_supp.h(57): warning C4005: '__useHeader' : macro redefinition (Win32InputBox.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2886) : see previous definition of '__useHeader'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.1a\include\specstrings_supp.h(77): warning C4005: '__on_failure' : macro redefinition (Win32InputBox.cpp)
+                 G:\Programming\VisualStudio\VC\include\sal.h(2896) : see previous definition of '__on_failure'
+     1>g:\github\repositories\savetheworld\cocos2d\external\chipmunk\include\chipmunk\cpBB.h(105): warning C4056: overflow in floating-point constant arithmetic (..\physics-nodes\CCPhysicsSprite.cpp)
+     1>g:\github\repositories\savetheworld\cocos2d\external\chipmunk\include\chipmunk\cpBB.h(111): warning C4056: overflow in floating-point constant arithmetic (..\physics-nodes\CCPhysicsSprite.cpp)
+       Lib:
+         G:\Programming\VisualStudio\VC\bin\Lib.exe /OUT:"G:\GitHub\Repositories\SaveTheWorld\proj.win32\Debug.win32\libExtensions.lib" /NOLOGO Debug.win32\AssetsManager.obj
+         Debug.win32\CCControl.obj
+         Debug.win32\CCControlButton.obj
+         Debug.win32\CCControlColourPicker.obj
+         Debug.win32\CCControlHuePicker.obj
+         Debug.win32\CCControlPotentiometer.obj
+         Debug.win32\CCControlSaturationBrightnessPicker.obj
+         Debug.win32\CCControlSlider.obj
+         Debug.win32\CCControlStepper.obj
+         Debug.win32\CCControlSwitch.obj
+         Debug.win32\CCControlUtils.obj
+         Debug.win32\CCInvocation.obj
+         Debug.win32\CCScale9Sprite.obj
+         Debug.win32\CCEditBox.obj
+         Debug.win32\CCEditBoxImplWin.obj
+         Debug.win32\CCScrollView.obj
+         Debug.win32\CCTableView.obj
+         Debug.win32\CCTableViewCell.obj
+         Debug.win32\CCPhysicsDebugNode.obj
+         Debug.win32\CCPhysicsSprite.obj
+         Debug.win32\Win32InputBox.obj
+         libExtensions.vcxproj -> G:\GitHub\Repositories\SaveTheWorld\proj.win32\Debug.win32\libExtensions.lib
+     1>Done Building Project "G:\GitHub\Repositories\SaveTheWorld\cocos2d\extensions\proj.win32\libExtensions.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:46.38

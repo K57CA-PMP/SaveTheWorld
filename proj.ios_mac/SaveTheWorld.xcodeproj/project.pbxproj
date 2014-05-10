@@ -67,6 +67,11 @@
 		7A049282191DD3C4005676D3 /* startButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A049281191DD3C4005676D3 /* startButton.png */; };
 		7A049284191DFC5B005676D3 /* emergencyButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A049283191DFC5B005676D3 /* emergencyButton.png */; };
 		7A049286191E0049005676D3 /* settingButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A049285191E0049005676D3 /* settingButton.png */; };
+		7A04928B191E0438005676D3 /* Stage1Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A049287191E0438005676D3 /* Stage1Layer.cpp */; };
+		7A04928C191E0438005676D3 /* Stage1Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A049289191E0438005676D3 /* Stage1Scene.cpp */; };
+		7A049290191E04AC005676D3 /* stage1 in Resources */ = {isa = PBXBuildFile; fileRef = 7A04928D191E04AC005676D3 /* stage1 */; };
+		7A049291191E04AC005676D3 /* submit1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A04928E191E04AC005676D3 /* submit1.png */; };
+		7A049292191E04AC005676D3 /* submit2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A04928F191E04AC005676D3 /* submit2.png */; };
 		7A1FB691191CC4FF008171D2 /* City.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A1FB68F191CC4FF008171D2 /* City.cpp */; };
 		7AA0A8DE191CD3C6004F5774 /* city_selectors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AA0A8DB191CD3C6004F5774 /* city_selectors.plist */; };
 		7AA0A8DF191CD3C6004F5774 /* city_selectors.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 7AA0A8DC191CD3C6004F5774 /* city_selectors.pvr.ccz */; };
@@ -281,6 +286,13 @@
 		7A049281191DD3C4005676D3 /* startButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startButton.png; sourceTree = "<group>"; };
 		7A049283191DFC5B005676D3 /* emergencyButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emergencyButton.png; sourceTree = "<group>"; };
 		7A049285191E0049005676D3 /* settingButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingButton.png; sourceTree = "<group>"; };
+		7A049287191E0438005676D3 /* Stage1Layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Stage1Layer.cpp; path = ../Classes/Stage1Layer.cpp; sourceTree = "<group>"; };
+		7A049288191E0438005676D3 /* Stage1Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stage1Layer.h; path = ../Classes/Stage1Layer.h; sourceTree = "<group>"; };
+		7A049289191E0438005676D3 /* Stage1Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Stage1Scene.cpp; path = ../Classes/Stage1Scene.cpp; sourceTree = "<group>"; };
+		7A04928A191E0438005676D3 /* Stage1Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Stage1Scene.h; path = ../Classes/Stage1Scene.h; sourceTree = "<group>"; };
+		7A04928D191E04AC005676D3 /* stage1 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = stage1; sourceTree = "<group>"; };
+		7A04928E191E04AC005676D3 /* submit1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = submit1.png; sourceTree = "<group>"; };
+		7A04928F191E04AC005676D3 /* submit2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = submit2.png; sourceTree = "<group>"; };
 		7A1FB68F191CC4FF008171D2 /* City.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = City.cpp; path = ../Classes/City.cpp; sourceTree = "<group>"; };
 		7A1FB690191CC4FF008171D2 /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = City.h; path = ../Classes/City.h; sourceTree = "<group>"; };
 		7AA0A8DB191CD3C6004F5774 /* city_selectors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city_selectors.plist; sourceTree = "<group>"; };
@@ -372,6 +384,10 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7A049287191E0438005676D3 /* Stage1Layer.cpp */,
+				7A049288191E0438005676D3 /* Stage1Layer.h */,
+				7A049289191E0438005676D3 /* Stage1Scene.cpp */,
+				7A04928A191E0438005676D3 /* Stage1Scene.h */,
 				7ADEAE54191B800E00ABDC91 /* Constant.h */,
 				1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */,
 				1AFAF8B416D35DE700DB1158 /* AppDelegate.h */,
@@ -502,6 +518,9 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7A04928D191E04AC005676D3 /* stage1 */,
+				7A04928E191E04AC005676D3 /* submit1.png */,
+				7A04928F191E04AC005676D3 /* submit2.png */,
 				7A049285191E0049005676D3 /* settingButton.png */,
 				7A049283191DFC5B005676D3 /* emergencyButton.png */,
 				7A049281191DD3C4005676D3 /* startButton.png */,
@@ -688,17 +707,20 @@
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
+				7A049292191E04AC005676D3 /* submit2.png in Resources */,
 				7AF71D95191B788E00202960 /* map.jpg in Resources */,
 				7A049282191DD3C4005676D3 /* startButton.png in Resources */,
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
+				7A049291191E04AC005676D3 /* submit1.png in Resources */,
 				7AA0A8EC191D39FB004F5774 /* map_ui.pvr.ccz in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
 				7AA0A8DE191CD3C6004F5774 /* city_selectors.plist in Resources */,
 				7A049284191DFC5B005676D3 /* emergencyButton.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
+				7A049290191E04AC005676D3 /* stage1 in Resources */,
 				7AA0A8E0191CD3C6004F5774 /* map01.plist in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
@@ -734,8 +756,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A04928B191E0438005676D3 /* Stage1Layer.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				7A04928C191E0438005676D3 /* Stage1Scene.cpp in Sources */,
 				7A1FB691191CC4FF008171D2 /* City.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				7AA0A8E6191D137D004F5774 /* GameManager.cpp in Sources */,

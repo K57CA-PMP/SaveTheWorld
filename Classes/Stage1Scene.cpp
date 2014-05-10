@@ -9,11 +9,11 @@
 #include "Stage1Scene.h"
 #include "Constant.h"
 #include "MapScene.h"
-//#include "cocos-ext.h"
+
 
 
 USING_NS_CC;
-//USING_NS_CC_EXT;
+USING_NS_CC_EXT;
 
 
 
@@ -23,8 +23,8 @@ bool Stage1Scene::init()
 	{
 		return false;
 	}
-	cluePictures[1] = "stage1/flood";
-	answer[1] = "flood";
+	questionIndex = UserDefault::getInstance()->getIntegerForKey("CurrentCityNo");
+	loadImageAnswer();
 	
 	mStage1Layer = Stage1Layer::create();
 	addChild(mStage1Layer);
@@ -38,7 +38,7 @@ bool Stage1Scene::init()
 		CC_CALLBACK_1(Stage1Scene::menuSubmitCallback, this));
 
 	//set button
-	submitItem->setPosition(Point(origin.x + visibleSize.width / 2, origin.y + visibleSize.height / 5));
+	submitItem->setPosition(Point(origin.x + visibleSize.width / 2, origin.y + visibleSize.height / 6));
 	auto menu = Menu::create(submitItem, NULL);
 	menu->setPosition(Point::ZERO);
 	mStage1Layer->addChild(menu,1);
@@ -46,9 +46,15 @@ bool Stage1Scene::init()
 
 	//set Edit Box
 
-	//auto answerBoxSize = Size(visibleSize.width / 3, visibleSize.height / 10);
-	//auto mAnswerBox = EditBox::create();
-	//
+	auto answerBoxSize = Size(visibleSize.width / 3, visibleSize.height / 10);
+	mAnswerBox = EditBox::create(answerBoxSize,Scale9Sprite::create());
+	mAnswerBox->setPosition(Point(visibleSize.width/2,visibleSize.height/3));
+	mAnswerBox->setPlaceHolder("Please enter the answer");
+	mAnswerBox->setText("tienhoangna");
+	mAnswerBox->setFontSize(14);
+	mAnswerBox->setFontColor(cocos2d::Color3B::MAGENTA);
+	
+	mStage1Layer->addChild(mAnswerBox,2);
 
 	//set First Image
 
@@ -59,40 +65,52 @@ bool Stage1Scene::init()
 
 void Stage1Scene::menuSubmitCallback(Ref* pSender)
 {
+	currentAnswer = mAnswerBox->getText();
+	CCLOG("%s",currentAnswer.c_str());
 	
-	std::string res = "sai";
-	if (res != answer[questionIndex] || (questionIndex == 1 && pictureIndex == 0)) {
+	if (currentAnswer != answer[questionIndex] ) {
+		
 		pictureIndex++;
 		if (pictureIndex >= 5) {
-			//Game over 
-			//auto mapScene = MapScene::create();
-			//Director::getInstance()->replaceScene(mapScene);
-			auto mapScene2 = MapScene::create();
-			Director::getInstance()->replaceScene(mapScene2);
-			CCLOG("----------------");
+			CCLOG("fuck");
+			Director::getInstance()->replaceScene(MapScene::create());
 		}
 	}
-	else {
-		questionIndex++;
-		pictureIndex = 1;
-		if (questionIndex == 6) {
-			auto scene = MapScene::create();
-			auto director = Director::getInstance();
-			director->replaceScene(scene);
-		}
+	else { // wining
+    UserDefault::getInstance()->setStringForKey(UserDefault::getInstance()->getStringForKey("CurrentCityName").c_str(), "win");
+		UserDefault::getInstance()->setIntegerForKey("CurrentCityNo",questionIndex + 1);
+		UserDefault::getInstance()->setStringForKey("CurrentCityName", __String::createWithFormat("city0%d", questionIndex + 1)->getCString());
+		Director::getInstance()->replaceScene(MapScene::create());
 	}
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 	auto cluePicture = Sprite::create(__String::createWithFormat("%s%d.jpg", cluePictures[questionIndex].c_str(), pictureIndex)->getCString());
-	cluePicture->setPosition(Point(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
+	cluePicture->setPosition(Point(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y+visibleSize.height/5));
 	cluePicture->setScaleX(visibleSize.width / 2 / cluePicture->getContentSize().width);
 	cluePicture->setScaleY(visibleSize.height / 2 / cluePicture->getContentSize().height);
 	// add the sprite as a child to this layer
 	mStage1Layer->addChild(cluePicture);
+	currentAnswer = "sai";
 }
 
 void Stage1Scene::showpicture(){
 	
 }
 
+void Stage1Scene::loadImageAnswer(){
+	cluePictures[1] = "stage1/flood";
+	cluePictures[2] = "stage1/chay";
+	cluePictures[3] = "stage1/drought";
+	cluePictures[4] = "stage1/earthquake";
+	cluePictures[5] = "stage1/storm";
+	cluePictures[6] = "stage1/tsunami";
+	
+	answer[1] = "flood";
+	answer[2] = "wildfire";
+	answer[3] = "drought";
+	answer[4] = "earthquake";
+	answer[5] = "storm";
+	answer[6] = "tsunami";
+
+}
 

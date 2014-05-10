@@ -89,17 +89,18 @@ void MapLayer::addCities(const char* pCurrentCityName)
     {
       city->updateCurrentSprite();
     }
-    if (UserDefault::getInstance()->getBoolForKey("IsWinCurrentCity"))
+    
+    if (UserDefault::getInstance()->getStringForKey(cityKey->getCString()) == "win")
     {
       city->updateClearedSprite();
     }
+
     this->addChild(city, Z_MAP_CITIES);
     
     iCityDictionary->setObject(city, "Object");
     
     mCitiesArray->addObject((Ref*) city);
   }
-  
 //  CCARRAY_FOREACH(mCitiesArray, child)
 //  {
 //    City *city = (City*)child;

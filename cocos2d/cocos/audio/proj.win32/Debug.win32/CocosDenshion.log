@@ -1,4 +1,4 @@
-﻿Build started 5/10/2014 12:22:09 AM.
+﻿Build started 5/10/2014 9:07:15 AM.
      1>Project "G:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\audio\proj.win32\CocosDenshion.vcxproj" on node 4 (Build target(s)).
      1>ClCompile:
          G:\Programming\VisualStudio\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\include" /I..\Include /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\2d /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\2d\renderer /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\ui /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\base /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\physics /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\math\kazmath /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\2d\platform\win32 /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\2d\platform\desktop /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external\glfw3\include\win32 /I"G:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external\win32-specific\gles\include\OGLES" /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _CRT_SECURE_NO_WARNINGS /D _VARIADIC_MAX=10 /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc120.pdb" /Gd /TP /wd4251 /analyze- /errorReport:prompt ..\win32\MciPlayer.cpp ..\win32\SimpleAudioEngine.cpp
@@ -20,4 +20,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:48.37
+Time Elapsed 00:02:08.51
