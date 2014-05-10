@@ -10,6 +10,7 @@
 #include "cocos2d.h"
 #include <math.h>
 #include "Constant.h"
+#include "CIGameManager.h"
 USING_NS_CC;
 
 Scene* CIPlayScene::createScene()
@@ -35,6 +36,7 @@ bool CIPlayScene::init()
   addItems();
   addHooks();
   addGameOver();
+  addReplayButton();
   hookRotateAnimation();
   handleTouch();
   
@@ -46,6 +48,7 @@ bool CIPlayScene::init()
   _hooktail->retain();
   _score = 0;
   _timeLimit = 3;
+  _nItems = 0;
   addLbls();
   
   schedule(schedule_selector(CIPlayScene::update));
@@ -76,7 +79,8 @@ void CIPlayScene::addItems()
 {
   _itemsArray = CCArray::createWithCapacity(5);
   _itemsArray->retain();
-  for (int i = 0; i < NUM_OF_ITEMS;  i++)
+  _nItems = CIGameManager::getGameLevel() + 2;
+  for (int i = 0; i < _nItems;  i++)
   {
     CCString* itemName = CCString::createWithFormat("CollectItems/item%i.png", i);
     Sprite* item = Sprite::create(itemName->getCString());
@@ -146,9 +150,28 @@ void CIPlayScene::addGameOver()
 {
   _gameOver = Sprite::create("CollectItems/gameOver.png");
   _gameOver->setScale(2);
-  _gameOver->setPosition(SCREEN_SIZE.width/2, SCREEN_SIZE.height/2);
+  _gameOver->setPosition(SCREEN_SIZE.width/2, SCREEN_SIZE.height/1.5);
   _gameOver->setVisible(false);
   this->addChild(_gameOver, 11);
+}
+
+void CIPlayScene::addReplayButton()
+{
+  auto menu = MenuItemImage::create("CollectItems/replay.png",
+                                    "CollectItems/replay.png",
+                                    CC_CALLBACK_1(CIPlayScene::replayBtnTouched, this));
+  menu->setScale(0.5);
+  menu->setPosition(SCREEN_SIZE.width/2, SCREEN_SIZE.height/2.5);
+  _replayBtn = Menu::create(menu, NULL);
+  _replayBtn->setPosition(Point::ZERO);
+  _replayBtn->setVisible(false);
+  this->addChild(_replayBtn, 11);
+}
+
+void CIPlayScene::replayBtnTouched(Ref* pSender)
+{
+  auto scene = CCTransitionCrossFade::create(0.5, CIPlayScene::createScene());
+  Director::getInstance()->sharedDirector()->replaceScene(scene);
 }
 
 void CIPlayScene::hookRotateAnimation()
@@ -280,7 +303,15 @@ void CIPlayScene::handleTouch()
 
 void CIPlayScene::update(float pDT)
 {
-  pDT = 2/60;
+//  switch (_state)
+//  {
+//    case ROTATE:
+//      <#statements#>
+//      break;
+//      
+//    default:
+//      break;
+//  }
   if (_state == ROTATE && !_isHookRotating)
   {
     while (_hooktail->count() > 0)
@@ -337,7 +368,19 @@ void CIPlayScene::update(float pDT)
   else if (_state == GAME_OVER)
   {
     _hook->stopAllActions();
+    if (_indexOfCollectedItem >= 0) {
+      ((Sprite*)(_itemsArray->objectAtIndex(_indexOfCollectedItem)))->stopAllActions();
+    }
     _gameOver->setVisible(true);
+    _replayBtn->setVisible(true);
+  }
+  else if (_state == NEXT_LEVEL)
+  {
+    
+  }
+  else if (_state == WIN)
+  {
+  
   }
 }
 

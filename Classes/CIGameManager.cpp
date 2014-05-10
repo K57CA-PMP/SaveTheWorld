@@ -7,3 +7,13 @@
 //
 
 #include "CIGameManager.h"
+
+int CIGameManager::_gameLevel = 1;
+int CIGameManager::getGameLevel()
+{
+  return _gameLevel;
+}
+void CIGameManager::setGameLevel(int pLevel)
+{
+  _gameLevel = pLevel;
+}

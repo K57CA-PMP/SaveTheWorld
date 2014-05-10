@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include "cocos2d.h"
+#include "CIGameManager.h"
 USING_NS_CC;
 
 class CIPlayScene : cocos2d::Layer
@@ -23,6 +24,7 @@ private:
   Sprite* _boy;
   Sprite* _hook;
   Sprite* _gameOver;
+  Menu* _replayBtn;
   
   RepeatForever* _rotateAction;
   Spawn* _launchAction;
@@ -33,6 +35,7 @@ private:
   int _state;
   bool _isHookRotating;
   bool _ItemCollected;
+  int _nItems;
   
   CCArray* _itemsArray;
   CCArray* _hooktail;
@@ -56,6 +59,8 @@ public:
   void addHooks();
   void addLbls();
   void addGameOver();
+  void addReplayButton();
+  void replayBtnTouched(Ref* pSender);
   
   void hookRotateAnimation();
   void hookLaunchAnimation();
