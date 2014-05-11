@@ -1,8 +1,276 @@
-﻿Build started 5/10/2014 10:56:00 AM.
+﻿Build started 5/11/2014 10:02:23 AM.
      1>Project "G:\GitHub\Repositories\SaveTheWorld\proj.win32\SaveTheWorld.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         G:\Programming\VisualStudio\VC\bin\CL.exe /c /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\audio\include /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external\chipmunk\include\chipmunk /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\extensions /I..\Classes /I.. /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\2d /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\2d\renderer /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\ui /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\base /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\physics /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\math\kazmath /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\2d\platform\win32 /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\2d\platform\desktop /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external\glfw3\include\win32 /I"G:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external\win32-specific\gles\include\OGLES" /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\ /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos /I"G:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\editor-support" /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USE_MATH_DEFINES /D GL_GLEXT_PROTOTYPES /D CC_ENABLE_CHIPMUNK_INTEGRATION=1 /D COCOS2D_DEBUG=1 /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _VARIADIC_MAX=10 /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc120.pdb" /Gd /TP /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt ..\Classes\Stage1Scene.cpp
+         G:\Programming\VisualStudio\VC\bin\CL.exe /c /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\audio\include /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external\chipmunk\include\chipmunk /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\extensions /I..\Classes /I.. /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\2d /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\2d\renderer /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\ui /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\base /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\physics /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\math\kazmath /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\2d\platform\win32 /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\2d\platform\desktop /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external\glfw3\include\win32 /I"G:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external\win32-specific\gles\include\OGLES" /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\ /IG:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos /I"G:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\cocos\editor-support" /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USE_MATH_DEFINES /D GL_GLEXT_PROTOTYPES /D CC_ENABLE_CHIPMUNK_INTEGRATION=1 /D COCOS2D_DEBUG=1 /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _VARIADIC_MAX=10 /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc120.pdb" /Gd /TP /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt ..\Classes\AppDelegate.cpp ..\Classes\City.cpp ..\Classes\Fact.cpp ..\Classes\Game1Layer.cpp ..\Classes\Game1Scene.cpp ..\Classes\GameManager.cpp ..\Classes\HelloWorldScene.cpp ..\Classes\MapLayer.cpp ..\Classes\MapScene.cpp ..\Classes\Stage1Scene.cpp
+         AppDelegate.cpp
+         City.cpp
+         Fact.cpp
+         Game1Layer.cpp
+     1>g:\github\repositories\savetheworld\classes\city.cpp(39): warning C4996: 'cocos2d::Node::boundingBox': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\ccnode.h(946) : see declaration of 'cocos2d::Node::boundingBox'
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\ccnode.h(946) : see declaration of 'cocos2d::Node::boundingBox'
+     1>g:\github\repositories\savetheworld\classes\city.cpp(48): warning C4996: 'cocos2d::Node::boundingBox': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\ccnode.h(946) : see declaration of 'cocos2d::Node::boundingBox'
+     1>g:\github\repositories\savetheworld\classes\city.cpp(49): warning C4996: 'cocos2d::Node::boundingBox': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\ccnode.h(946) : see declaration of 'cocos2d::Node::boundingBox'
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\ccnode.h(946) : see declaration of 'cocos2d::Node::boundingBox'
+     1>g:\github\repositories\savetheworld\classes\city.cpp(50): warning C4996: 'cocos2d::Node::boundingBox': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\ccnode.h(946) : see declaration of 'cocos2d::Node::boundingBox'
+     1>g:\github\repositories\savetheworld\classes\city.cpp(51): warning C4996: 'cocos2d::Node::boundingBox': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\ccnode.h(946) : see declaration of 'cocos2d::Node::boundingBox'
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\ccnode.h(946) : see declaration of 'cocos2d::Node::boundingBox'
+     1>g:\github\repositories\savetheworld\classes\city.cpp(56): warning C4996: 'cocos2d::Node::boundingBox': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\ccnode.h(946) : see declaration of 'cocos2d::Node::boundingBox'
+     1>g:\github\repositories\savetheworld\classes\city.cpp(57): warning C4996: 'cocos2d::Node::boundingBox': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\ccnode.h(946) : see declaration of 'cocos2d::Node::boundingBox'
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\ccnode.h(946) : see declaration of 'cocos2d::Node::boundingBox'
+     1>g:\github\repositories\savetheworld\classes\city.cpp(66): warning C4996: 'cocos2d::Node::boundingBox': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\ccnode.h(946) : see declaration of 'cocos2d::Node::boundingBox'
+     1>g:\github\repositories\savetheworld\classes\city.cpp(67): warning C4996: 'cocos2d::Node::boundingBox': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\ccnode.h(946) : see declaration of 'cocos2d::Node::boundingBox'
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\ccnode.h(946) : see declaration of 'cocos2d::Node::boundingBox'
+     1>g:\github\repositories\savetheworld\classes\city.cpp(70): warning C4996: 'cocos2d::Node::boundingBox': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\ccnode.h(946) : see declaration of 'cocos2d::Node::boundingBox'
+     1>g:\github\repositories\savetheworld\classes\city.cpp(71): warning C4996: 'cocos2d::Node::boundingBox': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\ccnode.h(946) : see declaration of 'cocos2d::Node::boundingBox'
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\ccnode.h(946) : see declaration of 'cocos2d::Node::boundingBox'
+     1>g:\github\repositories\savetheworld\classes\city.cpp(78): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>g:\github\repositories\savetheworld\classes\city.cpp(79): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>g:\github\repositories\savetheworld\classes\fact.h(26): warning C4996: 'cocos2d::LabelTTF': was declared deprecated (..\Classes\Fact.cpp)
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(59) : see declaration of 'cocos2d::LabelTTF'
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(29): warning C4996: 'cocos2d::LabelTTF::create': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(75) : see declaration of 'cocos2d::LabelTTF::create'
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(31): warning C4996: 'cocos2d::LabelTTF::setHorizontalAlignment': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(125) : see declaration of 'cocos2d::LabelTTF::setHorizontalAlignment'
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(59): warning C4566: character represented by universal-character-name '\u0169' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(59): warning C4566: character represented by universal-character-name '\u1EC7' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(59): warning C4566: character represented by universal-character-name '\u01B0' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(59): warning C4566: character represented by universal-character-name '\u1EE3' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(59): warning C4566: character represented by universal-character-name '\u1EF1' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(59): warning C4566: character represented by universal-character-name '\u1EDB' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(59): warning C4566: character represented by universal-character-name '\u1ED1' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(59): warning C4566: character represented by universal-character-name '\u1EAD' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(59): warning C4566: character represented by universal-character-name '\u1EA3' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(63): warning C4566: character represented by universal-character-name '\u1EEB' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(63): warning C4566: character represented by universal-character-name '\u1EF1' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(63): warning C4566: character represented by universal-character-name '\u1EA5' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(63): warning C4566: character represented by universal-character-name '\u1EC7' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(63): warning C4566: character represented by universal-character-name '\u1EC1' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(63): warning C4566: character represented by universal-character-name '\u1EE7' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(63): warning C4566: character represented by universal-character-name '\u1EEF' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(63): warning C4566: character represented by universal-character-name '\u0111' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(63): warning C4566: character represented by universal-character-name '\u1EB1' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(63): warning C4566: character represented by universal-character-name '\u1EC3' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(63): warning C4566: character represented by universal-character-name '\u01B0' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(63): warning C4566: character represented by universal-character-name '\u1EDD' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(63): warning C4566: character represented by universal-character-name '\u1ED5' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(63): warning C4566: character represented by universal-character-name '\u1EB7' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(63): warning C4566: character represented by universal-character-name '\u1EA3' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(67): warning C4566: character represented by universal-character-name '\u1EC7' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(67): warning C4566: character represented by universal-character-name '\u01B0' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(67): warning C4566: character represented by universal-character-name '\u1EE3' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(67): warning C4566: character represented by universal-character-name '\u1EBF' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(67): warning C4566: character represented by universal-character-name '\u1EDB' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(67): warning C4566: character represented by universal-character-name '\u1EA1' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(67): warning C4566: character represented by universal-character-name '\u1EA3' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(67): warning C4566: character represented by universal-character-name '\u1EA5' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(71): warning C4566: character represented by universal-character-name '\u1EF1' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(71): warning C4566: character represented by universal-character-name '\u0111' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(71): warning C4566: character represented by universal-character-name '\u1ED9' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(71): warning C4566: character represented by universal-character-name '\u1EB7' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(71): warning C4566: character represented by universal-character-name '\u1EA5' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(71): warning C4566: character represented by universal-character-name '\u01B0' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(71): warning C4566: character represented by universal-character-name '\u1EE3' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(71): warning C4566: character represented by universal-character-name '\u1EA1' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(71): warning C4566: character represented by universal-character-name '\u1EDF' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(71): warning C4566: character represented by universal-character-name '\u1ECB' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(71): warning C4566: character represented by universal-character-name '\u1EC3' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(71): warning C4566: character represented by universal-character-name '\u1EE7' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(71): warning C4566: character represented by universal-character-name '\u1ED1' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(71): warning C4566: character represented by universal-character-name '\u1EE5' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(71): warning C4566: character represented by universal-character-name '\u1ED5' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(71): warning C4566: character represented by universal-character-name '\u1EED' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(75): warning C4566: character represented by universal-character-name '\u1EA5' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(75): warning C4566: character represented by universal-character-name '\u1EC7' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(75): warning C4566: character represented by universal-character-name '\u0111' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(75): warning C4566: character represented by universal-character-name '\u1EDB' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(75): warning C4566: character represented by universal-character-name '\u01B0' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(75): warning C4566: character represented by universal-character-name '\u1EE3' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(75): warning C4566: character represented by universal-character-name '\u1ECD' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(75): warning C4566: character represented by universal-character-name '\u1EAD' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(75): warning C4566: character represented by universal-character-name '\u1ED9' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(75): warning C4566: character represented by universal-character-name '\u1EDD' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(75): warning C4566: character represented by universal-character-name '\u0103' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(75): warning C4566: character represented by universal-character-name '\u1EC3' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(75): warning C4566: character represented by universal-character-name '\u1EDE' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(75): warning C4566: character represented by universal-character-name '\u1EAF' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(75): warning C4566: character represented by universal-character-name '\u1EA7' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(75): warning C4566: character represented by universal-character-name '\u1ED5' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(75): warning C4566: character represented by universal-character-name '\u1EC1' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(75): warning C4566: character represented by universal-character-name '\u1ED3' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(79): warning C4566: character represented by universal-character-name '\u1EC3' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(79): warning C4566: character represented by universal-character-name '\u1EF3' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(79): warning C4566: character represented by universal-character-name '\u1EC1' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(79): warning C4566: character represented by universal-character-name '\u1EDB' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(79): warning C4566: character represented by universal-character-name '\u1ED1' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(79): warning C4566: character represented by universal-character-name '\u0111' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(79): warning C4566: character represented by universal-character-name '\u1ED9' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(79): warning C4566: character represented by universal-character-name '\u1EDD' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(79): warning C4566: character represented by universal-character-name '\u1EA7' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(79): warning C4566: character represented by universal-character-name '\u1EE7' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(79): warning C4566: character represented by universal-character-name '\u1ECB' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(79): warning C4566: character represented by universal-character-name '\u1EA1' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(79): warning C4566: character represented by universal-character-name '\u1EE5' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(79): warning C4566: character represented by universal-character-name '\u1EA5' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(79): warning C4566: character represented by universal-character-name '\u1EA3' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(79): warning C4566: character represented by universal-character-name '\u1ECD' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\fact.cpp(90): warning C4996: 'cocos2d::LabelTTF::setString': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(121) : see declaration of 'cocos2d::LabelTTF::setString'
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(121) : see declaration of 'cocos2d::LabelTTF::setString'
+     1>g:\github\repositories\savetheworld\classes\game1layer.h(22): warning C4996: 'cocos2d::LabelTTF': was declared deprecated (..\Classes\Game1Layer.cpp)
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(59) : see declaration of 'cocos2d::LabelTTF'
+     1>g:\github\repositories\savetheworld\classes\game1layer.h(33): warning C4996: 'cocos2d::LabelTTF': was declared deprecated (..\Classes\Game1Layer.cpp)
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(59) : see declaration of 'cocos2d::LabelTTF'
+     1>g:\github\repositories\savetheworld\classes\game1layer.h(34): warning C4996: 'cocos2d::LabelTTF': was declared deprecated (..\Classes\Game1Layer.cpp)
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(59) : see declaration of 'cocos2d::LabelTTF'
+     1>g:\github\repositories\savetheworld\classes\game1layer.h(22): warning C4996: 'cocos2d::LabelTTF': was declared deprecated (..\Classes\AppDelegate.cpp)
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(59) : see declaration of 'cocos2d::LabelTTF'
+     1>g:\github\repositories\savetheworld\classes\game1layer.h(33): warning C4996: 'cocos2d::LabelTTF': was declared deprecated (..\Classes\AppDelegate.cpp)
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(59) : see declaration of 'cocos2d::LabelTTF'
+     1>g:\github\repositories\savetheworld\classes\game1layer.h(34): warning C4996: 'cocos2d::LabelTTF': was declared deprecated (..\Classes\AppDelegate.cpp)
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(59) : see declaration of 'cocos2d::LabelTTF'
+     1>g:\github\repositories\savetheworld\classes\fact.h(26): warning C4996: 'cocos2d::LabelTTF': was declared deprecated (..\Classes\Game1Layer.cpp)
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(59) : see declaration of 'cocos2d::LabelTTF'
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(25): warning C4996: 'cocos2d::CCRectMake': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\deprecated\ccdeprecated.h(388) : see declaration of 'cocos2d::CCRectMake'
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u1EED' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u0111' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u1EA7' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u1EE7' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u1EA1' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u1EC7' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u1EC3' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u1EEF' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u1EBF' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u1EE9' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u1EC1' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u1ED5' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u1EAD' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u1EB7' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u1EA3' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u1ECD' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u1ED1' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u1ED9' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u1EA5' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u1EBD' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u01B0' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u1EE3' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u1ECB' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u1EE5' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u1EDB' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u1EDD' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(45): warning C4566: character represented by universal-character-name '\u01A1' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(46): warning C4996: 'cocos2d::LabelTTF::create': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(75) : see declaration of 'cocos2d::LabelTTF::create'
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(48): warning C4996: 'cocos2d::LabelTTF::setHorizontalAlignment': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(125) : see declaration of 'cocos2d::LabelTTF::setHorizontalAlignment'
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(50): warning C4996: 'cocos2d::LabelTTF::getContentSize': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(154) : see declaration of 'cocos2d::LabelTTF::getContentSize'
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(154) : see declaration of 'cocos2d::LabelTTF::getContentSize'
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(50): warning C4996: 'cocos2d::CCRectMake': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\deprecated\ccdeprecated.h(388) : see declaration of 'cocos2d::CCRectMake'
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(154) : see declaration of 'cocos2d::LabelTTF::getContentSize'
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(51): warning C4996: 'cocos2d::LabelTTF::getContentSize': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(154) : see declaration of 'cocos2d::LabelTTF::getContentSize'
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(154) : see declaration of 'cocos2d::LabelTTF::getContentSize'
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(154) : see declaration of 'cocos2d::LabelTTF::getContentSize'
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u1EED' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u0111' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u1EA7' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u1EE7' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u1EA1' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u1EC7' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u1EC3' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u1EEF' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u1EBF' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u1EE9' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u1EC1' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u1ED5' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u1EAD' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u1EB7' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u1EA3' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u1ECD' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u1ED1' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u1ED9' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u1EA5' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u1EBD' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u01B0' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u1EE3' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u1ECB' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u1EE5' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u1EDB' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u1EDD' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(96): warning C4566: character represented by universal-character-name '\u01A1' cannot be represented in the current code page (1252)
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(97): warning C4996: 'cocos2d::LabelTTF::create': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(75) : see declaration of 'cocos2d::LabelTTF::create'
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(101): warning C4996: 'cocos2d::LabelTTF::setHorizontalAlignment': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(125) : see declaration of 'cocos2d::LabelTTF::setHorizontalAlignment'
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(104): warning C4996: 'cocos2d::LabelTTF::create': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(75) : see declaration of 'cocos2d::LabelTTF::create'
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(110): warning C4996: 'cocos2d::LabelTTF::setHorizontalAlignment': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(125) : see declaration of 'cocos2d::LabelTTF::setHorizontalAlignment'
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(182): warning C4996: 'cocos2d::LabelTTF::setString': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(121) : see declaration of 'cocos2d::LabelTTF::setString'
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(121) : see declaration of 'cocos2d::LabelTTF::setString'
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(183): warning C4996: 'cocos2d::LabelTTF::setFontSize': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(134) : see declaration of 'cocos2d::LabelTTF::setFontSize'
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(184): warning C4996: 'cocos2d::LabelTTF::setVerticalAlignment': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(128) : see declaration of 'cocos2d::LabelTTF::setVerticalAlignment'
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(203): warning C4996: 'cocos2d::LabelTTF::setString': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(121) : see declaration of 'cocos2d::LabelTTF::setString'
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(121) : see declaration of 'cocos2d::LabelTTF::setString'
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(204): warning C4996: 'cocos2d::LabelTTF::setFontSize': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(134) : see declaration of 'cocos2d::LabelTTF::setFontSize'
+     1>g:\github\repositories\savetheworld\classes\game1layer.cpp(205): warning C4996: 'cocos2d::LabelTTF::setVerticalAlignment': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(128) : see declaration of 'cocos2d::LabelTTF::setVerticalAlignment'
+         Game1Scene.cpp
+         GameManager.cpp
+         HelloWorldScene.cpp
+         MapLayer.cpp
+     1>g:\github\repositories\savetheworld\classes\maplayer.cpp(18): warning C4390: ';' : empty controlled statement found; is this the intent?
+     1>g:\github\repositories\savetheworld\classes\maplayer.cpp(86): warning C4996: 'cocos2d::ccpAdd': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\deprecated\ccdeprecated.h(69) : see declaration of 'cocos2d::ccpAdd'
+     1>g:\github\repositories\savetheworld\classes\maplayer.cpp(86): warning C4996: 'cocos2d::ccp': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\deprecated\ccdeprecated.h(47) : see declaration of 'cocos2d::ccp'
+     1>g:\github\repositories\savetheworld\classes\maplayer.cpp(118): warning C4996: 'cocos2d::ccpAdd': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\deprecated\ccdeprecated.h(69) : see declaration of 'cocos2d::ccpAdd'
+     1>g:\github\repositories\savetheworld\classes\maplayer.cpp(144): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>g:\github\repositories\savetheworld\classes\maplayer.cpp(164): warning C4996: 'cocos2d::ccpMult': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\deprecated\ccdeprecated.h(91) : see declaration of 'cocos2d::ccpMult'
+     1>g:\github\repositories\savetheworld\classes\maplayer.cpp(175): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>g:\github\repositories\savetheworld\classes\maplayer.cpp(186): warning C4996: 'cocos2d::ccpMult': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\deprecated\ccdeprecated.h(91) : see declaration of 'cocos2d::ccpMult'
+     1>g:\github\repositories\savetheworld\classes\maplayer.cpp(195): warning C4996: 'cocos2d::CallFunc::create': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\ccactioninstant.h(275) : see declaration of 'cocos2d::CallFunc::create'
+     1>g:\github\repositories\savetheworld\classes\game1layer.h(22): warning C4996: 'cocos2d::LabelTTF': was declared deprecated (..\Classes\Game1Scene.cpp)
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(59) : see declaration of 'cocos2d::LabelTTF'
+     1>g:\github\repositories\savetheworld\classes\game1layer.h(33): warning C4996: 'cocos2d::LabelTTF': was declared deprecated (..\Classes\Game1Scene.cpp)
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(59) : see declaration of 'cocos2d::LabelTTF'
+     1>g:\github\repositories\savetheworld\classes\game1layer.h(34): warning C4996: 'cocos2d::LabelTTF': was declared deprecated (..\Classes\Game1Scene.cpp)
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(59) : see declaration of 'cocos2d::LabelTTF'
+     1>g:\github\repositories\savetheworld\classes\helloworldscene.cpp(58): warning C4996: 'cocos2d::LabelTTF::create': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(75) : see declaration of 'cocos2d::LabelTTF::create'
+     1>g:\github\repositories\savetheworld\classes\helloworldscene.cpp(62): warning C4996: 'cocos2d::LabelTTF::getContentSize': was declared deprecated
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(154) : see declaration of 'cocos2d::LabelTTF::getContentSize'
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(154) : see declaration of 'cocos2d::LabelTTF::getContentSize'
+         MapScene.cpp
          Stage1Scene.cpp
+     1>g:\github\repositories\savetheworld\classes\game1layer.h(22): warning C4996: 'cocos2d::LabelTTF': was declared deprecated (..\Classes\MapScene.cpp)
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(59) : see declaration of 'cocos2d::LabelTTF'
+     1>g:\github\repositories\savetheworld\classes\game1layer.h(33): warning C4996: 'cocos2d::LabelTTF': was declared deprecated (..\Classes\MapScene.cpp)
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(59) : see declaration of 'cocos2d::LabelTTF'
+     1>g:\github\repositories\savetheworld\classes\game1layer.h(34): warning C4996: 'cocos2d::LabelTTF': was declared deprecated (..\Classes\MapScene.cpp)
+                 g:\github\repositories\savetheworld\cocos2d\cocos\2d\cclabelttf.h(59) : see declaration of 'cocos2d::LabelTTF'
        PreLinkEvent:
          if not exist "G:\GitHub\Repositories\SaveTheWorld\proj.win32\Debug.win32\" mkdir "G:\GitHub\Repositories\SaveTheWorld\proj.win32\Debug.win32\"
          xcopy /Y /Q "G:\GitHub\Repositories\SaveTheWorld\cocos2d\cocos\2d\..\..\external\websockets\prebuilt\win32\*.*" "G:\GitHub\Repositories\SaveTheWorld\proj.win32\Debug.win32\"
@@ -12,6 +280,9 @@
          G:\Programming\VisualStudio\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\GitHub\Repositories\SaveTheWorld\proj.win32\Debug.win32\SaveTheWorld.exe" /INCREMENTAL /NOLOGO /LIBPATH:G:\GitHub\Repositories\SaveTheWorld\proj.win32\Debug.win32\ /LIBPATH:G:\GitHub\Repositories\SaveTheWorld\proj.win32\Debug.win32\ opengl32.lib glew32.lib libzlib.lib libpng.lib libjpeg.lib libtiff.lib libwebp.lib libiconv.lib glfw3.lib freetype250.lib winmm.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\GitHub\Repositories\SaveTheWorld\proj.win32\Debug.win32\SaveTheWorld.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\GitHub\Repositories\SaveTheWorld\proj.win32\Debug.win32\SaveTheWorld.lib" /MACHINE:X86 /SAFESEH Debug.win32\game.res
          Debug.win32\AppDelegate.obj
          Debug.win32\City.obj
+         Debug.win32\Fact.obj
+         Debug.win32\Game1Layer.obj
+         Debug.win32\Game1Scene.obj
          Debug.win32\GameManager.obj
          Debug.win32\HelloWorldScene.obj
          Debug.win32\MapLayer.obj
@@ -30,4 +301,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:05.46
+Time Elapsed 00:00:27.17
