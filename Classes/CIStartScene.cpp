@@ -37,6 +37,7 @@ bool CIStartScene::init()
   else if (CIGameManager::getDialogState() == 5)
   {
     addStartBtn();
+    addAnswers();
   }
   
   return true;
@@ -110,7 +111,6 @@ void CIStartScene::addDialogs()
       _dialog->setText(DIALOG4);
       break;
     default:
-      addAnswers();
       break;
   }
   _dialog->setMaxLength(20);
@@ -181,4 +181,6 @@ void CIStartScene::addAnswers()
   CIGameManager::setAnswer(3, 1);
   CIGameManager::setAnswer(4, 3);
   CIGameManager::setAnswer(5, 2);
+  
+  CCLOG("Answers added");
 }

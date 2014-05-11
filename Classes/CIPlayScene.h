@@ -13,6 +13,7 @@
 #include "cocos2d.h"
 #include "CIGameManager.h"
 #include "HelloWorldScene.h"
+#include "MapScene.h"
 USING_NS_CC;
 
 class CIPlayScene : cocos2d::Layer
@@ -28,6 +29,7 @@ private:
   Menu* _win;
   Menu* _replayBtn;
   Menu* _backBtn;
+  Menu* _nextBtn;
   
   RepeatForever* _rotateAction;
   Spawn* _launchAction;
@@ -67,6 +69,9 @@ public:
   void replayBtnTouched(Ref* pSender);
   void winTouched(Ref* pSender);
   void backBtnTouched(Ref* pSender);
+  void addNextBtn();
+  void nextBtnTouched(Ref* pSender);
+  
   
   void hookRotateAnimation();
   void hookLaunchAnimation();

@@ -38,6 +38,7 @@ bool CIPlayScene::init()
   addGameOver();
   addReplayButton();
   addBackBtn();
+  addNextBtn();
   hookRotateAnimation();
   handleTouch();
   addWin();
@@ -213,7 +214,7 @@ void CIPlayScene::addBackBtn()
   menu->setScale(0.7);
   _backBtn = Menu::create(menu, _backBtn);
   _backBtn->setPosition(Point::ZERO);
-  _backBtn->setVisible(false);
+//  _backBtn->setVisible(false);
   this->addChild(_backBtn, 11);
 }
 
@@ -234,6 +235,25 @@ void CIPlayScene::backBtnTouched(Ref* pSender)
   auto scene = CCTransitionCrossFade::create(0.5, HelloWorld::createScene());
   Director::getInstance()->sharedDirector()->replaceScene(scene);
 }
+
+void CIPlayScene::addNextBtn()
+{
+  auto menu = MenuItemImage::create("CollectItems/next.png",
+                                    "CollectItems/next.png",
+                                    CC_CALLBACK_1(CIPlayScene::nextBtnTouched, this));
+  menu->setPosition(Point(_visibleSize.width - menu->getContentSize().width, _origin.y + menu->getContentSize().height));
+  _nextBtn = Menu::create(menu, NULL);
+  _nextBtn->setPosition(Point::ZERO);
+  this->addChild(_nextBtn, 3);
+}
+
+void CIPlayScene::nextBtnTouched(Ref* pSender)
+{
+  CIGameManager::setDialogState(CIGameManager::getDialogState() + 1);
+  Scene* scene = CCTransitionCrossFade::create(0.5, MapScene::create());
+  Director::getInstance()->sharedDirector()->replaceScene(scene);
+}
+
 void CIPlayScene::hookRotateAnimation()
 {
   Animation* rotation = Animation::create();
