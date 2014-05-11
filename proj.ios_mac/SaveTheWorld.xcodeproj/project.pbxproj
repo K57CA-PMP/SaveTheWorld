@@ -31,6 +31,9 @@
 		17CA7713191CD29100CC9814 /* CIPlayScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17CA7711191CD29100CC9814 /* CIPlayScene.cpp */; };
 		17CA7743191DFA8E00CC9814 /* CIGameManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17CA7741191DFA8E00CC9814 /* CIGameManager.cpp */; };
 		17CA7749191E421C00CC9814 /* CIStartScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17CA7747191E421C00CC9814 /* CIStartScene.cpp */; };
+		17F2F0D5191F4452009B1DBA /* Fact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17F2F0CF191F4452009B1DBA /* Fact.cpp */; };
+		17F2F0D6191F4452009B1DBA /* Game1Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17F2F0D1191F4452009B1DBA /* Game1Layer.cpp */; };
+		17F2F0D7191F4452009B1DBA /* Game1Scene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17F2F0D3191F4452009B1DBA /* Game1Scene.cpp */; };
 		1AC6FB1F180E996B004C840B /* libbox2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAFF180E9839004C840B /* libbox2d Mac.a */; };
 		1AC6FB20180E996B004C840B /* libchipmunk Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAFD180E9839004C840B /* libchipmunk Mac.a */; };
 		1AC6FB21180E996B004C840B /* libcocos2dx Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2dx Mac.a */; };
@@ -270,6 +273,12 @@
 		17CA7742191DFA8E00CC9814 /* CIGameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CIGameManager.h; path = ../Classes/CIGameManager.h; sourceTree = "<group>"; };
 		17CA7747191E421C00CC9814 /* CIStartScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CIStartScene.cpp; sourceTree = "<group>"; };
 		17CA7748191E421C00CC9814 /* CIStartScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CIStartScene.h; sourceTree = "<group>"; };
+		17F2F0CF191F4452009B1DBA /* Fact.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Fact.cpp; path = ../Classes/Fact.cpp; sourceTree = "<group>"; };
+		17F2F0D0191F4452009B1DBA /* Fact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Fact.h; path = ../Classes/Fact.h; sourceTree = "<group>"; };
+		17F2F0D1191F4452009B1DBA /* Game1Layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Game1Layer.cpp; path = ../Classes/Game1Layer.cpp; sourceTree = "<group>"; };
+		17F2F0D2191F4452009B1DBA /* Game1Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game1Layer.h; path = ../Classes/Game1Layer.h; sourceTree = "<group>"; };
+		17F2F0D3191F4452009B1DBA /* Game1Scene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Game1Scene.cpp; path = ../Classes/Game1Scene.cpp; sourceTree = "<group>"; };
+		17F2F0D4191F4452009B1DBA /* Game1Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game1Scene.h; path = ../Classes/Game1Scene.h; sourceTree = "<group>"; };
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1AFAF8B316D35DE700DB1158 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = ../Classes/AppDelegate.cpp; sourceTree = "<group>"; };
@@ -407,6 +416,12 @@
 		15AA9C4015B7EC450033D6C2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				17F2F0CF191F4452009B1DBA /* Fact.cpp */,
+				17F2F0D0191F4452009B1DBA /* Fact.h */,
+				17F2F0D1191F4452009B1DBA /* Game1Layer.cpp */,
+				17F2F0D2191F4452009B1DBA /* Game1Layer.h */,
+				17F2F0D3191F4452009B1DBA /* Game1Scene.cpp */,
+				17F2F0D4191F4452009B1DBA /* Game1Scene.h */,
 				7A049296191E2DF9005676D3 /* CCLabelBMFontAnimated.cpp */,
 				7A049297191E2DF9005676D3 /* CCLabelBMFontAnimated.h */,
 				7A049287191E0438005676D3 /* Stage1Layer.cpp */,
@@ -812,9 +827,11 @@
 				17CA7749191E421C00CC9814 /* CIStartScene.cpp in Sources */,
 				7A04928C191E0438005676D3 /* Stage1Scene.cpp in Sources */,
 				7A1FB691191CC4FF008171D2 /* City.cpp in Sources */,
+				17F2F0D7191F4452009B1DBA /* Game1Scene.cpp in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				7AA0A8E6191D137D004F5774 /* GameManager.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				17F2F0D5191F4452009B1DBA /* Fact.cpp in Sources */,
 				17CA7713191CD29100CC9814 /* CIPlayScene.cpp in Sources */,
 				7AF71D9D191B793D00202960 /* MapScene.cpp in Sources */,
 				7A049295191E16D6005676D3 /* SavingBoy.cpp in Sources */,
@@ -822,6 +839,7 @@
 				1AFAF8B816D35DE700DB1158 /* HelloWorldScene.cpp in Sources */,
 				7A049279191DD047005676D3 /* MainMenu.cpp in Sources */,
 				7A049298191E2DF9005676D3 /* CCLabelBMFontAnimated.cpp in Sources */,
+				17F2F0D6191F4452009B1DBA /* Game1Layer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
