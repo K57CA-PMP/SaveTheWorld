@@ -1,6 +1,7 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
 #include "MapScene.h"
+#include "Game1Scene.h"
 #include "CIPlayScene.h"
 #include "CIStartScene.h"
 #include "MainMenu.h"
@@ -37,8 +38,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     auto scene = CIPlayScene::createScene();
     // run
+	CCLOG(UserDefault::getInstance()->getXMLFilePath().c_str());
     director->runWithScene(scene);
-
     return true;
 }
 

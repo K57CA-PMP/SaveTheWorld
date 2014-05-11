@@ -137,6 +137,9 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\City.cpp" />
+    <ClCompile Include="..\Classes\Fact.cpp" />
+    <ClCompile Include="..\Classes\Game1Layer.cpp" />
+    <ClCompile Include="..\Classes\Game1Scene.cpp" />
     <ClCompile Include="..\Classes\GameManager.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
     <ClCompile Include="..\Classes\MapLayer.cpp" />
@@ -149,12 +152,16 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\City.h" />
     <ClInclude Include="..\Classes\Constant.h" />
+    <ClInclude Include="..\Classes\Game1Layer.h" />
+    <ClInclude Include="..\Classes\Game1Scene.h" />
     <ClInclude Include="..\Classes\GameManager.h" />
+    <ClInclude Include="..\Classes\Fact.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="..\Classes\MapLayer.h" />
     <ClInclude Include="..\Classes\MapScene.h" />
     <ClInclude Include="..\Classes\Stage1Layer.h" />
     <ClInclude Include="..\Classes\Stage1Scene.h" />
+    <ClInclude Include="..\Classes\vietnamese.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>
