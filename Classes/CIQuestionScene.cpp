@@ -138,7 +138,7 @@ void CIQuestionScene::addAnswers()
       _answer3 = Menu::create(_menu3, NULL);
       _answer3->setPosition(Point::ZERO);
       break;
-    case 2:
+    case 3:
       // add answer1
       _menu1 = MenuItemImage::create("CollectItems/a1_q3.png",
                                      "CollectItems/a1_q3.png",
