@@ -76,8 +76,9 @@ void Stage1Scene::menuSubmitCallback(Ref* pSender)
 			Director::getInstance()->replaceScene(MapScene::create());
 		}
 	}
-	else {
-		UserDefault::getInstance()->setIntegerForKey("CurrentCityNo",questionIndex+1);
+	else { // wining
+    UserDefault::getInstance()->setStringForKey(UserDefault::getInstance()->getStringForKey("CurrentCityName").c_str(), "win");
+		UserDefault::getInstance()->setIntegerForKey("CurrentCityNo",questionIndex + 1);
 		UserDefault::getInstance()->setStringForKey("CurrentCityName", __String::createWithFormat("city0%d", questionIndex + 1)->getCString());
 		Director::getInstance()->replaceScene(MapScene::create());
 	}

@@ -2,10 +2,16 @@
 #include "HelloWorldScene.h"
 #include "MapScene.h"
 #include "Game1Scene.h"
+#include "CIPlayScene.h"
+#include "CIStartScene.h"
+#include "MainMenu.h"
+#include "Stage1Scene.h"
+#include "SavingBoy.h"
 
 USING_NS_CC;
 
-AppDelegate::AppDelegate() {
+AppDelegate::AppDelegate()
+{
 
 }
 
@@ -29,7 +35,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
     director->setAnimationInterval(1.0 / 60);
 
     // create a scene. it's an autorelease object
-    auto scene = MapScene::create();
+
+    auto scene = SavingBoy::createScene();
     // run
 	CCLOG(UserDefault::getInstance()->getXMLFilePath().c_str());
     director->runWithScene(scene);

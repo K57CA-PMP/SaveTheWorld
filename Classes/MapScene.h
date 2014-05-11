@@ -1,10 +1,11 @@
-//
-//  MapScene.h
-//  SaveTheWorld
-//
-//  Created by Giap Nguyen on 5/8/14.
-//
-//
+////
+////  MapScene.h
+////  SaveTheWorld
+////
+////  Created by Giap Nguyen on 5/8/14.
+////
+////
+
 
 #ifndef __SaveTheWorld__MapScene__
 #define __SaveTheWorld__MapScene__

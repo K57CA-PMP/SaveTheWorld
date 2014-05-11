@@ -1,10 +1,10 @@
-//
-//  MapLayer.h
-//  SaveTheWorld
-//
-//  Created by Giap Nguyen on 5/8/14.
-//
-//
+////
+////  MapLayer.h
+////  SaveTheWorld
+////
+////  Created by Giap Nguyen on 5/8/14.
+////
+////
 
 #ifndef __SaveTheWorld__MapLayer__
 #define __SaveTheWorld__MapLayer__

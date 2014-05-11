@@ -1,10 +1,10 @@
-//
-//  MapScene.cpp
-//  SaveTheWorld
-//
-//  Created by Giap Nguyen on 5/8/14.
-//
-//
+////
+////  MapScene.cpp
+////  SaveTheWorld
+////
+////  Created by Giap Nguyen on 5/8/14.
+////
+////
 
 #include "MapScene.h"
 #include "Game1Scene.h"
@@ -47,15 +47,18 @@ bool MapScene::init()
   
   Sprite* normal = Sprite::createWithSpriteFrameName("map_button_battle.png");
   Sprite* selected = Sprite::createWithSpriteFrameName("map_button_battle.png");
+
   MenuItemSprite* item = MenuItemSprite::create(normal,
                                                 selected,
                                                 CC_CALLBACK_1(MapScene::play, this));
-  Point pos = Point(SCREEN_SIZE.width - (normal->getContentSize().width/2)- 1.0*1 - 10,
-                  (normal->getContentSize().height/2) + 1.0*1 + 10);
+  Point pos = Point(SCREEN_SIZE.width - (normal->getContentSize().width/2)- 1.0*1 - 20,
+                  (normal->getContentSize().height/2) + 1.0*1 + 20);
 
   item->setPosition(pos);
+  item->setScale(1.5f);
   Menu* menu = Menu::create(item, NULL);
   menu->setPosition(Point::ZERO);
+
   addChild(menu, 1);
 //  menu->setAnchorPoint(Point::ANCHOR_BOTTOM_RIGHT);
 //  menu->runAction(CCRepeatForever::create(CCRotateBy::create(0.8, 360)));

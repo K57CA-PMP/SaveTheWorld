@@ -1,10 +1,11 @@
-//
-//  MapLayer.cpp
-//  SaveTheWorld
-//
-//  Created by Giap Nguyen on 5/8/14.
-//
-//
+////
+////  MapLayer.cpp
+////  SaveTheWorld
+////
+////  Created by Giap Nguyen on 5/8/14.
+////
+////
+
 
 #include "MapLayer.h"
 
@@ -84,17 +85,23 @@ void MapLayer::addCities(const char* pCurrentCityName)
     City *city = City::create(cityKey->getCString(), CITY_STATUS_LOCKED);
     
     city->setPosition(ccpAdd(PointFromString(((__String*)iCityDictionary->objectForKey("Position"))->getCString()), ccp(380, 300)));
+    city->setScale(1.5f);
     if (cityKey->compare(pCurrentCityName) == 0)
     {
-      city->updateSprite();
+      city->updateCurrentSprite();
     }
+    
+    if (UserDefault::getInstance()->getStringForKey(cityKey->getCString()) == "win")
+    {
+      city->updateClearedSprite();
+    }
+
     this->addChild(city, Z_MAP_CITIES);
     
     iCityDictionary->setObject(city, "Object");
     
     mCitiesArray->addObject((Ref*) city);
   }
-  
 //  CCARRAY_FOREACH(mCitiesArray, child)
 //  {
 //    City *city = (City*)child;

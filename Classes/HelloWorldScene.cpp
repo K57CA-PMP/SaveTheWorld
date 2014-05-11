@@ -79,6 +79,10 @@ bool HelloWorld::init()
 
 void HelloWorld::menuCloseCallback(Ref* pSender)
 {
+  CIGameManager::setGameLevel(CIGameManager::getGameLevel() + 1);
+  Scene* scene = CIPlayScene::createScene();
+  Director::getInstance()->sharedDirector()->replaceScene(scene);
+  
   std::string currentCityName = UserDefault::getInstance()->getStringForKey("CurrentCityName"); //GameManager::getCurrentCityName();
   CCLOG("cur: %s", currentCityName.c_str());
   int newCityNumber = __String::create(currentCityName.substr(4, 2))->intValue() + 1;
@@ -103,4 +107,5 @@ void HelloWorld::menuCloseCallback(Ref* pSender)
 //#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
 //    exit(0);
 //#endif
+
 }

@@ -1,4 +1,4 @@
-//
+
 //  City.cpp
 //  SaveTheWorld
 //
@@ -9,7 +9,6 @@
 #include "City.h"
 
 USING_NS_CC;
-
 City* City::create(const char *pName, eCityStatus pCityStatus)
 {
   City *pobSprite = new City();
@@ -89,7 +88,12 @@ bool City::init(const char *pName, eCityStatus pCityStatus)
   return true;
 }
 
-void City::updateSprite()
+void City::updateCurrentSprite()
 {
   mArrow->setVisible(true);
+}
+
+void City::updateClearedSprite()
+{
+  mCleared->setVisible(true);
 }

@@ -33,7 +33,8 @@ public:
   virtual bool init(const char* pNqame, eCityStatus pCityStatus);
   static City* create(const char* pName, eCityStatus pCityStatus);
   
-  void updateSprite();
+  void updateCurrentSprite();
+  void updateClearedSprite();
 };
 
 #endif /* defined(__SaveTheWorld__City__) */
