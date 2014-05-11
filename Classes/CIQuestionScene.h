@@ -26,6 +26,14 @@ private:
   Sprite* _background;
   EditBox* _question;
   
+  MenuItemImage* _menu1;
+  MenuItemImage* _menu2;
+  MenuItemImage* _menu3;
+  
+  Menu* _answer1;
+  Menu* _answer2;
+  Menu* _answer3;
+
 public:
   static cocos2d::Scene* createScene();
   virtual bool init();
@@ -34,6 +42,7 @@ public:
   void addBackground();
   void addQuestion();
   void addAnswers();
+  void answerTouched(Ref* pSender);
 };
 
 #endif /* defined(__SaveTheWorld__CIQuestionScene__) */
