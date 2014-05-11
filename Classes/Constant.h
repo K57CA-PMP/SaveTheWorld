@@ -47,4 +47,10 @@
 #define DIALOG3 "BẠN SẼ PHẢI LÀM GÌ?"
 #define DIALOG4 "HÃY MANG THEO NHU YẾU PHẨM THIẾT YẾU NHẤT!"
 
+#define ANSWER1 1
+#define ANSWER2 1
+#define ANSWER3 1
+#define ANSWER4 3
+#define ANSWER5 2
+
 #endif

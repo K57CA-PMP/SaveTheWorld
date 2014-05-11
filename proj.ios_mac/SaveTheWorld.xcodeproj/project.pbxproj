@@ -27,6 +27,7 @@
 		17BBA787191EBFD600618DE3 /* startButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 17BBA773191EBFD600618DE3 /* startButton.png */; };
 		17BBA788191EBFD600618DE3 /* submit1.png in Resources */ = {isa = PBXBuildFile; fileRef = 17BBA774191EBFD600618DE3 /* submit1.png */; };
 		17BBA789191EBFD600618DE3 /* submit2.png in Resources */ = {isa = PBXBuildFile; fileRef = 17BBA775191EBFD600618DE3 /* submit2.png */; };
+		17C9974D191F1668008B8BC8 /* CIQuestionScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17C9974B191F1668008B8BC8 /* CIQuestionScene.cpp */; };
 		17CA7713191CD29100CC9814 /* CIPlayScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17CA7711191CD29100CC9814 /* CIPlayScene.cpp */; };
 		17CA7743191DFA8E00CC9814 /* CIGameManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17CA7741191DFA8E00CC9814 /* CIGameManager.cpp */; };
 		17CA7749191E421C00CC9814 /* CIStartScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 17CA7747191E421C00CC9814 /* CIStartScene.cpp */; };
@@ -261,6 +262,8 @@
 		17BBA773191EBFD600618DE3 /* startButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startButton.png; sourceTree = "<group>"; };
 		17BBA774191EBFD600618DE3 /* submit1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = submit1.png; sourceTree = "<group>"; };
 		17BBA775191EBFD600618DE3 /* submit2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = submit2.png; sourceTree = "<group>"; };
+		17C9974B191F1668008B8BC8 /* CIQuestionScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CIQuestionScene.cpp; path = ../Classes/CIQuestionScene.cpp; sourceTree = "<group>"; };
+		17C9974C191F1668008B8BC8 /* CIQuestionScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CIQuestionScene.h; path = ../Classes/CIQuestionScene.h; sourceTree = "<group>"; };
 		17CA7711191CD29100CC9814 /* CIPlayScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CIPlayScene.cpp; path = ../Classes/CIPlayScene.cpp; sourceTree = "<group>"; };
 		17CA7712191CD29100CC9814 /* CIPlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CIPlayScene.h; path = ../Classes/CIPlayScene.h; sourceTree = "<group>"; };
 		17CA7741191DFA8E00CC9814 /* CIGameManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CIGameManager.cpp; path = ../Classes/CIGameManager.cpp; sourceTree = "<group>"; };
@@ -442,6 +445,8 @@
 				17CA7742191DFA8E00CC9814 /* CIGameManager.h */,
 				17CA7747191E421C00CC9814 /* CIStartScene.cpp */,
 				17CA7748191E421C00CC9814 /* CIStartScene.h */,
+				17C9974B191F1668008B8BC8 /* CIQuestionScene.cpp */,
+				17C9974C191F1668008B8BC8 /* CIQuestionScene.h */,
 			);
 			name = CollectItems;
 			sourceTree = "<group>";
@@ -801,6 +806,7 @@
 			files = (
 				7A04928B191E0438005676D3 /* Stage1Layer.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				17C9974D191F1668008B8BC8 /* CIQuestionScene.cpp in Sources */,
 				17CA7743191DFA8E00CC9814 /* CIGameManager.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				17CA7749191E421C00CC9814 /* CIStartScene.cpp in Sources */,
