@@ -28,7 +28,7 @@ void CIGameManager::setDialogState(int pState)
   _dialogState = pState;
 }
 
-int CIGameManager::_questionIndex = 1;
+int CIGameManager::_questionIndex = 0;
 int CIGameManager::getQuestionIndex()
 {
   return _questionIndex;

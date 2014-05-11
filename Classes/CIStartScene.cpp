@@ -105,9 +105,9 @@ void CIStartScene::addDialogs()
       break;
     case 4:
       _dialog = EditBox::create(Size(_visibleSize.width/1, _visibleSize.height/9), Scale9Sprite::create());
-      _dialog->setPosition(Point(_visibleOrigin.x + _visibleSize.width/1.93, _visibleOrigin.y + _visibleSize.height/2));
+      _dialog->setPosition(Point(_visibleOrigin.x + _visibleSize.width/1.9, _visibleOrigin.y + _visibleSize.height/2));
       _dialog->setFontColor(Color3B(255, 255, 255));
-      _dialog->setFont("Arial", 50);
+      _dialog->setFont("Arial", 40);
       _dialog->setText(DIALOG4);
       break;
     default:

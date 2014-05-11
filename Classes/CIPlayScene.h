@@ -14,6 +14,7 @@
 #include "CIGameManager.h"
 #include "HelloWorldScene.h"
 #include "MapScene.h"
+#include "CIQuestionScene.h"
 USING_NS_CC;
 
 class CIPlayScene : cocos2d::Layer

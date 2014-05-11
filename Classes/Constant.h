@@ -43,14 +43,20 @@
 #define TIME_LBL_POS Point(50, 400)
 
 #define DIALOG1 "Bạn ở trong khu vực sắp có bão xảy ra."
-#define DIALOG2 "Bạn nhận được yêu cầu di dời ngay lập tức."
+#define DIALOG2 "Bạn nhận được yêu cầu di dời ngay lập tức!"
 #define DIALOG3 "BẠN SẼ PHẢI LÀM GÌ?"
-#define DIALOG4 "HÃY MANG THEO NHU YẾU PHẨM THIẾT YẾU NHẤT!"
+#define DIALOG4 "HÃY CHỌN MANG THEO NHỮNG THỨ CẦN THIẾT NHẤT!"
 
 #define ANSWER1 1
 #define ANSWER2 1
 #define ANSWER3 1
 #define ANSWER4 3
 #define ANSWER5 2
+
+#define QUESTION1 "Trước khi đi bạn sẽ làm gì với ngôi nhà của mình?"
+#define QUESTION2 "Thế còn đồ đạc của mình thì sao?"
+#define QUESTION3 "Hãy lựa chọn loại thực phẩm mà bạn mang theo:"
+#define QUESTION4 "Bạn sẽ sơ tán đến nơi nào?"
+#define QUESTION5 "Bạn sẽ tới đó bằng đường nào?"
 
 #endif

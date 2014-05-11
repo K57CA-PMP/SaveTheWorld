@@ -11,7 +11,11 @@
 
 #include <iostream>
 #include "cocos2d.h"
+#include "cocos-ext.h"
+#include "Constant.h"
+#include "CIGameManager.h"
 USING_NS_CC;
+USING_NS_CC_EXT;
 
 class CIQuestionScene : cocos2d::Layer
 {
@@ -20,6 +24,7 @@ private:
   Point _visibleOrigin;
 
   Sprite* _background;
+  EditBox* _question;
   
 public:
   static cocos2d::Scene* createScene();

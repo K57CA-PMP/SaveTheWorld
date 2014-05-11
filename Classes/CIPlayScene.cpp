@@ -250,7 +250,8 @@ void CIPlayScene::addNextBtn()
 void CIPlayScene::nextBtnTouched(Ref* pSender)
 {
   CIGameManager::setDialogState(CIGameManager::getDialogState() + 1);
-  Scene* scene = CCTransitionCrossFade::create(0.5, MapScene::create());
+  CIGameManager::setQuestionIndex(CIGameManager::getQuestionIndex() + 1);
+  Scene* scene = CCTransitionCrossFade::create(0.5, CIQuestionScene::createScene());
   Director::getInstance()->sharedDirector()->replaceScene(scene);
 }
 
