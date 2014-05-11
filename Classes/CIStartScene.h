@@ -44,6 +44,7 @@ public:
   void backBtnTouched(Ref* pSender);
   void addStartBtn();
   void startBtnTouched(Ref* pSender);
+  void addAnswers();
 };
 
 #endif /* defined(__SaveTheWorld__CIStartScene__) */

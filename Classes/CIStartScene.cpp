@@ -110,6 +110,7 @@ void CIStartScene::addDialogs()
       _dialog->setText(DIALOG4);
       break;
     default:
+      addAnswers();
       break;
   }
   _dialog->setMaxLength(20);
@@ -171,4 +172,13 @@ void CIStartScene::startBtnTouched(Ref* pSender)
 {
   Scene* scene = CCTransitionJumpZoom::create(1, CIPlayScene::createScene());
   Director::getInstance()->sharedDirector()->replaceScene(scene);
+}
+
+void CIStartScene::addAnswers()
+{
+  CIGameManager::setAnswer(1, 1);
+  CIGameManager::setAnswer(2, 1);
+  CIGameManager::setAnswer(3, 1);
+  CIGameManager::setAnswer(4, 3);
+  CIGameManager::setAnswer(5, 2);
 }

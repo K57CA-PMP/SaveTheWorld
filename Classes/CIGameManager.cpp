@@ -27,3 +27,23 @@ void CIGameManager::setDialogState(int pState)
 {
   _dialogState = pState;
 }
+
+int CIGameManager::_questionIndex = 1;
+int CIGameManager::getQuestionIndex()
+{
+  return _questionIndex;
+}
+void CIGameManager::setQuestionIndex(int pIndex)
+{
+  _questionIndex = pIndex;
+}
+
+int CIGameManager::_answersArray[6];
+int CIGameManager::getAnswer(int pIndex)
+{
+  return _answersArray[pIndex];
+}
+void CIGameManager::setAnswer(int pIndex, int pAnswer)
+{
+  _answersArray[pIndex] = pAnswer;
+}
