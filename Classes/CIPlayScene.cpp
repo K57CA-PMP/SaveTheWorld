@@ -45,7 +45,7 @@ bool CIPlayScene::init()
   _rotateAction->retain();
   _isHookRotating = false;
   _ItemCollected = false;
-  _indexOfCollectedItem = 0;
+  _indexOfCollectedItem = -1;
   _hooktail = CCArray::create();
   _hooktail->retain();
   _score = CIGameManager::getGameLevel() + 2;

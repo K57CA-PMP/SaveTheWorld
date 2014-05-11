@@ -35,7 +35,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     // create a scene. it's an autorelease object
 
-    auto scene = SavingBoy::createScene();
+    auto scene = CIStartScene::createScene();
     // run
     director->runWithScene(scene);
 
