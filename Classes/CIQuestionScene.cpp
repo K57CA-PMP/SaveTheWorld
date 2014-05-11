@@ -138,24 +138,29 @@ void CIQuestionScene::addAnswers()
 //      _answer3 = Menu::create(_menu3, NULL);
 //      _answer3->setPosition(Point::ZERO);
 //      break;
-    case 3:
-      // add answer1
-      _menu1 = MenuItemImage::create("CollectItems/a1_q3.png",
-                                     "CollectItems/a1_q3.png",
-                                     CC_CALLBACK_1(CIQuestionScene::answerTouched, this));
-      _menu1->setPosition(Point(SCREEN_SIZE.width/2, SCREEN_SIZE.height/2));
-      _answer1 = Menu::create(_menu1, NULL);
-      // add answer2
-      _menu2 = MenuItemImage::create("CollectItems/a2_q3.png",
-                                     "CollectItems/a2_q3.png",
-                                     CC_CALLBACK_1(CIQuestionScene::answerTouched, this));
-      _answer2 = Menu::create(_menu2, NULL);
-      // add answer3
-      _menu3 = MenuItemImage::create("CollectItems/a3_q3.png",
-                                     "CollectItems/a3_q3.png",
-                                     CC_CALLBACK_1(CIQuestionScene::answerTouched, this));
-      _answer3 = Menu::create(_menu3, NULL);
-      break;
+//    case 2:
+//      // add answer1
+//      _menu1 = MenuItemImage::create("CollectItems/a1_q3.png",
+//                                     "CollectItems/a1_q3.png",
+//                                     CC_CALLBACK_1(CIQuestionScene::answerTouched, this));
+//      _menu1->setPosition(Point(SCREEN_SIZE.width/4, SCREEN_SIZE.height/3));
+//      _answer1 = Menu::create(_menu1, NULL);
+//      _answer1->setPosition(Point::ZERO);
+//      // add answer2
+//      _menu2 = MenuItemImage::create("CollectItems/a2_q3.png",
+//                                     "CollectItems/a2_q3.png",
+//                                     CC_CALLBACK_1(CIQuestionScene::answerTouched, this));
+//      _menu2->setPosition(Point(SCREEN_SIZE.width/2, SCREEN_SIZE.height/3));
+//      _answer2 = Menu::create(_menu2, NULL);
+//      _answer2->setPosition(Point::ZERO);
+//      // add answer3
+//      _menu3 = MenuItemImage::create("CollectItems/a3_q3.png",
+//                                     "CollectItems/a3_q3.png",
+//                                     CC_CALLBACK_1(CIQuestionScene::answerTouched, this));
+//      _menu3->setPosition(Point(SCREEN_SIZE.width/1.37, SCREEN_SIZE.height/3));
+//      _answer3 = Menu::create(_menu3, NULL);
+//      _answer3->setPosition(Point::ZERO);
+//      break;
     case 4:
       // add answer1
       _menu1 = MenuItemImage::create("CollectItems/a1_q4.png",
